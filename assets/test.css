@@ -1,0 +1,29 @@
+.logo {
+    background-image: url(../assets/pictures/avatar_antho.png);
+    background-repeat: no-repeat;
+    height: 150px;
+    margin: 50px;
+    width: 154px;
+}
+
+.logo:hover {
+    -webkit-animation: bounce;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+}
+
+@-webkit-keyframes bounce {
+    45% {
+        height: 130px;
+        margin-top: 70px;
+    }
+    55% {
+        height: 130px;
+        margin-top: 70px;
+    }
+    75% {
+        height: 170px;
+        margin-top: 0px;
+    }
+}

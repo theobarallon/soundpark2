@@ -1,0 +1,331 @@
+@font-face {
+  font-family: 'Code';
+  src: url("/code_light.otf");
+   }
+@font-face {
+  font-family: 'CodeBold';
+  src: url("/code_bold.otf");
+   }
+
+* { margin:0; }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 30px;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999; }
+
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 56% }
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: middle; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: white;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    box-shadow: inset 0 1px 1px white, 0 0 8px white; }
+  
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; }
+
+
+
+.container {
+margin-right: auto;
+margin-left: auto;
+*zoom: 1; }
+.container:before, .container:after {
+display: table;
+content: "";
+line-height: 0; }
+.container:after {
+clear: both; }
+
+.container-fluid {
+padding-right: 20px;
+padding-left: 20px;
+*zoom: 1; }
+.container-fluid:before, .container-fluid:after {
+display: table;
+content: "";
+line-height: 0; }
+.container-fluid:after {
+clear: both; }
+
+
+h1, h2, h3 {
+  font-family: 'Code';
+  text-align: center;
+  font-weight: normal; }
+
+h1 {
+  font-family: 'Code';
+  margin: 0 0 20px 0; }
+
+h1 {
+  color: #666;
+  margin-top: 15%;
+  font-size: 6em; }
+
+h2 {
+  color: #777;
+  margin-top: 5%;
+  font-size: 30px; }
+
+h3 {
+  color: #777;
+  margin-top: 0px;
+  font-size: 26px; }
+
+
+  
+  input[type="text"], input[type="password"]
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    height : 25px;
+    border-radius: 0px;
+    width: 50%;
+    background-color: #660066; }
+    
+	input[name="user_password2"]
+	{
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    height : 25px;
+    border-radius: 0px;
+    width: 67%; }
+    
+  form input[type="submit"] {
+    border-radius: 3px;
+    background-color: #464545;
+    color: #fff;
+    padding: 4px 6px 2px;
+    border: none;
+    height : 35px;
+    width: 35px;
+    font-family: Code; 
+    border: 1px solid #a0a0a0;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #999; }
+
+  header h1
+  {
+    margin-top: 6%;
+  }
+  header h2
+  {
+    display : block;
+    margin: 3.5% 15% 3% 15%;
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1.7em; 
+  }
+  footer
+  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #660066;
+    width: 100%;
+    height: 23%;
+  }
+
+  #subscription_area
+  {
+    width: 100%;
+    margin: auto;
+  }
+  footer form
+  {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+ 
+  }
+
+  footer h2
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    color: white;
+    font-size: 3em;
+    margin-top : 3%;
+    margin-bottom: 2%;
+  }
+
+  .play 
+  {
+    display: inline-block;
+    width:60px;
+    height:60px;
+    background-image: url(pictures/play.png);
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+    margin-right: 3%;
+    margin-left: 2%;
+  }
+
+  .pause 
+  {
+    
+    display: inline-block;
+    width:60px;
+    height:60px;
+    background-image: url(pictures/pause.png);
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+    margin-right: 1%;
+  }
+
+  .container
+  {
+
+  }
+
+  #sound_box
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 0;
+    height: 280px;
+    width: 85%;
+
+  }
+
+  #sound_cover
+  {
+    height: 280px;
+    width: 280px;
+    margin-right: 10px;
+    display: inline-block;
+    background-image: url(pictures/sound_cover_sample.jpg);
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+  }
+
+  #sound_informations
+  {
+    display: inline-block;
+    height: 90%;
+    vertical-align: middle;
+    padding: 1% 0 1% 0;
+
+    overflow: hidden;
+    
+
+  }
+
+  #sound_informations h3
+  {
+    text-align: left;
+    line-height: 2.5em;
+    font-size: 1.4em;
+    color: black;
+    overflow: hidden;
+  }
+
+

@@ -1,0 +1,47 @@
+
+input
+{
+	border-style: none;
+	color: transparent;
+	display: inline-block;
+    width:52px;
+    height:60px;
+    font-size: 0.0000001em;
+}
+
+input:focus
+{
+	border-color: none;
+    outline: none;
+    box-shadow: none;
+}
+
+input[value="play"]
+{
+	display: inline-block;
+    width:52px;
+    height:60px;
+    background: url(pictures/play.png);
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+    margin-right: 15%;
+    margin-left: 15%;
+
+}
+input[value="pause"]
+{
+	display: inline-block;
+    width:52px;
+    height:60px;
+    background: url(pictures/pause.png);
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    vertical-align: middle;
+    margin-right: 15%;
+    margin-left: 15%;
+  }

@@ -1,0 +1,399 @@
+/*Initionalisation, paramètre par défaut de bases et polices spécifiques*/
+
+@font-face {
+  font-family: 'Code';
+  src: url("/code_light.otf");
+   }
+@font-face {
+  font-family: 'CodeBold';
+  src: url("/code_bold.otf");
+   }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+* { margin:0; }
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 30px;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999; }
+
+
+
+/*Page principale*/
+
+
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 1080px }
+
+body
+{
+	text-align: center;
+}
+
+
+.container {
+display: inline-block;
+*zoom: 1; }
+.container:before, .container:after {
+display: table;
+content: "";
+line-height: 0; }
+.container:after {
+clear: both; }
+
+.container-fluid {
+padding-right: 20px;
+padding-left: 20px;
+*zoom: 1; }
+.container-fluid:before, .container-fluid:after {
+display: table;
+content: "";
+line-height: 0; }
+.container-fluid:after {
+clear: both; }
+
+
+h1, h2, h3 {
+  font-family: 'Code';
+  text-align: center;
+  font-weight: normal; }
+
+h1 {
+  font-family: 'Code';
+  margin: 0 0 20px 0; }
+
+h1 {
+  color: #666;
+  margin-top: 15%;
+  font-size: 6em; }
+
+h2 {
+  color: #777;
+  margin-top: 5%;
+  font-size: 30px; }
+
+h3 {
+  color: #777;
+  margin-top: 0px;
+  font-size: 26px; }
+
+
+
+  header h1
+  {
+    margin-top: 6%;
+  }
+  header h2
+  {
+    display : none;
+    margin: 6% 15% 0% 15%;
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1.7em; 
+  }
+  footer
+  {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #660066;
+    width: 100%;
+    height: 23%;
+  }
+
+  #buttons_area
+  {
+    width: 100%;
+    margin-top: 3%;
+    height: 40%;
+   
+  }
+  
+
+  input[value="play"],
+input[value="pause"]
+{
+  border-style: none;
+  color: transparent;
+  display: inline-block;
+    width:52px;
+    height:60px;
+    font-size: 0.0000001em;
+}
+
+input[value="play"]:focus,
+input[value="pause"]:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[value="play"]
+{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  background: url(pictures/play_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+
+}
+input[value="pause"]
+{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  background: url(pictures/pause_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+  }
+
+  .container
+  {
+  	margin-top: 6.2%;
+  	position: relative;
+  	text-align: center;
+    overflow: hidden;
+  }
+
+ 
+ #left_arrow, #right_arrow
+ {
+ 	display: inline-block;
+ 	
+ 	width: 90px;
+ 	height: 280px;
+ 	text-align: center;
+  background-color: white;
+  z-index: 1000;
+ }
+
+ #left_arrow
+ {
+ 	 margin: 0 0 0 0;
+ 	 position: absolute;
+   left: 0;
+    top:0;
+ }
+
+  #right_arrow
+ {
+ 	float : right;
+ 	margin: 0 0 0 0;
+  position: absolute;
+  right: 0;
+  top:0;
+ }
+
+#left_arrow_icon
+ {
+ 	height: 280px;
+ 	width: 90px;
+  border-style: none;
+ 	display: inline-block;
+ 	background: url(pictures/left_arrow.png);
+ 	background-repeat: no-repeat;
+ 	background-position:center center;
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+ }
+
+ #left_arrow_icon:hover
+ {
+ 	background-image: url(pictures/left_arrow_hover.png);
+ }
+
+#left_arrow_icon:focus,
+#right_arrow_icon:focus
+ {
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+ }
+
+
+
+ #right_arrow_icon
+ {
+ 	height: 280px;
+ 	width: 90px;
+ 	display: inline-block;
+  border-style: none;
+ 	background: url(pictures/right_arrow.png);
+ 	background-repeat: no-repeat;
+ 	background-position:center center;
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+ }
+
+ #right_arrow_icon:hover
+ {
+ 	background-image: url(pictures/right_arrow_hover.png);
+ }
+
+.trackIds
+{
+  display: none;
+}
+
+  .sound_box
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 210px 0 210px;
+    height: 280px;
+    width: auto;
+  }
+  
+
+  .sound_cover
+  {
+    height: 280px;
+    width: 280px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .sound_informations
+  {
+    display: inline-block;
+    height: 90%;
+    vertical-align: middle;
+    padding: 1% 0 1% 0;
+    overflow: hidden;
+    
+
+  }
+
+  .sound_informations h3
+  {
+    text-align: left;
+    line-height: 2.5em;
+    font-size: 1.4em;
+    font-family: 'open Sans';
+    font-weight: 300;
+    width: 363px;
+    color: black;
+    overflow: hidden;
+  }
+
+
+  .slider
+  {
+    width: 10000px;
+    text-align: left;
+    position : relative;
+  }
+ 
+
+#minus_one,
+#plus_one,
+#minus_one:focus,
+#plus_one:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 3em;
+  width: 2em;
+  height: 2em;
+  background: none;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-family: 'open Sans';
+  font-weight: 300;
+  vertical-align: middle;
+}
+
+#share_url
+{
+  width: 626px;
+  margin-top: 15px;
+  background-color: #660066;
+  text-align: center;
+  font-family: 'open Sans';
+  font-weight: 300;
+  font-size: 1em;
+  color: white;
+  height : 25px;
+  border-radius: 0px;
+  display: none;
+}
+
+
+#minus_one:hover,
+#plus_one:hover
+ {
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-name: bounce;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes bounce
+ {
+    45% {
+        font-size: 1.5em;
+        
+    }
+    55% {
+        font-size: 1.5em;
+        
+    }
+    75% {
+        font-size: 4em;
+        
+    }
+}
+
+keyframes bounce
+ {
+    45% {
+        font-size: 1.5em;
+        
+    }
+    55% {
+        font-size: 1.5em;
+        
+    }
+    75% {
+        font-size: 4em;
+        
+    }
+}
