@@ -1,4 +1,5 @@
 function updatePlayerPosition(trackId){
+    document.getElementById('share_url').value = ("http://localhost:8888/soundpark2/view/fromshare.php?trackId=" + trackId); // On met à jour le lien share aussi au passage
 	xhr = new XMLHttpRequest();
 	xhr.open('GET', 'http://localhost:8888/soundpark2/control/display_player_position.php?trackId='+trackId);
 	xhr.onreadystatechange = function() 
@@ -13,5 +14,6 @@ function updatePlayerPosition(trackId){
     };
 
     xhr.send(null); // La requête est prête, on envoie tout !
+
 
 }

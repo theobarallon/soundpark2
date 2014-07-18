@@ -119,6 +119,8 @@ h3 {
     width: 100%;
     margin-top: 3%;
     height: 40%;
+    -webkit-transition: margin-top 0.3s;
+    transition: margin-top 0.3s;
    
   }
   
@@ -388,9 +390,9 @@ input[value="pause"]
 
 #share_url
 {
-  width: 626px;
+  width: 426px;
   margin-top: 15px;
-  background-color: #660066;
+  background-color: transparent;
   text-align: center;
   font-family: 'open Sans';
   font-weight: 300;
@@ -398,6 +400,10 @@ input[value="pause"]
   color: white;
   height : 25px;
   border-radius: 0px;
+}
+
+#share_link
+{
   display: none;
 }
 
@@ -445,4 +451,13 @@ keyframes bounce
         font-size: 4em;
         
     }
+}
+
+.share_url_title
+{
+  font-size: 1em;
+  width: 100px;
+  font-family: 'open Sans';
+  font-weight: 300;
+  color: white;
 }

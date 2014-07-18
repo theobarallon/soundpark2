@@ -25,6 +25,7 @@
 
 			var songUrl = "<?php echo($_POST['song_url'])?>";
 			var playlist = "<?php echo($_POST['playlist'])?>";
+			var idCurrator = "<?php echo($_POST['idCurrator'])?>";
 			var streamable, trackId, trackArtWork, trackArtist, trackTitle, trackGenre;
 
 
@@ -44,7 +45,7 @@
 								var songInfo = document.getElementById('songInfo');
 								songInfo.innerHTML = "<p id=\"artist\"> Artist = " + trackArtist +"</p><p id=\"title\"> Title = " + trackTitle +"</p><img src=\""+trackArtWork+"\"id=\"artWork\">" ;
 								var addLink = document.getElementById('addLink');
-								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&artist="+trackArtist+"&genre="+trackGenre+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"\"> Add Track Bitch </a>";
+								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&artist="+trackArtist+"&genre="+trackGenre+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"&idCurrator="+idCurrator+"\"> Add Track Bitch </a>";
 							}
 							else
 							{

@@ -248,42 +248,14 @@ h3 {
     margin-bottom: 2%;
   }
 
-  .play 
-  {
-    display: inline-block;
-    width:60px;
-    height:60px;
-    background-image: url(pictures/play.png);
-    -webkit-background-size: cover; /* pour Chrome et Safari */
-    -moz-background-size: cover; /* pour Firefox */
-    -o-background-size: cover; /* pour Opera */
-    background-size: cover; /* version standardisée */
-    vertical-align: middle;
-    margin-right: 3%;
-    margin-left: 2%;
-  }
-
-  .pause 
-  {
-    
-    display: inline-block;
-    width:60px;
-    height:60px;
-    background-image: url(pictures/pause.png);
-    -webkit-background-size: cover; /* pour Chrome et Safari */
-    -moz-background-size: cover; /* pour Firefox */
-    -o-background-size: cover; /* pour Opera */
-    background-size: cover; /* version standardisée */
-    vertical-align: middle;
-    margin-right: 1%;
-  }
+  
 
   .container
   {
 
   }
 
-  #sound_box
+  .sound_box
   {
     vertical-align: middle;
     display: inline-block;
@@ -293,21 +265,16 @@ h3 {
 
   }
 
-  #sound_cover
+  .sound_cover
   {
     height: 280px;
     width: 280px;
     margin-right: 10px;
     display: inline-block;
-    background-image: url(pictures/sound_cover_sample.jpg);
-    -webkit-background-size: cover; /* pour Chrome et Safari */
-    -moz-background-size: cover; /* pour Firefox */
-    -o-background-size: cover; /* pour Opera */
-    background-size: cover; /* version standardisée */
     vertical-align: middle;
   }
 
-  #sound_informations
+  .sound_informations
   {
     display: inline-block;
     height: 90%;
@@ -316,13 +283,76 @@ h3 {
     overflow: hidden;
   }
 
-  #sound_informations h3
+  .sound_informations h3
   {
+    width: 390px;
     text-align: left;
     line-height: 2.5em;
+    font-family: 'open Sans';
+    font-weight: 300;
     font-size: 1.4em;
     color: black;
     overflow: hidden;
   }
 
+/* Bouton Play/pause */
 
+  input[value="play"],
+input[value="pause"]
+{
+  border-style: none;
+  color: transparent;
+  display: inline-block;
+    width:52px;
+    height:60px;
+    font-size: 0.0000001em;
+}
+
+input[value="play"]:focus,
+input[value="pause"]:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[value="play"]
+{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  background: url(pictures/play.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 3%;
+  margin-left: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+
+}
+input[value="pause"]
+{
+  display: inline-block;
+  width:60px;
+  height:60px;
+  background: url(pictures/pause.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 3%;
+  margin-left: 2%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+  }
+
+.trackId
+{
+  display: none;
+}

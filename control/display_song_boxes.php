@@ -1,6 +1,5 @@
 <?php
-include_once('connect_sql.php');
-$req = $bdd->query('SELECT artwork_url, artist, title, genre FROM song, playlist WHERE song.ID_playlist=playlist.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW()');
+include_once('../model/get_song_boxes.php');
 
 $i = 1;
 while($songBoxes = $req->fetch())
@@ -16,7 +15,7 @@ while($songBoxes = $req->fetch())
 			<h3> Artiste : <?php echo($songBoxes[1]);?> </br></h3>
 			<h3> Titre : <?php echo($songBoxes[2]);?> </br></h3>
 			<h3> Style : <?php echo($songBoxes[3]);?> </br></h3>
-			<h3> Currator : Jauhny </br></h3>
+			<h3> Currator : <?php echo($songBoxes[4]);?> </br></h3>
 		</div>
 	</div>
 	<?php 

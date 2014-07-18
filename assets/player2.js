@@ -149,6 +149,11 @@ function nextTrack()
 		updateCurrentTrack(songTable[position]);
 		updatePlayerPosition(songTable[position]);
 		s.slideRight();
+		g.disappear();
+	}
+	else
+	{
+		location.href="../view/end.php";
 	}
 	
 }
@@ -161,6 +166,7 @@ function previousTrack()
 	updateCurrentTrack(songTable[position]);
 	updatePlayerPosition(songTable[position]);
 	s.slideLeft();
+	g.disappear();
 	
 }
 
@@ -168,10 +174,6 @@ function getCurrentTrackId()
 {
 	return songTable[position];
 }
-
-
-
-
 
 
 

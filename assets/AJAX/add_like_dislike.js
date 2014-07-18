@@ -1,6 +1,7 @@
 function addLike()
 {
 	var trackId = getCurrentTrackId();
+    g.appear();
 	xhr = new XMLHttpRequest();
 	xhr2 = new XMLHttpRequest();
 	xhr.open('GET', 'http://localhost:8888/soundpark2/control/display_player_position.php?trackId='+trackId);
@@ -45,7 +46,7 @@ function addLike()
 
 function addDislike()
 {
-
+    g.disappear();
 	var trackId = getCurrentTrackId();
 	xhr = new XMLHttpRequest();
 	xhr2 = new XMLHttpRequest();

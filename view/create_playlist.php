@@ -14,17 +14,20 @@
 	<body>
 		<header>
 		<?php 
-			if(isset($_GET['addTrack']))
+			if(isset($_GET['addTrack']) AND isset($_GET['idPlaylist']))
 			{
-				?> <h1> Son bien ajouté ! </h1>
+				?> <h1> Son bien ajouté ! </h1></br>
+
 			<?php
+			include_once('../model/get_track_table.php');
+			include_once('../control/display_track_table.php');
 			}
 			?>
 		</header>
 		
 		<form accept-charset="UTF-8" action="http://localhost:8888/soundpark2/control/get_track_info.php" class="new_song" id="new_song" method="post">
-			<input autofocus="autofocus" id="song_url" name="song_url" type="url" />
-		       <label for="playlist">Dans quelle playlist ?</label>
+			 <span>URL : </span><input autofocus="autofocus" id="song_url" name="song_url" type="url" />
+		      <label for="playlist">Dans quelle playlist ?</label>
 		       <select name="playlist" id="playlist">
 		           <option value="1">Playlist du 23 au 30 juin</option>
 		           <option value="2">Playlist du 30 juin au 6 juillet</option>
@@ -34,6 +37,21 @@
 		           <option value="6">Playlist du 28 juillet au 3 aout</option>
 		           <option value="7">Playlist du 4 au 10 aout</option>
 		           <option value="8">Playlist du 11 au 17 aout</option>
+		       </select>
+		       <?php 
+		      	include_once('../model/get_currators.php');
+		       	echo'<label for="idCurrator">Quel influenceur ?</label>';
+		       	echo'<select name="idCurrator" id="idCurrator">';
+				$j = 0;
+
+				while($j<$i)
+				{
+					?>
+					<option value="<?php echo $idCurrator[$j]; ?>"><?php echo $pseudoCurrator[$j]; ?></option>
+					<?php
+					$j++;
+				}
+				?>
 		       </select>
 
 			<input name="commit" type="submit" value="Go" />

@@ -1,4 +1,7 @@
-
+<?php 
+	/*session_start();
+	include_once('../model/connect_sql.php');*/
+?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
@@ -6,8 +9,9 @@
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/fromshare.css" media="all" rel="stylesheet" />
-    <script src="../assets/audio_player.js"></script>
-    <script type="text/javascript" src="../assets/jquery-1.3.2.min.js"></script>
+    <script src="../assets/player_fromshare.js"></script>
+       <script src="http://connect.soundcloud.com/sdk.js"></script>
+    <script type="text/javascript" src="../assets/jquery.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
  </head>
@@ -19,7 +23,10 @@
 		</header>
 		
 		<div class="container"> 
-			<div id="toggle" class="play"></div>
+			<input type="button" class="play" id="play" value="pause"/>
+			<?php include_once('../control/display_share_song_box.php'); ?>
+
+			<!--
 			<div id="sound_box">
 				<div id="sound_cover">
 				</div>
@@ -30,7 +37,9 @@
 					<h3> Currator : Jauhny </br></h3>
 				</div>
 			</div>
+			-->
 		</div>
+		<div class="trackId" id="trackId"><?php if(isset($_GET['trackId'])){echo($_GET['trackId']);} ?></div>		
 		<footer>
 			<div id="subscription_area">
 				<h2>Get subscribed!</br></h2>
@@ -44,4 +53,5 @@
 			</div>
 		</footer>		
 </body>
+<script src="../assets/player_fromshare.js"></script>
 </html>

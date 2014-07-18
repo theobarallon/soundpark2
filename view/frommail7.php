@@ -11,7 +11,7 @@
   <head>
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="../assets/frommail6.css" media="all" rel="stylesheet" />
+    <link href="../assets/frommail7.css" media="all" rel="stylesheet" />
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <script type="text/javascript" src="../assets/AJAX/update_player_position.js"></script>
@@ -60,10 +60,18 @@
 				<input type="button" class="play" id="play" value="pause"/>
 				<input type="button" id="plus_one" value="+1" onclick="addLike()"/>
 				<form id="share_link">
-				<input type="text"  id="share_url" name="share_url" value="http://www.soundpark.fm/son1" disabled="disabled" autofocus/>
+					<span class="share_url_title"> Share that tune --> </span>
+					<?php 
+						//on va ici chercher le premier trackId pour initialiser le lien share
+						$req = $bdd->query('SELECT trackId FROM song, playlist WHERE song.ID_playlist=playlist.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW()');
+						$trackIds = $req->fetch();
+					?>
+					<input type="text"  id="share_url" name="share_url" value="http://localhost:8888/soundpark2/view/fromshare.php?trackId=<?php echo $trackIds[0]; ?>" disabled="disabled" autofocus/>
+					<span class="share_url_title"> <-- Share that tune </span>
 				</form>
 			</div>
 		</footer>		
 </body>
     <script type="text/javascript" src="../assets/player2.js"></script>
+    <script type="text/javascript" src="../assets/glide_up_share_link.js"></script>
 </html>
