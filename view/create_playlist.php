@@ -60,6 +60,14 @@
 		<div id="songInfo">
 		</div>
 
+		<div id="track_list">
+
+			<h2> Playlist de la semaine courante : </h2>
+			
+			<?php include_once('../control/display_complete_track_list.php'); ?>
+
+		</div>
+
 		<footer>
 			
 		</footer>		
