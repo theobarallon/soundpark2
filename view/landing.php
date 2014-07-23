@@ -8,7 +8,7 @@
   <head>
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="assets/landing.css" media="all" rel="stylesheet" />
+    <link href="../assets/landing.css" media="all" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  
  

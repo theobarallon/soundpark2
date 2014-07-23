@@ -26,7 +26,7 @@
 		</div>
 		<footer>
 			<div id="buttons_area">
-				v
+				<a href="<?php echo($_COOKIE['playlist_url']); ?>" id="replay"></a>
 			</div>
 		</footer>		
 </body>

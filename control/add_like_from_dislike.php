@@ -9,7 +9,7 @@
 		$req = $bdd->prepare('SELECT ID FROM user WHERE email = ?');
 		$req->execute(array($_GET['currentUser']));
 		$idUser = $req->fetch();
-		$req = $bdd->prepare('INSERT INTO soundpark2.dislike(ID_song, ID_user, date) VALUES(?, ?, NOW())');
+		$req = $bdd->prepare('DELETE FROM soundpark2.dislike WHERE ID_song = ? AND ID_user = ?');
 		$req->execute(array($Id[0], $idUser[0]));
 		$req = $bdd->prepare('SELECT COUNT(*) FROM soundpark2.dislike WHERE ID_song = ?');
 		$req->execute(array($Id[0]));
