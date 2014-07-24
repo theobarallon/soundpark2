@@ -19,8 +19,7 @@
 				?> <h1> Son bien ajouté ! </h1></br>
 
 			<?php
-			include_once('../model/get_track_table.php');
-			include_once('../control/display_track_table.php');
+
 			}
 			?>
 		</header>

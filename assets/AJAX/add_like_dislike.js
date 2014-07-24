@@ -1,11 +1,10 @@
 function addLike()
 {
 	var trackId = getCurrentTrackId();
-    g.appear();
+     // on fait apparaitre le lien de partage
 	xhr = new XMLHttpRequest();
 	xhr2 = new XMLHttpRequest();
     var currentUser = getCookie('current_user');
-    alert(currentUser);
 	xhr.open('GET', 'http://localhost:8888/soundpark2/control/display_player_position.php?trackId='+trackId);
 	xhr.onreadystatechange = function() 
 	{ // On gère ici une requête asynchrone
@@ -18,6 +17,7 @@ function addLike()
             var dislikeStamp = document.getElementById("dislike_stamp_left"+xhr.responseText);
             if(likeStamp.style.display!="block" && dislikeStamp.style.display!="block")
             {
+                g.appear();
             	xhr2.open('GET', 'http://localhost:8888/soundpark2/control/add_like.php?trackId='+trackId+'&currentUser='+currentUser);
             	alert('http://localhost:8888/soundpark2/control/add_like.php?trackId='+trackId+'&currentUser='+currentUser);
                 xhr2.send(null);

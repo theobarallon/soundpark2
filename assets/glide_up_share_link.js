@@ -1,10 +1,5 @@
-window.onload=function(){
-	g = new glider();
-};
-
-
-
-var glider = function(){
+var glider = function()
+{
 	var self=this;
 
 	this.appear= function()
