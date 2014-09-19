@@ -18,18 +18,28 @@
 		<h2>Toutes les semaines, le lundi, à 9h, <strong>le meilleur </strong>de la musique sélectionné par la crème de la crème au chaud dans votre boite mail.</h2>
 
 		<div id="email_form">
-		  	<form accept-charset="UTF-8" action="http://localhost:8888/soundpark2/control/register.php" class="new_user" id="new_user" method="post">
+		  	<form accept-charset="UTF-8" action="http://soundpark.fm/control/register.php" class="new_user" id="new_user" method="post">
 				<input autofocus="autofocus" id="user_email" name="user_email" placeholder="Email" type="email" /> 
 				<input name="commit" type="submit" value="Go" />
 				<div class="clearfix"></div>
 			</form>
 		</div>
-		<?php if(isset($_GET['attempt']))
-		{
-			echo '<h2> </br></br> password not corresponding </h2>';
-		}
+		<?php 
+			if(isset($_GET['invalidEmail']))
+			{
+				echo '<h3> Invalid email bro. </h3>';
+			}
+		
+			else if(isset($_GET['alreadyExists']))
+			{
+				echo "<h3> Already part of the crew bro, don't tell me you forgot it ? </h3>";
+			}
+			else 
+			{
+				echo"<h3> C’est gratos.</h3>";
+			}
 		?>
-		<h3> C’est gratos.</h3>
+		
 	</div>
 		
 		

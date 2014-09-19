@@ -23,7 +23,7 @@
 		</header>
 		
 		<div class="container"> 
-			<input type="button" class="play" id="play" value="pause"/>
+			<input type="button" class="play" id="play" value="play"/>
 			<?php include_once('../control/display_share_song_box.php'); ?>
 
 			<!--
@@ -44,7 +44,7 @@
 			<div id="subscription_area">
 				<h2>Get subscribed!</br></h2>
 				<div id="saisie">
-					<form accept-charset="UTF-8" action="http://localhost:8888/soundpark2/control/suscribe.php" class="new_user" id="new_user" method="post">
+					<form accept-charset="UTF-8" action="http://soundpark.fm/control/suscribe.php" class="new_user" id="new_user" method="post">
 							<input autofocus="autofocus" id="user_email" name="user_email" placeholder="Email" type="text" />
 							<input name="commit" type="submit" value="Go" />
 							<div class="clearfix"></div>

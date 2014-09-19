@@ -16,14 +16,14 @@ var slider = function(id){
 		self.largeur+=parseInt($(this).css("margin-left"));
 		self.largeur+=parseInt($(this).css("margin-right"));
 	});
-	alert(this.largeur);
+	//alert(this.largeur);
 	this.prec = this.div.find('.previous');
 	this.suiv = this.div.find('.next');
-	alert(this.suiv.html());
+	//alert(this.suiv.html());
 	this.saut=((this.largeur/5)*2);
 	this.steps = Math.ceil(this.largeur/this.saut);
-	alert(this.saut);
-	alert(this.steps);
+	//alert(this.saut);
+	//alert(this.steps);
 	this.courant = 0;
 	this.prec.hide();
 	if(this.largeur<this.lengthCach)
@@ -62,7 +62,7 @@ var slider = function(id){
 		}
 		else
 		{
-			alert("fini");
+			//alert("fini");
 		}
 	}
 

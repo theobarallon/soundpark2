@@ -2,17 +2,17 @@ function displayUserPastLikes()
 {
     xhr = new XMLHttpRequest();
     var currentUser = getCookie('current_user');
-    xhr.open('GET', 'http://localhost:8888/soundpark2/model/get_user_likes.php?currentUser='+currentUser);
+    xhr.open('GET', 'http://soundpark.fm/model/get_user_likes.php?currentUser='+currentUser);
     xhr.onreadystatechange = function() 
     { // On gère ici une requête asynchrone
         if(xhr.readyState == 4 && xhr.status == 200) 
         { // Si le fichier est chargé sans erreur
-            alert('bite');
+            //alert('bite');
             var trackIds2 = document.getElementsByClassName('trackIds');
             var songTable2 = [];
 
             var str = xhr.responseText;
-            alert(str);        
+            //alert(str);        
             var userLikesTrackIdsTable = str.split("-");
 
             for(var i = 0 ; i<trackIds.length ; i++)
@@ -38,7 +38,7 @@ function displayUserPastDislikes()
 {
     xhr2 = new XMLHttpRequest();
     var currentUser = getCookie('current_user');
-    xhr2.open('GET', 'http://localhost:8888/soundpark2/model/get_user_dislikes.php?currentUser='+currentUser);
+    xhr2.open('GET', 'http://soundpark.fm/model/get_user_dislikes.php?currentUser='+currentUser);
     xhr2.onreadystatechange = function() 
     { // On gère ici une requête asynchrone
         if(xhr2.readyState == 4 && xhr2.status == 200) 
@@ -48,7 +48,7 @@ function displayUserPastDislikes()
             var songTable2 = [];
 
             var str = xhr2.responseText;
-            alert(str);
+            //alert(str);
             
             var userDislikesTrackIdsTable = str.split("-");
 

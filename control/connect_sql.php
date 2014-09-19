@@ -2,7 +2,7 @@
 	session_start();
 	try
 	{
-		$bdd = new PDO('mysql:host=localhost;dbname=soundpark2', 'root', 'root');
+		$bdd = new PDO('mysql:host=localhost;dbname=soundpark2', 'root', 'mWLbiJWD73');
 	}
 	catch (Exception $e)
 	{

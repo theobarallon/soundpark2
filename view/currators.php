@@ -12,7 +12,7 @@
  
 	<body>
 		<header>
-			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
+			<h1><a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
 			<h2>Merci à eux : </h2>
 		</header>
 		
@@ -28,7 +28,7 @@
 		
 		<footer>
 			<div id="buttons_area">
-				<a href="<?php echo($_COOKIE['playlist_url']); ?>" id="replay"></a>
+				<a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>" id="replay"></a>
 			</div>
 		</footer>		
 		   <script src="../assets/slider_currators.js"></script>

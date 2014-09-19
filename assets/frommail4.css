@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'Code';
-  src: url("/code_light.otf");
+  src: url("fonts/code_light.otf");
    }
 @font-face {
   font-family: 'CodeBold';
-  src: url("/code_bold.otf");
+  src: url("fonts/code_bold.otf");
    }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);

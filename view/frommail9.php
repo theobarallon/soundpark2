@@ -30,7 +30,7 @@
 			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
 			<h2 id="player_position"><?php include("../control/display_player_position.php"); ?></h2>
 			<!--<h3> <?php //echo($_COOKIE['playlist_url']); ?> </h3>-->
-			<h3> <?php echo($_COOKIE['current_user']); ?> </h3>
+			<!--<h3> <?php //echo($_COOKIE['current_user']); ?> </h3>-->
 		</header>
 		
 		<div class="container" id="galerie"> 
@@ -70,7 +70,7 @@
 						$req = $bdd->query('SELECT trackId FROM song, playlist WHERE song.ID_playlist=playlist.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW()');
 						$trackIds = $req->fetch();
 					?>
-					<input type="text"  id="share_url" name="share_url" value="http://localhost:8888/soundpark2/view/fromshare.php?trackId=<?php echo $trackIds[0]; ?>" disabled="disabled" autofocus/>
+					<input type="text"  id="share_url" name="share_url" value="http://soundpark.fm/view/fromshare.php?trackId=<?php echo $trackIds[0]; ?>" disabled="disabled" autofocus/>
 					<span class="share_url_title"> <-- Share that tune </span>
 				</form>
 			</div>

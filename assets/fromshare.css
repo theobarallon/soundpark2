@@ -1,10 +1,13 @@
 @font-face {
   font-family: 'Code';
-  src: url("/code_light.otf");
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
    }
 @font-face {
   font-family: 'CodeBold';
-  src: url("/code_bold.otf");
+  src: url("fonts/code_bold.otf");
    }
 
 * { margin:0; }
@@ -261,7 +264,6 @@ h3 {
     display: inline-block;
     margin: 0 0 0 0;
     height: 280px;
-    width: 85%;
 
   }
 

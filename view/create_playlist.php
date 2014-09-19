@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
   <head>
@@ -24,18 +22,14 @@
 			?>
 		</header>
 		
-		<form accept-charset="UTF-8" action="http://localhost:8888/soundpark2/control/get_track_info.php" class="new_song" id="new_song" method="post">
+		<form accept-charset="UTF-8" action="http://soundpark.fm/control/get_track_info.php" class="new_song" id="new_song" method="post">
 			 <span>URL : </span><input autofocus="autofocus" id="song_url" name="song_url" type="url" />
 		      <label for="playlist">Dans quelle playlist ?</label>
 		       <select name="playlist" id="playlist">
-		           <option value="1">Playlist du 23 au 30 juin</option>
-		           <option value="2">Playlist du 30 juin au 6 juillet</option>
-		           <option value="3">Playlist du 7 au 13 juillet</option>
-		           <option value="4">Playlist du 14 au 20 juillet</option>
-		           <option value="5">Playlist du 21 au 27 juillet</option>
-		           <option value="6">Playlist du 28 juillet au 3 aout</option>
-		           <option value="7">Playlist du 4 au 10 aout</option>
-		           <option value="8">Playlist du 11 au 17 aout</option>
+		           <option value="11">Playlist du 15 au 21 septembre</option>
+		           <option value="12">Playlist du 22 au 28 septembre</option>
+		           <option value="13">Playlist du 29 septembre au 5 octobre</option>
+		           <option value="14">Playlist du 6 au 12 octobre</option>
 		       </select>
 		       <?php 
 		      	include_once('../model/get_currators.php');

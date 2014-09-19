@@ -5,5 +5,5 @@
 	}
 	else
 	{
-		header('Location: http://localhost:8888/soundpark2/view/landing.php');
+		header('Location: http://soundpark.fm/view/landing.php');
 	}

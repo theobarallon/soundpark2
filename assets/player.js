@@ -7,7 +7,7 @@ var onPlay = false;
 var position = 0;
 var songTable = new Array('/tracks/112435186', '/tracks/138084493', '/tracks/9740176');
 var currentTrack;
-alert('mabite');
+//alert('mabite');
 updateCurrentTrack(songTable[0]);
 
 
@@ -21,7 +21,7 @@ $('#play').click(function() //Gestion du bouton de lecture/pause en toggle
 		if(!onPlay)
 		{
 			onPlay = true;
-			alert(onPlay);
+			//alert(onPlay);
 		} 
 	}
 	else {
@@ -33,18 +33,18 @@ $('#play').click(function() //Gestion du bouton de lecture/pause en toggle
 
 function updateCurrentTrack(trackId) 
 {
-	alert(trackId);
+	//alert(trackId);
 	SC.stream(trackId,{onfinish: function(){ nextTrack();}}, function(sound){
 		currentTrack = sound;
 		if ($('#play').val() == "pause") 
 		{	
 			onPlay=true;
 			currentTrack.play();
-			alert(currentTrack.artwork_url);
+			//alert(currentTrack.artwork_url);
 		}
 		else
 		{
-			alert(onPlay);
+			//alert(onPlay);
 		}
 	});
 }

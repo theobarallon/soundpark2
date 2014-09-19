@@ -11,7 +11,7 @@ var position = 0;
 var trackId = document.getElementById('trackId').innerHTML;
 
 
-alert(trackId);
+//alert(trackId);
 
 var currentTrack;
 updateCurrentTrack(trackId);
@@ -36,12 +36,17 @@ $('#play').click(function() //Gestion du bouton de lecture/pause en toggle
 
 function updateCurrentTrack(trackId) 
 {
-	SC.stream("/tracks/"+trackId, function(sound){
+	SC.stream("/tracks/"+trackId,{onfinish: function(){ 
+		
+		updateCurrentTrack(trackId);
+		$('#play').val("play"); 
+		}}, function(sound){
 		currentTrack = sound;
 		if ($('#play').val() == "pause") 
 		{	
 			onPlay=true;
 			currentTrack.play();
+			currentTrack.pause();
 		}
 	});
 }

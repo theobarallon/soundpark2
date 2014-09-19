@@ -12,17 +12,17 @@ var slider = function(id){
 	this.lengthCach = this.div.width();
 	this.largeur=0;
 	this.div.find("h3").each(function(){
-		self.largeur+= (self.div.width())/4;
+		self.largeur+= (self.div.width())/3;
 		self.largeur+=parseInt($(this).css("margin-left"));
 		self.largeur+=parseInt($(this).css("margin-right"));
 	});
-	alert(this.largeur);
+	//alert(this.largeur);
 	this.prec = this.div.find('.previous');
 	this.suiv = this.div.find('.next');
-	alert(this.suiv.html());
+	//alert(this.suiv.html());
 	this.saut=(this.lengthCach);
 	this.steps = Math.ceil(this.largeur/this.saut);
-	alert(this.steps);
+	//alert(this.steps);
 	this.courant = 0;
 	this.prec.hide();
 
@@ -57,7 +57,7 @@ var slider = function(id){
 		}
 		else
 		{
-			alert("fini");
+			//alert("fini");
 		}
 	}
 
@@ -83,7 +83,7 @@ for(var i = 0 ; i<trackIds.length ; i++)
 {
 	songTable[i] = trackIds[i].innerHTML;
 }
-alert(songTable.length);
+//alert(songTable.length);
 
 var currentTrack;
 updateCurrentTrack(songTable[0]);

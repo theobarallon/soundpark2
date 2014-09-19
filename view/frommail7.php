@@ -66,7 +66,7 @@
 						$req = $bdd->query('SELECT trackId FROM song, playlist WHERE song.ID_playlist=playlist.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW()');
 						$trackIds = $req->fetch();
 					?>
-					<input type="text"  id="share_url" name="share_url" value="http://localhost:8888/soundpark2/view/fromshare.php?trackId=<?php echo $trackIds[0]; ?>" disabled="disabled" autofocus/>
+					<input type="text"  id="share_url" name="share_url" value="http://soundpark.fm/view/fromshare.php?trackId=<?php echo $trackIds[0]; ?>" disabled="disabled" autofocus/>
 					<span class="share_url_title"> <-- Share that tune </span>
 				</form>
 			</div>

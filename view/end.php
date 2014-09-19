@@ -14,11 +14,11 @@
 	<body>
 		
 		<header>
-			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
+			<h1><a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
 		</header>
 		<div class="container"> 
 				<h2>A la semaine prochaine ! </br> Si t'as kiffé, n'hésite pas à partager :</h2>
-				<a href="http://www.facebook.com/sharer.php?u=http://localhost:8888/soundpark2/view/fromshare.php" target="_blank"><img src="../assets/pictures/fb_share_icon.png"></img></a>
+				<a href="http://www.facebook.com/sharer.php?u=http://soundpark.fm/view/fromshare.php" target="_blank"><img src="../assets/pictures/fb_share_icon.png"></img></a>
 				<img src="../assets/pictures/twitter_share_icon.png"> </img>
 				<img src="../assets/pictures/pinterest_share_icon.png"> </img>
 				<img src="../assets/pictures/rss_share_icon.png"> </img>
@@ -26,7 +26,7 @@
 		</div>
 		<footer>
 			<div id="buttons_area">
-				<a href="<?php echo($_COOKIE['playlist_url']); ?>" id="replay"></a>
+				<a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>" id="replay"></a>
 			</div>
 		</footer>		
 </body>

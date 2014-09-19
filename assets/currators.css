@@ -1,10 +1,13 @@
 @font-face {
   font-family: 'Code';
-  src: url("/code_light.otf");
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
    }
 @font-face {
   font-family: 'CodeBold';
-  src: url("/code_bold.otf");
+  src: url("fonts/code_bold.otf");
    }
 
 * { margin:0; }
@@ -169,7 +172,13 @@ h3 {
   color: #777;
   margin-top: 0px;
   font-size: 26px; }
-
+ 
+ h1 a
+  {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
 
   
   input[type="text"], input[type="password"]
