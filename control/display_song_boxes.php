@@ -14,7 +14,7 @@ while($songBoxes = $req->fetch())
 		<div class="sound_informations", id="sound_informations<?php echo($i);?>">
 			<h3> Artiste : <?php echo($songBoxes[1]);?> </br></h3>
 			<h3> Titre : <?php echo($songBoxes[2]);?> </br></h3>
-			<h3> Currator : <?php echo($songBoxes[4]);?> </br></h3>
+			<h3> Curator : <?php echo($songBoxes[4]);?> </br></h3>
 		</div>
 	</div>
 	<?php 

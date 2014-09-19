@@ -19,9 +19,16 @@
 			<?php
 
 			}
+			else if(isset($_GET['addCurator']))
+			{
+				?> <h1> Curator well added ! </h1></br>
+
+			<?php
+
+			}
 			?>
 		</header>
-		
+		<h2> Add a new song to a playlist : </h2>
 		<form accept-charset="UTF-8" action="http://soundpark.fm/control/get_track_info.php" class="new_song" id="new_song" method="post">
 			 <span>URL : </span><input autofocus="autofocus" id="song_url" name="song_url" type="url" />
 		      <label for="playlist">Dans quelle playlist ?</label>
@@ -32,15 +39,15 @@
 		           <option value="14">Playlist du 6 au 12 octobre</option>
 		       </select>
 		       <?php 
-		      	include_once('../model/get_currators.php');
-		       	echo'<label for="idCurrator">Quel influenceur ?</label>';
-		       	echo'<select name="idCurrator" id="idCurrator">';
+		      	include_once('../model/get_curators.php');
+		       	echo'<label for="idCurator">Quel influenceur ?</label>';
+		       	echo'<select name="idCurator" id="idCurator">';
 				$j = 0;
 
 				while($j<$i)
 				{
 					?>
-					<option value="<?php echo $idCurrator[$j]; ?>"><?php echo $pseudoCurrator[$j]; ?></option>
+					<option value="<?php echo $idCurator[$j]; ?>"><?php echo $pseudoCurator[$j]; ?></option>
 					<?php
 					$j++;
 				}
@@ -55,9 +62,27 @@
 
 		<div id="track_list">
 
-			<h2> Playlist de la semaine courante : </h2>
+			<h3> Playlist de la semaine courante : </h3>
 			
 			<?php include_once('../control/display_complete_track_list.php'); ?>
+
+		</div>
+		<div id="curators_registering">
+
+			<h2> Add a curator : </h2>
+			
+			<form accept-charset="UTF-8" action="http://soundpark.fm/control/add_curator.php" class="new_curator" id="new_curator" method="post" enctype="multipart/form-data">
+			 <span>Name : </span><input autofocus="autofocus" id="pseudo" name="pseudo" type="text" />
+		      <label for="genre">Style de prédilection ?</label>
+		       <select name="genre" id="genre">
+		           <option value="1">Electro</option>
+		           <option value="2">Samba</option>
+		           <option value="3">Musette</option>
+		       </select>
+		       <span>Face : </span><input id="avatar" name="avatar" type="file" />
+		       <span>Website : </span><input  id="link" name="link" type="url" />
+			<input name="commit" type="submit" value="Go" />
+		</form>
 
 		</div>
 

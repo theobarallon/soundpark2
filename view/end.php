@@ -22,7 +22,7 @@
 				<img src="../assets/pictures/twitter_share_icon.png"> </img>
 				<img src="../assets/pictures/pinterest_share_icon.png"> </img>
 				<img src="../assets/pictures/rss_share_icon.png"> </img>
-				<a href="currators.php"><h3>Et merci qui ?</h3></a>
+				<a href="curators.php"><h3>Et merci qui ?</h3></a>
 		</div>
 		<footer>
 			<div id="buttons_area">

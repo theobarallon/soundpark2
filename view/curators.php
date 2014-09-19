@@ -4,7 +4,7 @@
   <head>
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="../assets/currators.css" media="all" rel="stylesheet" />
+    <link href="../assets/curators.css" media="all" rel="stylesheet" />
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
@@ -23,7 +23,7 @@
 			><div id="right_arrow">
 				<input type="button" id="right_arrow_icon" class="next" onclick="slideItRight()"/>
 			</div
-			><div id="slider" class="slider"><?php include_once('../control/get_currators_avatars.php'); ?></div>
+			><div id="slider" class="slider"><?php include_once('../control/get_curators_avatars.php'); ?></div>
 		</div>
 		
 		<footer>
@@ -31,6 +31,6 @@
 				<a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>" id="replay"></a>
 			</div>
 		</footer>		
-		   <script src="../assets/slider_currators.js"></script>
+		   <script src="../assets/slider_curators.js"></script>
 </body>
 </html>

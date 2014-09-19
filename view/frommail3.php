@@ -42,7 +42,7 @@
 						<h3> Artiste : yourmumcoeur </br></h3>
 						<h3> Titre : eargasm </br></h3>
 						<h3> Style : Jazz </br></h3>
-						<h3> Currator : Jauhny </br></h3>
+						<h3> Curator : Jauhny </br></h3>
 					</div>
 				</div>
 				<div id="sound_box2" class="sound_box">
@@ -52,7 +52,7 @@
 						<h3> Artiste : yourmumcoeur </br></h3>
 						<h3> Titre : eargasm </br></h3>
 						<h3> Style : Jazz </br></h3>
-						<h3> Currator : Jauhny </br></h3>
+						<h3> Curator : Jauhny </br></h3>
 					</div>
 				</div>
 				<div id="sound_box3" class="sound_box">
@@ -62,7 +62,7 @@
 						<h3> Artiste : yourmumcoeur </br></h3>
 						<h3> Titre : eargasm </br></h3>
 						<h3> Style : Jazz </br></h3>
-						<h3> Currator : Jauhny </br></h3>
+						<h3> Curator : Jauhny </br></h3>
 					</div>
 				</div>
 				<div id="sound_box4" class="sound_box">
@@ -72,7 +72,7 @@
 						<h3> Artiste : yourmumcoeur </br></h3>
 						<h3> Titre : eargasm </br></h3>
 						<h3> Style : Jazz </br></h3>
-						<h3> Currator : Jauhny </br></h3>
+						<h3> Curator : Jauhny </br></h3>
 					</div>
 				</div>
 			</div>

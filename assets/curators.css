@@ -329,7 +329,7 @@ h3 {
   height: 200px;
   width: 90px;
   display: inline-block;
-  background: url(pictures/left_arrow_currators.png);
+  background: url(pictures/left_arrow_curators.png);
   background-repeat: no-repeat;
   background-position:center center;
  }
@@ -344,7 +344,7 @@ h3 {
   height: 200px;
   width: 90px;
   display: inline-block;
-  background: url(pictures/right_arrow_currators.png);
+  background: url(pictures/right_arrow_curators.png);
   background-repeat: no-repeat;
   background-position:center center;
  }
@@ -354,7 +354,7 @@ h3 {
 
  }
 
-  .currator_avatar
+  .curator_avatar
   {
     height: 200px;
     width: 200px;

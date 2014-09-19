@@ -1,0 +1,59 @@
+<?php
+
+	include_once('connect_sql.php');
+
+//if(isset($_POST['pseudo']) AND isset($_POST['genre']) AND isset($_POST['link']))
+if(isset($_POST['pseudo']) AND isset($_POST['genre']) AND isset($_POST['link']) AND isset($_FILES['avatar']) AND $_FILES['avatar']['error'] == 0)
+{
+
+	//script avatar
+	// Testons si le fichier n'est pas trop gros
+    if ($_FILES['avatar']['size'] <= 1000000)
+    {
+            // Testons si l'extension est autorisée
+            $infosfichier = pathinfo($_FILES['avatar']['name']);
+            $extension_upload = $infosfichier['extension'];
+            $extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png');
+            if (in_array($extension_upload, $extensions_autorisees))
+            {
+                    // On peut valider le fichier et le stocker définitivement
+            		$avatarPath = ('../assets/pictures/' . $_POST['pseudo'] . '.' . $extension_upload);
+                    $req = $bdd->prepare('INSERT INTO curator(genre, pseudo, avatar_url, link) VALUES(:genre, :pseudo, :avatar_url, :link)');
+					$req->execute(array(
+						'genre' => $_POST['genre'],
+						'pseudo' => $_POST['pseudo'],
+						'avatar_url' => $avatarPath,
+						'link' => $_POST['link']
+						));
+					
+					$test =   move_uploaded_file($_FILES['avatar']['tmp_name'], $avatarPath);
+					if($test)
+					{
+						header('Location: http://soundpark.fm/view/create_playlist.php?addCurator=TRUE');
+					}
+					else
+					{
+						echo('non');
+					}
+
+						
+					
+            }
+            else
+            {
+            	echo($_FILES['avatar']['name']);
+            	echo('extension not supported for profiles pics');
+            }
+    }
+    else
+    {
+    	echo ('trop gros, coquin');
+    }
+
+	
+}
+
+else
+{
+	echo('poulpe');
+}
