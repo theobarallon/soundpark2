@@ -28,6 +28,11 @@
 			<div id="buttons_area">
 				<a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>" id="replay"></a>
 			</div>
-		</footer>		
+		</footer>	
+
+		 <!-- Mixpanel Logs -->
+		   <script type="text/javascript">
+		   		
+		   </script>	
 </body>
 </html>
