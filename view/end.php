@@ -14,15 +14,15 @@
 	<body>
 		
 		<header>
-			<h1><a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
+			<h1><a id="bannerBackLink" href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
 		</header>
 		<div class="container"> 
 				<h2>A la semaine prochaine ! </br> Si t'as kiffé, n'hésite pas à partager :</h2>
-				<a href="http://www.facebook.com/sharer.php?u=http://soundpark.fm/view/fromshare.php" target="_blank"><img src="../assets/pictures/fb_share_icon.png"></img></a>
+				<a href="http://www.facebook.com/sharer.php?u=http://soundpark.fm/view/landing.php" id="facebookShare" target="_blank"><img src="../assets/pictures/fb_share_icon.png"></img></a>
 				<img src="../assets/pictures/twitter_share_icon.png"> </img>
 				<img src="../assets/pictures/pinterest_share_icon.png"> </img>
 				<img src="../assets/pictures/rss_share_icon.png"> </img>
-				<a href="curators.php"><h3>Et merci qui ?</h3></a>
+				<a href="curators.php" id="curatorPageLink"><h3>Et merci qui ?</h3></a>
 		</div>
 		<footer>
 			<div id="buttons_area">
@@ -32,7 +32,15 @@
 
 		 <!-- Mixpanel Logs -->
 		   <script type="text/javascript">
-		   		
+
+		   		mixpanel.track_links("#bannerBackLink", "Clicked on the banner backlink", {fullUrl: window.location.href});
+		   		mixpanel.track_links("#facebookShare", "Clicked on the Facebook share Link", {fullUrl: window.location.href});
+		   		document.getElementById('replay').addEventListener('click', function () {
+					mixpanel.track("Replay Clicked");
+					}, false);
+		   		mixpanel.track_links("#curatorPageLink", "Clicked on the 'Et merci qui ?' Link", {fullUrl: window.location.href});
+		   		mixpanel.track("Page view", {fullUrl: window.location.href});
+
 		   </script>	
 </body>
 </html>

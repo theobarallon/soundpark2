@@ -40,6 +40,9 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 
 		   <!-- Mixpanel Logs -->
 		   <script type="text/javascript">
+		   		
+				mixpanel.track("Page view", {fullUrl: window.location.href});
+				
 		   		document.getElementById('replay').addEventListener('click', function () {
 					mixpanel.track("Replay Clicked");
 					}, false);

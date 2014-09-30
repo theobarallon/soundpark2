@@ -161,13 +161,16 @@ h1 {
 h2 {
   color: #777;
   margin-top: 8%;
-  font-size: 30px;
-  margin-bottom: 2%; }
+  font-family: 'open Sans';
+  font-weight: 300;
+  font-size: 1.7em; 
+  margin-bottom: 3%; }
 
 h3 {
   color: #777;
   margin-top: 2%;
-  font-size: 26px; }
+  font-family: 'open Sans';
+  font-size: 1.5em;  }
 
 form {
   margin: 0px; }

@@ -13,6 +13,13 @@
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/frommail7.css" media="all" rel="stylesheet" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" media="screen and (max-width: 1285px)" href="../assets/frommail7SmallRes.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/frommail7Mobile.css" />
+    <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/frommail7Mobile.css" />
+
+
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <script type="text/javascript" src="../assets/cookies.js"></script>

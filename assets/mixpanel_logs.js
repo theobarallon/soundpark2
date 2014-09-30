@@ -19,8 +19,3 @@ document.getElementById('play').addEventListener('click', function () {
 }, false);
 
 
-document.getElementById('replay').addEventListener('click', function () {
-	mixpanel.track("Replay Clicked");
-}, false);
-
-mixpanel.track_links("#slider a", "Clicked on a curator link");

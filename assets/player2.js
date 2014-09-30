@@ -19,12 +19,15 @@ var slider = function(id){
 	//alert(this.largeur);
 	this.prec = this.div.find('.previous');
 	this.suiv = this.div.find('.next');
+	this.precParent = this.div.find('#left_arrow');
+	this.suivParent = this.div.find('#right_arrow');
 	//alert(this.suiv.html());
-	this.saut=(this.lengthCach);
+	this.saut=(this.lengthCach)+4;
 	this.steps = Math.ceil(this.largeur/this.saut);
 	//alert(this.steps);
 	this.courant = 0;
 	this.prec.hide();
+	this.precParent.hide();
 
 	this.slideRight = function(){
 			if(self.courant<(self.steps-1)){
@@ -35,8 +38,10 @@ var slider = function(id){
 			if(self.courant==(self.steps-1))
 			{
 				self.suiv.fadeOut();
+				self.suivParent.fadeOut();
 			}
 			self.prec.fadeIn();
+			self.precParent.fadeIn();
 		}
 	}
 	this.slideLeft = function(){
@@ -49,10 +54,12 @@ var slider = function(id){
 			if(self.courant==(self.steps-2))
 			{
 				self.suiv.fadeIn();
+				self.suivParent.fadeIn();
 			}
 			if(self.courant==0)
 			{
 				self.prec.fadeOut();
+				self.precParent.fadeOut();
 			}
 		}
 		else

@@ -39,11 +39,11 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 1080px }
+  width: 900px }
 
 body
 {
-  text-align: center;
+	text-align: center;
 }
 
 
@@ -81,7 +81,7 @@ h1 {
 h1 {
   color: #666;
   margin-top: 15%;
-  font-size: 6em; }
+  font-size: 5.5em; }
 
 h2 {
   color: #777;
@@ -114,14 +114,14 @@ h3 {
     left: 0;
     background-image: url(pictures/footer.jpg);
     width: 100%;
-    height: 23%;
+    height: 150px;
   }
 
   #buttons_area
   {
     width: 100%;
     margin-top: 3%;
-    height: 40%;
+    height: 30%;
     -webkit-transition: margin-top 0.3s;
     transition: margin-top 0.3s;
    
@@ -152,7 +152,7 @@ input[value="play"]
   display: inline-block;
   width:60px;
   height:60px;
-  background: url(pictures/play_white.png);
+  background: url(pictures/play_white_smallRes.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
@@ -170,7 +170,7 @@ input[value="pause"]
   display: inline-block;
   width:60px;
   height:60px;
-  background: url(pictures/pause_white.png);
+  background: url(pictures/pause_white_smallRes.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
@@ -185,21 +185,22 @@ input[value="pause"]
 
   .container
   {
-    margin-top: 5%;
-    position: relative;
-    text-align: center;
+  	margin-top: 4.5%;
+  	position: relative;
+  	text-align: center;
     overflow: hidden;
-    height: 480px;
+    height: 380px;
   }
 
  
  #left_arrow, #right_arrow
  {
-  display: inline-block;
-  
-  width: 90px;
-  height: 280px;
-  text-align: center;
+ 	display: inline-block;
+ 	
+ 	width: 90px;
+ 	height: 280px;
+  margin-top: 30px;
+ 	text-align: center;
   background-color: white;
   z-index: 1000;
 
@@ -207,16 +208,16 @@ input[value="pause"]
 
  #left_arrow
  {
-   margin: 0 0 0 0;
-   position: absolute;
+ 	 margin: 0 0 0 0;
+ 	 position: absolute;
    left: 0;
     top:0;
  }
 
   #right_arrow
  {
-  float : right;
-  margin: 0 0 0 0;
+ 	float : right;
+ 	margin: 0 0 0 0;
   position: absolute;
   right: 0;
   top:0;
@@ -224,21 +225,21 @@ input[value="pause"]
 
 #left_arrow_icon
  {
-  height: 280px;
-  width: 90px;
+ 	height: 280px;
+ 	width: 90px;
   margin-top: 30px;
   border-style: none;
-  display: inline-block;
-  background: url(pictures/left_arrow.png);
-  background-repeat: no-repeat;
-  background-position:center center;
+ 	display: inline-block;
+ 	background: url(pictures/left_arrow_smallRes.png);
+ 	background-repeat: no-repeat;
+ 	background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
  #left_arrow_icon:hover
  {
-  background-image: url(pictures/left_arrow_hover.png);
+ 	background-image: url(pictures/left_arrow_hover_smallRes.png);
  }
 
 #left_arrow_icon:focus,
@@ -253,21 +254,21 @@ input[value="pause"]
 
  #right_arrow_icon
  {
-  height: 280px;
-  width: 90px;
+ 	height: 280px;
+ 	width: 90px;
   margin-top: 30px;
-  display: inline-block;
+ 	display: inline-block;
   border-style: none;
-  background: url(pictures/right_arrow.png);
-  background-repeat: no-repeat;
-  background-position:center center;
+ 	background: url(pictures/right_arrow_smallRes.png);
+ 	background-repeat: no-repeat;
+ 	background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
  #right_arrow_icon:hover
  {
-  background-image: url(pictures/right_arrow_hover.png);
+ 	background-image: url(pictures/right_arrow_hover_smallRes.png);
  }
 
 .trackIds
@@ -317,28 +318,25 @@ input[value="pause"]
     display: none;
   }
 
- .sound_box
+    .sound_box
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 210px 0 210px;
+    margin: 0 140px 0 140px;
     position: relative;
-    height: 480px;
+    height: 380px;
     width: auto;
   }
-  
 
   .sound_cover
   {
-    height: 280px;
-    width: 280px;
+    height: 240px;
+    width: 240px;
     margin-right: 10px;
     margin-top: 30px;
     display: inline-block;
     vertical-align: middle;
   }
-
- 
 
   .sound_informations
   {
@@ -353,7 +351,7 @@ input[value="pause"]
   {
     text-align: left;
     line-height: 2.5em;
-    font-size: 1.4em;
+    font-size: 1.3em;
 
     font-family: 'open Sans';
     font-weight: 300;
@@ -379,7 +377,7 @@ input[value="pause"]
   border-style: none;
   outline: none;
   box-shadow: none;
-  font-size: 3em;
+  font-size: 2.5em;
   width: 2em;
   height: 2em;
   background: none;
