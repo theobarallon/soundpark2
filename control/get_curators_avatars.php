@@ -5,7 +5,7 @@ $i = 1;
 while($songBoxes = $req->fetch())
 {
 	?>
-		><a href="<?php echo($songBoxes[2]);?>"><img src="<?php echo($songBoxes[1]);?>" class="curator_avatar" id="curator_avatar<?php echo($i);?>"></img></a
+		><a href="<?php echo($songBoxes[2]);?>"><img src="<?php echo($songBoxes[1]);?>" class="curator_avatar" id="curator_avatar<?php echo($songBoxes[0]);?>"></img></a
 	<?php 
 	$i++;
 };

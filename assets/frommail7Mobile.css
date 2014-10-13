@@ -76,7 +76,7 @@ h1, h2, h3 {
 
 h1 {
   font-family: 'Code';
-  margin: 0 0 10px 0; }
+  margin: 0 0 5px 0; }
 
 h1 {
   color: #666;
@@ -112,19 +112,18 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-image: url(pictures/footer.jpg);
+    background-image: none;
+    background-color: #660066;
     width: 100%;
-    height: 85px;
+    height: 80px;
   }
 
   #buttons_area
   {
     width: 100%;
-    margin-top: 3%;
-    height: 30%;
-    -webkit-transition: margin-top 0.3s;
-    transition: margin-top 0.3s;
-   
+    height: 100%;
+    margin: 0;
+    position: relative;   
   }
   
 
@@ -134,9 +133,8 @@ input[value="pause"]
   border-style: none;
   color: transparent;
   display: inline-block;
-    width:52px;
-    height:60px;
-    font-size: 0.0000001em;
+  margin-top: 22px;
+  font-size: 0.0000001em;
 }
 
 input[value="play"]:focus,
@@ -145,6 +143,7 @@ input[value="pause"]:focus
   border-style: none;
   outline: none;
   box-shadow: none;
+  text-align: center;
 }
 
 input[value="play"]
@@ -158,10 +157,6 @@ input[value="play"]
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 0;
-  margin-bottom: 0;
   vertical-align: middle;
 
 }
@@ -176,10 +171,6 @@ input[value="pause"]
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 0;
-  margin-bottom: 0;
   vertical-align: middle;
   }
 
@@ -189,20 +180,20 @@ input[value="pause"]
   	position: relative;
   	text-align: center;
     overflow: hidden;
-    height: 568px;
+    height: 400px;
   }
 
  
  #left_arrow, #right_arrow
  {
  	display: inline-block;
- 	width: 60px;
+ 	width: 50px;
  	height: 120px;
  	text-align: center;
   z-index: 1000;
   background-color: white;
   border-radius: 20px;
-  opacity: 0.8;
+  opacity: 0.6;
   margin: 0 10px 0 10px;
  }
 
@@ -211,7 +202,7 @@ input[value="pause"]
 
  	position: absolute;
   left: 0;
-  top:160px;
+  top:130px;
  }
 
   #right_arrow
@@ -220,17 +211,22 @@ input[value="pause"]
 
   position: absolute;
   right: 0;
-  top:160px;
+  top:130px;
  }
 
 #left_arrow_icon
  {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
   border-style: none;
  	display: inline-block;
- 	background: url(pictures/left_arrow_smallRes.png);
-    background-repeat: no-repeat;
+ 	background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
   background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
@@ -238,7 +234,13 @@ input[value="pause"]
 
  #left_arrow_icon:hover
  {
- 	background-image: url(pictures/left_arrow_hover_smallRes.png);
+ 	  background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
  }
 
 #left_arrow_icon:focus,
@@ -253,12 +255,16 @@ input[value="pause"]
 
  #right_arrow_icon
  {
- 	height: 60px;
- 	width: 60px;
-  margin-top: 30px;
+ 	height: 50px;
+ 	width: 50px;
+  margin-top: 35px;
  	display: inline-block;
   border-style: none;
- 	background: url(pictures/right_arrow_smallRes.png);
+ 	background: url(pictures/arrow_chevron_right.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
  	background-repeat: no-repeat;
  	background-position:center center;
   -webkit-transition: background-image 0.5s;
@@ -267,7 +273,13 @@ input[value="pause"]
 
  #right_arrow_icon:hover
  {
- 	background-image: url(pictures/right_arrow_hover_smallRes.png);
+ 	  background: url(pictures/arrow_chevron_right.png);
+      -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
  }
 
 .trackIds
@@ -329,8 +341,8 @@ input[value="pause"]
 
   .sound_cover
   {
-    height: 440px;
-    width: 440px;
+    height: 350px;
+    width: 350px;
     margin-right: 0;
     margin-top: 0;
     position: absolute;
@@ -374,6 +386,24 @@ input[value="pause"]
   }
  
 
+#minus_one
+{
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  left: 20px;
+}
+
+#plus_one
+{
+  position: absolute;
+    text-align: center;
+    top: 7px;
+  right: 20px;
+}
+
+
+
 #minus_one,
 #plus_one,
 #minus_one:focus,
@@ -392,6 +422,8 @@ input[value="pause"]
   font-family: 'open Sans';
   font-weight: 100;
   vertical-align: middle;
+  text-align: center;
+  padding: 1px;
 }
 
 #share_url
@@ -449,31 +481,31 @@ input[value="pause"]
 @-webkit-keyframes bounce
  {
     45% {
-        font-size: 1.5em;
+        font-size: 1.2em;
         
     }
     55% {
-        font-size: 1.5em;
+        font-size: 1.2em;
         
     }
     75% {
-        font-size: 4em;
+        font-size: 3em;
         
     }
 }
 
 keyframes bounce
  {
-    45% {
-        font-size: 1.5em;
+   45% {
+        font-size: 1.2em;
         
     }
     55% {
-        font-size: 1.5em;
+        font-size: 1.2em;
         
     }
     75% {
-        font-size: 4em;
+        font-size: 3em;
         
     }
 }

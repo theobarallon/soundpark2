@@ -16,7 +16,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="stylesheet" media="screen and (max-width: 1285px)" href="../assets/frommail7SmallRes.css" />
-    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/frommail7SmallRes.css" />
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/frommail7Mobile.css" />
     <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/frommail7Mobile.css" />
 
 
@@ -73,9 +73,15 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 		
 		<footer>
 			<div id="buttons_area">
-				<input type="button" id="minus_one" value="-1" onclick="addDislike()" align="center"/>
+
+				<!--<input type="button" id="minus_one" value="-1" onclick="addDislike()" align="center"/>
 				<input type="button" class="play" id="play" value="pause"/>
-				<input type="button" id="plus_one" value="+1" onclick="addLike()" align="center"/>
+				<input type="button" id="plus_one" value="+1" onclick="addLike()" align="center"/>-->
+
+				<button id="minus_one" type="button" onclick="addDislike()" ><div align="center">-1</div></button>
+				<input type="button" class="play" id="play" value="pause"/>
+				<button id="plus_one" onclick="addLike()" type="button"><div align="center">+1</div></button>
+
 				<form id="share_link">
 					<span class="share_url_title"> Share that tune --> </span>
 					<?php 

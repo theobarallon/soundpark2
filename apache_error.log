@@ -1,0 +1,4 @@
+[Sun Oct 05 15:49:27 2014] [notice] FastCGI: process manager initialized (pid 12908)
+[Sun Oct 05 15:49:27 2014] [notice] Digest: generating secret for digest authentication ...
+[Sun Oct 05 15:49:27 2014] [notice] Digest: done
+[Sun Oct 05 15:49:27 2014] [notice] Apache/2.2.26 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.6 PHP/5.5.10 mod_ssl/2.2.26 OpenSSL/0.9.8y DAV/2 mod_perl/2.0.8 Perl/v5.18.2 configured -- resuming normal operations
