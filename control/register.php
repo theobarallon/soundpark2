@@ -15,7 +15,7 @@
 	        $exists = $req->fetch();
 	        if($exists[0])
 	        {
-	        	header('Location: ../view/landing.php?alreadyExists=TRUE'); 
+	        	header('Location: ../view/landing2.php?alreadyExists=TRUE'); 
 	        	//include_once('../view/landing.php?alreadyExists=TRUE');
 	        }
 	        else
@@ -28,7 +28,7 @@
 	    }
 	    else
 	    {
-	        header('Location: ../view/landing.php?invalidEmail=TRUE'); 
+	        header('Location: ../view/landing2.php?invalidEmail=TRUE'); 
 	        //include_once('../view/landing.php?invalidEmail=TRUE');
 	    }
 	}

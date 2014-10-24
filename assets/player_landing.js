@@ -121,8 +121,8 @@ function updateCurrentTrack(trackId)
 
 	SC.stream("/tracks/"+trackId,{onfinish: function(){ 
 		
-		updateCurrentTrack(trackId);
-		$('.play').val("play"); 
+		nextTrack();
+		
 		}}, function(sound){
 		currentTrack = sound;
 		if ($('.play').val() == "pause") 

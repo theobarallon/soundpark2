@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	s = new slider("#slider");
+	s = new slider("#galerie");
 });
 
 

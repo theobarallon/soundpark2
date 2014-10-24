@@ -2,11 +2,14 @@
 
 @font-face {
   font-family: 'Code';
-  src: url("fonts/code_light.otf");
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
    }
 @font-face {
   font-family: 'CodeBold';
-  src: url("fonts/code_bold.otf");
+  src: url('fonts/code_bold.otf');
    }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
@@ -40,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body
 {
-	text-align: center;
+  text-align: center;
 }
 
 
@@ -109,8 +112,7 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #660066;
-    background-image: none;
+    background-image: url(pictures/footer.jpg);
     width: 100%;
     height: 23%;
   }
@@ -118,11 +120,95 @@ h3 {
   #buttons_area
   {
     width: 100%;
-    margin-top: 3%;
-    height: 40%;
+    margin-top: 4.3%;
+    height: 60%;
+    vertical-align: middle;
+    display: inline-block;
+    -webkit-transition: margin-top 0.3s;
+    transition: margin-top 0.3s;
    
   }
   
+
+ #like,
+ #dislike
+ {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 23px;
+ } 
+
+ #like
+{
+  margin-left: 2.3%;
+}
+
+#dislike
+{
+  margin-right: 2.3%;
+}
+
+input[value="-1"],
+input[value="+1"]
+{
+  border-style: none;
+  color: transparent;
+  display: inline-block;
+  vertical-align: middle;
+    width:35px;
+    height:35px;
+    font-size: 0.0000001em;
+}
+
+input[value="-1"]:focus,
+input[value="+1"]:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[value="-1"]
+{
+  display: inline-block;
+  width:35px;
+  height:35px;
+  background: url(pictures/cross_dislike.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+
+}
+input[value="+1"]
+{
+  display: inline-block;
+  width:35px;
+  height:35px;
+  background: url(pictures/heart_like.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+  }
+
+
+
+
 
   input[value="play"],
 input[value="pause"]
@@ -130,6 +216,7 @@ input[value="pause"]
   border-style: none;
   color: transparent;
   display: inline-block;
+  vertical-align: middle;
     width:52px;
     height:60px;
     font-size: 0.0000001em;
@@ -181,9 +268,9 @@ input[value="pause"]
 
   .container
   {
-  	margin-top: 5%;
-  	position: relative;
-  	text-align: center;
+    margin-top: 5%;
+    position: relative;
+    text-align: center;
     overflow: hidden;
     height: 480px;
   }
@@ -191,11 +278,11 @@ input[value="pause"]
  
  #left_arrow, #right_arrow
  {
- 	display: inline-block;
- 	
- 	width: 90px;
- 	height: 280px;
- 	text-align: center;
+  display: inline-block;
+  
+  width: 90px;
+  height: 280px;
+  text-align: center;
   background-color: white;
   z-index: 1000;
 
@@ -203,16 +290,16 @@ input[value="pause"]
 
  #left_arrow
  {
- 	 margin: 0 0 0 0;
- 	 position: absolute;
+   margin: 0 0 0 0;
+   position: absolute;
    left: 0;
     top:0;
  }
 
   #right_arrow
  {
- 	float : right;
- 	margin: 0 0 0 0;
+  float : right;
+  margin: 0 0 0 0;
   position: absolute;
   right: 0;
   top:0;
@@ -220,21 +307,21 @@ input[value="pause"]
 
 #left_arrow_icon
  {
- 	height: 280px;
- 	width: 90px;
+  height: 280px;
+  width: 90px;
   margin-top: 30px;
   border-style: none;
- 	display: inline-block;
- 	background: url(pictures/left_arrow.png);
- 	background-repeat: no-repeat;
- 	background-position:center center;
+  display: inline-block;
+  background: url(pictures/left_arrow.png);
+  background-repeat: no-repeat;
+  background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
  #left_arrow_icon:hover
  {
- 	background-image: url(pictures/left_arrow_hover.png);
+  background-image: url(pictures/left_arrow_hover.png);
  }
 
 #left_arrow_icon:focus,
@@ -249,21 +336,21 @@ input[value="pause"]
 
  #right_arrow_icon
  {
- 	height: 280px;
- 	width: 90px;
+  height: 280px;
+  width: 90px;
   margin-top: 30px;
- 	display: inline-block;
+  display: inline-block;
   border-style: none;
- 	background: url(pictures/right_arrow.png);
- 	background-repeat: no-repeat;
- 	background-position:center center;
+  background: url(pictures/right_arrow.png);
+  background-repeat: no-repeat;
+  background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
  #right_arrow_icon:hover
  {
- 	background-image: url(pictures/right_arrow_hover.png);
+  background-image: url(pictures/right_arrow_hover.png);
  }
 
 .trackIds
@@ -271,15 +358,7 @@ input[value="pause"]
   display: none;
 }
 
-  .sound_box
-  {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 210px 0 210px;
-    position: relative;
-    height: 480px;
-    width: auto;
-  }
+
 
   .like_stamp
   {
@@ -321,6 +400,15 @@ input[value="pause"]
     display: none;
   }
 
+ .sound_box
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 210px 0 210px;
+    position: relative;
+    height: 480px;
+    width: auto;
+  }
   
 
   .sound_cover
@@ -333,16 +421,15 @@ input[value="pause"]
     vertical-align: middle;
   }
 
+ 
+
   .sound_informations
   {
     margin-top: 30px;
-    height: 280px;
     display: inline-block;
     vertical-align: middle;
     padding: 0;
     overflow: hidden;
-    
-
   }
 
   .sound_informations h3
@@ -361,50 +448,55 @@ input[value="pause"]
 
   .slider
   {
-    width: 10000px;
+    width: 40000px;
     text-align: left;
     position : relative;
   }
  
 
-#minus_one,
-#plus_one,
-#minus_one:focus,
-#plus_one:focus
-{
-  border-style: none;
-  outline: none;
-  box-shadow: none;
-  font-size: 3em;
-  width: 2em;
-  height: 2em;
-  background: none;
-  text-decoration: none;
-  display: inline-block;
-  color: white;
-  font-family: 'open Sans';
-  font-weight: 300;
-  vertical-align: middle;
-}
+
 
 #share_url
 {
-  width: 626px;
+  width: 658px;
   margin-top: 15px;
-  background-color: #660066;
+  background-color: transparent;
   text-align: center;
   font-family: 'open Sans';
   font-weight: 300;
   font-size: 1em;
   color: white;
   height : 25px;
+  border-width: 1px;
   border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+}
+
+#share_url:hover
+{
+  border-color: white;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+  -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+  box-shadow: inset 0 1px 1px white, 0 0 8px white; 
+}
+
+#share_link
+{
   display: none;
 }
 
 
-#minus_one:hover,
-#plus_one:hover
+input[value="-1"]:hover,
+input[value="+1"]:hover
  {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: 0.4s;
@@ -419,15 +511,18 @@ input[value="pause"]
 @-webkit-keyframes bounce
  {
     45% {
-        font-size: 1.5em;
+        width: 25px;
+        height: 25px;
         
     }
     55% {
-        font-size: 1.5em;
+        width:  25px;
+        height: 25px;
         
     }
     75% {
-        font-size: 4em;
+        width:  50px;
+        height: 50px;
         
     }
 }
@@ -435,15 +530,28 @@ input[value="pause"]
 keyframes bounce
  {
     45% {
-        font-size: 1.5em;
+        width:  25px;
+        height: 25px;
         
     }
     55% {
-        font-size: 1.5em;
+        width:  25px;
+        height: 25px;
         
     }
     75% {
-        font-size: 4em;
+        width:  50px;
+        height: 50px;
         
     }
+}
+
+.share_url_title
+{
+  font-size: 1em;
+  width: 100px;
+  font-family: 'open Sans';
+  font-weight: 300;
+  color: white;
+  display: none;
 }

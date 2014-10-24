@@ -9,10 +9,11 @@
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/landing.css" media="all" rel="stylesheet" />
-    <meta property="og:site_name" content="Soundpark.fm"/>
-    <meta property="og:description" content="Every week, on monday, 9 o'clock, the trendiest music curated by the cream of the crop, lying in your mailbox" />
+     <meta property="og:site_name" content="Soundpark.fm"/>
+    <meta property="og:description" content=" Je viens d’écouter la playlist de Soundpark.fm sélectionnée par la crème de la crème. Tu devrais écouter aussi." />
     <meta property="og:image"
 content="http://soundpark.fm/assets/pictures/avatar_disco.png" />
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  
  

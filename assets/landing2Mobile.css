@@ -1,0 +1,573 @@
+/*Initionalisation, paramètre par défaut de bases et polices spécifiques*/
+
+@font-face {
+  font-family: 'Code';
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
+   }
+@font-face {
+  font-family: 'CodeBold';
+  src: url('fonts/code_bold.otf');
+   }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+* { margin:0; }
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 30px;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999; }
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  vertical-align: middle; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: white;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    box-shadow: inset 0 1px 1px white, 0 0 8px white; }
+  
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; }
+
+/*Page principale*/
+
+
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 320px }
+
+body
+{
+  text-align: center;
+}
+
+
+.container {
+display: inline-block;
+*zoom: 1; }
+.container:before, .container:after {
+display: table;
+content: "";
+line-height: 0; }
+.container:after {
+clear: both; }
+
+.container-fluid {
+padding-right: 20px;
+padding-left: 20px;
+*zoom: 1; }
+.container-fluid:before, .container-fluid:after {
+display: table;
+content: "";
+line-height: 0; }
+.container-fluid:after {
+clear: both; }
+
+
+h1, h2, h3 {
+  font-family: 'Code';
+  text-align: center;
+  font-weight: normal; }
+
+h1 {
+  font-family: 'Code';
+  margin: 0 0 20px 0; }
+
+h1 {
+  color: #666;
+  margin-top: 15%;
+  font-size: 45px; }
+
+h2 {
+  color: #777;
+  margin-top: 5%;
+  font-size: 25px; }
+
+h3 {
+  color: #777;
+  margin-top: 0px;
+  font-size: 26px; }
+
+
+
+  header h1
+  {
+    margin-top: 9%;
+  }
+  header h2
+  {
+  
+    margin: 4% 5% 0% 5%;
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1.4em; 
+  }
+
+#player_position
+{
+  display: none;
+}
+
+footer
+  {
+    position: relative;
+    background-color: #660066;
+    width: 100%;
+    height: 150px;
+    margin-top: 0;
+    z-index: 100;
+  }
+
+  #subscription_area
+  {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  footer form
+  {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+ 
+  }
+
+  footer h2
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    color: white;
+    margin-top: 0;
+    font-size: 1.4em;
+    margin-bottom: 10%;
+  }
+
+ 
+
+  .container
+  {
+    margin-top: 4.5%;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    height: 320px;
+    margin-bottom: 0;
+  }
+
+ 
+ #left_arrow, #right_arrow
+ {
+  display: inline-block;
+  width: 50px;
+  height: 120px;
+  text-align: center;
+  z-index: 900;
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0.6;
+  margin: 0 10px 0 10px;
+ }
+
+ #left_arrow
+ {
+
+  position: absolute;
+  left: 0;
+  top: 100px;
+ }
+
+  #right_arrow
+ {
+  float : right;
+
+  position: absolute;
+  right: 0;
+  top: 100px;
+ }
+
+#left_arrow_icon
+ {
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
+  border-style: none;
+  display: inline-block;
+  background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+ }
+
+ #left_arrow_icon:hover
+ {
+    background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
+ }
+
+#left_arrow_icon:focus,
+#right_arrow_icon:focus
+ {
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+ }
+
+
+
+ #right_arrow_icon
+ {
+  height: 50px;
+  width: 50px;
+  margin-top: 35px;
+  display: inline-block;
+  border-style: none;
+  background: url(pictures/arrow_chevron_right.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+ }
+
+ #right_arrow_icon:hover
+ {
+    background: url(pictures/arrow_chevron_right.png);
+      -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
+ }
+
+.trackIds
+{
+  display: none;
+}
+
+
+
+  .like_stamp
+  {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: 140px;
+    top: 21px;
+    display : none;
+    -webkit-transition: display 0.5s;
+    transition: display 0.5s;
+  }
+
+
+
+
+
+.sound_box
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 0;
+    position: relative;
+    height: 320px;
+    width: 320px;
+  }
+
+  .sound_cover
+  {
+    height: 320px;
+    width: 320px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .sound_informations
+  {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    vertical-align: middle;
+    padding: 0;
+    overflow: hidden;
+    margin-top: 0;
+  }
+
+  .sound_informations h3
+  {
+    text-align: left;
+    line-height: 1.5em;
+    font-size: 1em;
+    background-color: black;
+    opacity: 0.8;
+    font-family: 'open Sans';
+    font-weight: 300;
+    width: 250px;
+    color: white;
+    overflow: hidden;
+  }
+
+  .cover_wrapper
+  {
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 100;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+
+ 
+
+
+ input[value="play"],
+input[value="pause"]
+{
+  border-style: none;
+  color: transparent;
+  display: inline-block;
+  position: absolute;
+  z-index: 1000;
+
+    width:52px;
+    height:60px;
+    font-size: 0.0000001em;
+}
+
+input[value="play"]:focus,
+input[value="pause"]:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[value="play"]
+{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(pictures/play_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-left: 110px;
+  margin-top: 110px;
+}
+input[value="pause"]
+{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: url(pictures/pause_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-left: 110px;
+  margin-top: 110px;
+}
+
+
+
+  .like_stamp_left
+  {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: -10px;
+    top: 21px;
+    display: none;
+    -webkit-transition: display 0.5s;
+    transition: display 0.5s;
+  }
+
+
+.
+
+  .dislike_stamp_left
+  {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    left: -10px;
+    top: 21px;
+    display: none;
+  }
+
+
+.ribbon
+{
+  position: absolute;
+  top: -10px;
+  left: 3px;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  font-family: 'open Sans';
+  font-weight: 300;
+  z-index: 10;
+}
+
+
+
+  .slider
+  {
+    width: 40000px;
+    text-align: left;
+    position : relative;
+  }
+ 
+
+
+
+  input[type="text"], input[type="password"]
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    height : 25px;
+    border-radius: 0px;
+    width: 50%;
+    background-color: #660066; }
+    
+  input[name="user_password2"]
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    height : 25px;
+    border-radius: 0px;
+    width: 67%; }
+    
+  form input[type="submit"] {
+    border-radius: 3px;
+    background-color: #464545;
+    color: #fff;
+    padding: 4px 6px 2px;
+    border: none;
+    height : 35px;
+    width: 35px;
+    font-family: Code; 
+    border: 1px solid #a0a0a0;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #999; }

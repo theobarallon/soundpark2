@@ -2,11 +2,14 @@
 
 @font-face {
   font-family: 'Code';
-  src: url("fonts/code_light.otf");
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
    }
 @font-face {
   font-family: 'CodeBold';
-  src: url("fonts/code_bold.otf");
+  src: url('fonts/code_bold.otf');
    }
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
@@ -36,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 1080px }
+  width: 320px }
 
 body
 {
@@ -73,12 +76,12 @@ h1, h2, h3 {
 
 h1 {
   font-family: 'Code';
-  margin: 0 0 20px 0; }
+  margin: 0 0 5px 0; }
 
 h1 {
   color: #666;
   margin-top: 15%;
-  font-size: 6em; }
+  font-size: 45px; }
 
 h2 {
   color: #777;
@@ -94,7 +97,7 @@ h3 {
 
   header h1
   {
-    margin-top: 6%;
+    margin-top: 9%;
   }
   header h2
   {
@@ -109,20 +112,78 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #660066;
     background-image: none;
+    background-color: #660066;
     width: 100%;
-    height: 23%;
+    height: 80px;
   }
 
   #buttons_area
   {
     width: 100%;
-    margin-top: 3%;
-    height: 40%;
-   
+    height: 100%;
+    margin: 0;
+    position: relative;   
   }
   
+#like,
+ #dislike
+ {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 23px;
+ } 
+
+ #like
+{
+  margin-left: 2.3%;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  right: 20px;
+}
+
+#dislike
+{
+  margin-right: 2.3%;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  left: 20px;
+}
+
+
+input[value="-1"]
+{
+  display: inline-block;
+  width:20px;
+  height:20px;
+  background: url(pictures/cross_dislike.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[value="+1"]
+{
+  display: inline-block;
+  width:20px;
+  height:20px;
+  background: url(pictures/heart_like.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
 
   input[value="play"],
 input[value="pause"]
@@ -130,9 +191,8 @@ input[value="pause"]
   border-style: none;
   color: transparent;
   display: inline-block;
-    width:52px;
-    height:60px;
-    font-size: 0.0000001em;
+  margin-top: 22px;
+  font-size: 0.0000001em;
 }
 
 input[value="play"]:focus,
@@ -141,100 +201,104 @@ input[value="pause"]:focus
   border-style: none;
   outline: none;
   box-shadow: none;
+  text-align: center;
 }
 
 input[value="play"]
 {
   display: inline-block;
-  width:60px;
-  height:60px;
-  background: url(pictures/play_white.png);
+  width:35px;
+  height:35px;
+  background: url(pictures/play_white_smallRes.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 0;
-  margin-bottom: 0;
   vertical-align: middle;
 
 }
 input[value="pause"]
 {
   display: inline-block;
-  width:60px;
-  height:60px;
-  background: url(pictures/pause_white.png);
+  width:35px;
+  height:35px;
+  background: url(pictures/pause_white_smallRes.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-right: 15%;
-  margin-left: 15%;
-  margin-top: 0;
-  margin-bottom: 0;
   vertical-align: middle;
   }
 
   .container
   {
-  	margin-top: 5%;
+  	margin-top: 4.5%;
   	position: relative;
   	text-align: center;
     overflow: hidden;
-    height: 480px;
+    height: 400px;
   }
 
  
  #left_arrow, #right_arrow
  {
  	display: inline-block;
- 	
- 	width: 90px;
- 	height: 280px;
+ 	width: 50px;
+ 	height: 120px;
  	text-align: center;
-  background-color: white;
   z-index: 1000;
-
+  background-color: white;
+  border-radius: 20px;
+  opacity: 0.6;
+  margin: 0 10px 0 10px;
  }
 
  #left_arrow
  {
- 	 margin: 0 0 0 0;
- 	 position: absolute;
-   left: 0;
-    top:0;
+
+ 	position: absolute;
+  left: 0;
+  top: 130px;
  }
 
   #right_arrow
  {
  	float : right;
- 	margin: 0 0 0 0;
+
   position: absolute;
   right: 0;
-  top:0;
+  top: 130px;
  }
 
 #left_arrow_icon
  {
- 	height: 280px;
- 	width: 90px;
-  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
   border-style: none;
  	display: inline-block;
- 	background: url(pictures/left_arrow.png);
- 	background-repeat: no-repeat;
- 	background-position:center center;
+ 	background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
  #left_arrow_icon:hover
  {
- 	background-image: url(pictures/left_arrow_hover.png);
+ 	  background: url(pictures/arrow_chevron_left.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
  }
 
 #left_arrow_icon:focus,
@@ -249,12 +313,16 @@ input[value="pause"]
 
  #right_arrow_icon
  {
- 	height: 280px;
- 	width: 90px;
-  margin-top: 30px;
+ 	height: 50px;
+ 	width: 50px;
+  margin-top: 35px;
  	display: inline-block;
   border-style: none;
- 	background: url(pictures/right_arrow.png);
+ 	background: url(pictures/arrow_chevron_right.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
  	background-repeat: no-repeat;
  	background-position:center center;
   -webkit-transition: background-image 0.5s;
@@ -263,7 +331,13 @@ input[value="pause"]
 
  #right_arrow_icon:hover
  {
- 	background-image: url(pictures/right_arrow_hover.png);
+ 	  background: url(pictures/arrow_chevron_right.png);
+      -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
  }
 
 .trackIds
@@ -271,15 +345,7 @@ input[value="pause"]
   display: none;
 }
 
-  .sound_box
-  {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 210px 0 210px;
-    position: relative;
-    height: 480px;
-    width: auto;
-  }
+
 
   .like_stamp
   {
@@ -321,129 +387,92 @@ input[value="pause"]
     display: none;
   }
 
-  
+    .sound_box
+  {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 0;
+    position: relative;
+    height: 568px;
+    width: 320px;
+  }
 
   .sound_cover
   {
-    height: 280px;
-    width: 280px;
-    margin-right: 10px;
-    margin-top: 30px;
+    height: 350px;
+    width: 350px;
+    margin-right: 0;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: inline-block;
     vertical-align: middle;
   }
 
   .sound_informations
   {
-    margin-top: 30px;
-    height: 280px;
-    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: 10px;
     vertical-align: middle;
     padding: 0;
     overflow: hidden;
-    
-
+    margin-top: 0;
   }
 
   .sound_informations h3
   {
     text-align: left;
-    line-height: 2.5em;
-    font-size: 1.4em;
-
+    line-height: 1.5em;
+    font-size: 1em;
+    background-color: black;
+    opacity: 0.8;
     font-family: 'open Sans';
     font-weight: 300;
-    width: 363px;
-    color: black;
+    width: 250px;
+    color: white;
     overflow: hidden;
   }
 
 
   .slider
   {
-    width: 10000px;
+    width: 40000px;
     text-align: left;
     position : relative;
   }
  
 
-#minus_one,
-#plus_one,
-#minus_one:focus,
-#plus_one:focus
-{
-  border-style: none;
-  outline: none;
-  box-shadow: none;
-  font-size: 3em;
-  width: 2em;
-  height: 2em;
-  background: none;
-  text-decoration: none;
-  display: inline-block;
-  color: white;
-  font-family: 'open Sans';
-  font-weight: 300;
-  vertical-align: middle;
-}
-
 #share_url
 {
-  width: 626px;
-  margin-top: 15px;
-  background-color: #660066;
-  text-align: center;
-  font-family: 'open Sans';
-  font-weight: 300;
-  font-size: 1em;
-  color: white;
-  height : 25px;
-  border-radius: 0px;
+  display: none;
+}
+
+#share_url:hover
+{
+  border-color: white;
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+  -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+  box-shadow: inset 0 1px 1px white, 0 0 8px white; 
+}
+
+#share_link
+{
   display: none;
 }
 
 
-#minus_one:hover,
-#plus_one:hover
- {
-    -webkit-animation-name: bounce;
-    -webkit-animation-duration: 0.4s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-name: bounce;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
-    animation-iteration-count: 1;
-}
 
-@-webkit-keyframes bounce
- {
-    45% {
-        font-size: 1.5em;
-        
-    }
-    55% {
-        font-size: 1.5em;
-        
-    }
-    75% {
-        font-size: 4em;
-        
-    }
-}
-
-keyframes bounce
- {
-    45% {
-        font-size: 1.5em;
-        
-    }
-    55% {
-        font-size: 1.5em;
-        
-    }
-    75% {
-        font-size: 4em;
-        
-    }
+.share_url_title
+{
+  font-size: 1em;
+  width: 100px;
+  font-family: 'open Sans';
+  font-weight: 300;
+  color: white;
+  display: none;
 }

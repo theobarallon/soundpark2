@@ -17,7 +17,7 @@
 			<h1><a id="bannerBackLink" href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
 		</header>
 		<div class="container"> 
-				<h2>A la semaine prochaine ! </br> Si t'as kiffé, n'hésite pas à partager :</h2>
+				<h2>A la semaine prochaine ! </br> Si ça t'a plu, n'hésite pas à partager :</h2>
 				<a href="http://www.facebook.com/sharer.php?u=http://soundpark.fm/view/landing.php" id="facebookShare" target="_blank"><img src="../assets/pictures/fb_share_icon.png"></img></a>
 				<img src="../assets/pictures/twitter_share_icon.png"> </img>
 				<img src="../assets/pictures/pinterest_share_icon.png"> </img>
