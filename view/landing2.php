@@ -19,7 +19,7 @@
     <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/landing2Mobile.css" />
 
     <meta property="og:site_name" content="Soundpark.fm"/>
-    <meta property="og:description" content=" Je viens d’écouter la playlist de Soundpark.fm sélectionnée par la crème de la crème. Tu devrais écouter aussi." />
+    <meta property="og:description" content="Toutes les semaines, le lundi à 10h, le meilleur de la musique sélectionné par la crème de la crème, au chaud dans ta boîte mail" />
     <meta property="og:image"
 content="http://soundpark.fm/assets/pictures/avatar_disco.png" />
 
