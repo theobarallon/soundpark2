@@ -263,6 +263,7 @@ footer
   {
     width: 80%;
     margin: auto;
+    vertical-align: middle;
     text-align: center;
  
   }
@@ -614,6 +615,9 @@ input[value="pause"]
     width: 35px;
     font-family: Code; 
     border: 1px solid #a0a0a0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;  
     }
 
     form input[type="submit"]:hover {
