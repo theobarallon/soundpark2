@@ -261,9 +261,10 @@ footer
   }
   footer form
   {
-    width: 80%;
+    position: relative;
+    width: 90%;
     margin: auto;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
  
   }
@@ -585,8 +586,9 @@ input[value="pause"]
 
 
 
-  input[type="text"], input[type="password"]
+  input[type="text"]
   {
+    vertical-align: top;
     font-family: 'open Sans';
     font-weight: 300;
     font-size: 1em;
@@ -596,16 +598,9 @@ input[value="pause"]
     width: 50%;
     background-color: #531931; }
     
-  input[name="user_password2"]
-  {
-    font-family: 'open Sans';
-    font-weight: 300;
-    font-size: 1em;
-    height : 25px;
-    border-radius: 0px;
-    width: 67%; }
     
   form input[type="submit"] {
+    vertical-align: top;
     border-radius: 3px;
     background-color: #464545;
     color: #fff;
@@ -615,6 +610,7 @@ input[value="pause"]
     width: 35px;
     font-family: Code; 
     border: 1px solid #a0a0a0;
+    font-size: 0.9em;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;  
