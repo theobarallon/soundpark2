@@ -178,21 +178,65 @@ h3 {
   margin-top: 0px;
   font-size: 26px; }
 
-
+ header
+ {
+  height: 18em;
+  width: 100%;
+  background: url(pictures/headerMobile.jpg);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
+  background-position:center center;
+  margin-top: 0%;
+ }
 
   header h1
   {
-    margin-top: 9%;
+    margin: 0;
+  }
+
+    #title
+  {
+    margin-top: 0;
+    padding-top: 28px;
+    padding-bottom: 25px;
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    opacity: 0.7;
   }
   header h2
   {
   
-    margin: 4% 5% 0% 5%;
+    margin: 6% 5% 0% 5%;
     font-family: 'open Sans';
     font-weight: 300;
-    font-size: 1.4em; 
+    font-size: 1.3em; 
+    color: white;
+    padding: 0 10px 0 10px;
   }
 
+.tagline
+{
+  color: white;
+}
+
+#tagLineContainer
+{
+  display: inline-block;
+  width: 80%;
+  margin: auto;
+}
+
+#tagLineContainer h2
+{
+  font-family: 'open sans';
+  font-weight: 300;
+  font-size: 1.3em; 
+  color: #531931;
+}
 #player_position
 {
   display: none;
@@ -201,7 +245,7 @@ h3 {
 footer
   {
     position: relative;
-    background-color: #660066;
+    background-color: #531931;
     width: 100%;
     height: 150px;
     margin-top: 0;
@@ -230,19 +274,19 @@ footer
     color: white;
     margin-top: 0;
     font-size: 1.4em;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 
  
 
   .container
   {
-    margin-top: 4.5%;
+    margin-top: 0;
     position: relative;
     text-align: center;
     overflow: hidden;
-    height: 320px;
-    margin-bottom: 0;
+    height: 220px;
+    margin-bottom: 10%;
   }
 
  
@@ -250,13 +294,12 @@ footer
  {
   display: inline-block;
   width: 50px;
-  height: 120px;
+  height: 220px;
   text-align: center;
   z-index: 900;
   background-color: white;
-  border-radius: 20px;
-  opacity: 0.6;
-  margin: 0 10px 0 10px;
+  opacity: 1;
+  margin: 0;
  }
 
  #left_arrow
@@ -264,7 +307,7 @@ footer
 
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 0;
  }
 
   #right_arrow
@@ -273,14 +316,14 @@ footer
 
   position: absolute;
   right: 0;
-  top: 100px;
+  top: 0;
  }
 
 #left_arrow_icon
  {
   width: 50px;
   height: 50px;
-  margin-top: 35px;
+  margin-top: 85px;
   border-style: none;
   display: inline-block;
   background: url(pictures/arrow_chevron_left.png);
@@ -319,7 +362,7 @@ footer
  {
   height: 50px;
   width: 50px;
-  margin-top: 35px;
+  margin-top: 85px;
   display: inline-block;
   border-style: none;
   background: url(pictures/arrow_chevron_right.png);
@@ -371,16 +414,16 @@ footer
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 0 0 0;
+    margin: 0 50px 0 50px;
     position: relative;
-    height: 320px;
-    width: 320px;
+    height: 220px;
+    width: 220px;
   }
 
   .sound_cover
   {
-    height: 320px;
-    width: 320px;
+    height: 220px;
+    width: 220px;
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
@@ -394,8 +437,9 @@ footer
   .sound_informations
   {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    bottom: 3px;
+    left: 3px;
+    width: 217px;
     vertical-align: middle;
     padding: 0;
     overflow: hidden;
@@ -418,8 +462,8 @@ footer
 
   .cover_wrapper
   {
-    height: 320px;
-    width: 320px;
+    height: 220px;
+    width: 220px;
     position: absolute;
     top: 0;
     left: 0;
@@ -458,30 +502,30 @@ input[value="pause"]:focus
 input[value="play"]
 {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background: url(pictures/play_white.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-left: 110px;
-  margin-top: 110px;
+  margin-left: 80px;
+  margin-top: 80px;
 }
 input[value="pause"]
 {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background: url(pictures/pause_white.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
   vertical-align: middle;
-  margin-left: 110px;
-  margin-top: 110px;
+  margin-left: 80px;
+  margin-top: 80px;
 }
 
 
@@ -515,10 +559,13 @@ input[value="pause"]
 .ribbon
 {
   position: absolute;
-  top: -10px;
-  left: 3px;
-  background-color: black;
-  color: white;
+  top: 0px;
+  left: 0px;
+  width: 220px;
+  text-align: center;
+  background-color: white;
+  opacity: 0.85;
+  color: black;
   font-size: 1em;
   font-family: 'open Sans';
   font-weight: 300;
@@ -546,7 +593,7 @@ input[value="pause"]
     height : 25px;
     border-radius: 0px;
     width: 50%;
-    background-color: #660066; }
+    background-color: #531931; }
     
   input[name="user_password2"]
   {

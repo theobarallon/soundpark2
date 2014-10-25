@@ -193,6 +193,16 @@ h3 {
     font-size: 1.7em; 
   }
 
+  .tagline
+{
+  color: #660066;
+}
+
+#tagLineContainer
+{
+  display: none;
+}
+
 #player_position
 {
   display: none;

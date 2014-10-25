@@ -44,13 +44,15 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
  
 	<body>
 		<header>
-			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
+			<div id="title">
+				<h1>Soundpark.<span style="color: #660066">fm</span></h1>
+			</div>
 			<h2 id="player_position"><?php include("../control/display_player_position.php"); ?></h2>
-			<h2>Toutes les semaines, le lundi à 10h, <span style="color: #660066">le meilleur de la musique</span> sélectionné par <span style="color: #660066">la crème de la crème</span>, au chaud <span style="color: #660066">dans ta boîte mail</span>.</h2>
+			<h2>Toutes les semaines, le lundi à 10h, <span class="tagline">le meilleur de la musique</span> sélectionné par <span class="tagline">la crème de la crème</span>, au chaud <span class="tagline">dans ta boîte mail</span>.</h2>
 			<!--<h3> <?php //echo($_COOKIE['playlist_url']); ?> </h3>-->
 			<!--<h3> <?php //echo($_COOKIE['current_user']); ?> </h3>-->
 		</header>
-		
+		<div id="tagLineContainer"><h2>Cette semaine, les sons qui ont buzzé :</h2></div>
 		<div class="container" id="galerie"> 
 			
 			<div id="left_arrow">
@@ -59,17 +61,17 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 			<div id="right_arrow">
 				<input type="button" id="right_arrow_icon" class="next" onclick="nextTrack()"/>
 			</div>
-			<div class="slider">
+			<div class="slider"
 			<?php include_once('../control/display_landing_song_boxes.php'); ?>
 			<?php 
 				$req = $bdd->query('SELECT trackId, count(distinct like.ID) FROM song, playlist, soundpark2.like WHERE song.ID_playlist=playlist.ID AND like.ID_song = song.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW() GROUP BY trackId order by count(distinct soundpark2.like.ID) DESC LIMIT 3');
 				$i = 0;
 				while($trackIds = $req->fetch())
 				{
-					?> <div class="trackIds"><?php echo($trackIds[0]); ?></div> <?php
+					?> ><div class="trackIds"><?php echo($trackIds[0]); ?></div <?php
 				};
 			?>	
-			</div			
+			></div			
 		></div		
 		><footer>
 			<div id="subscription_area">
