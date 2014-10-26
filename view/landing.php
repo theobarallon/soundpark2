@@ -91,4 +91,45 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
     <script type="text/javascript" src="../assets/player_landing.js"></script>
     <script type="text/javascript" src="../assets/glide_up_share_link.js"></script>
     <script type="text/javascript" src="../assets/on_load_landing.js"></script>
+   
+    <!-- MIXPANEL TRACKING CODE -->
+    <script>
+
+
+	mixpanel.track("Page view", {
+			"fullUrl": window.location.href,
+			});
+
+	var elements = document.getElementsByClassName('play');
+
+	for (var i = 0; i < elements.length; i++) {
+	    elements[i].addEventListener('click', function() 
+	    { 
+	    	//mixpanel.track("Play/Pause Clicked on landing"); 
+
+		}, false);
+	}​
+
+
+
+	document.getElementById('user_email').addEventListener('click', function () 
+	{
+		mixpanel.track("email input field clicked");
+	}, false);
+
+	mixpanel.track_forms("#new_user", "Created Account", {"emailAdress": document.getElementById('user_email').value});
+
+
+	document.getElementById('right_arrow_icon').addEventListener('click', function () {
+		mixpanel.track("Next Clicked");
+	}, false);
+
+	document.getElementById('left_arrow_icon').addEventListener('click', function () {
+		mixpanel.track("Previous Clicked");
+	}, false);
+
+
+
+	</script>
+
 </html>
