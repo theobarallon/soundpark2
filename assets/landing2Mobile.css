@@ -348,6 +348,7 @@ footer
   background-size: cover; /* version standardisée */
   background-repeat: no-repeat;
   background-position:center center;
+  cursor: pointer;
  }
 
 #left_arrow_icon:focus,
@@ -387,6 +388,7 @@ footer
   background-size: cover; /* version standardisée */
   background-repeat: no-repeat;
   background-position:center center;
+  cursor: pointer;
  }
 
 .trackIds
@@ -554,11 +556,13 @@ input[value="pause"]
   top: 0px;
   left: 0px;
   width: 220px;
+  height: 29px;
   text-align: center;
   background-color: white;
+  padding-top: 6px;
   opacity: 0.9;
   color: black;
-  font-size: 1.05em;
+  font-size: 1.1em;
   font-family: 'open Sans';
   font-weight: 300;
   z-index: 10;

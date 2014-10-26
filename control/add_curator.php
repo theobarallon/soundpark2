@@ -17,7 +17,7 @@ if(isset($_POST['pseudo']) AND isset($_POST['genre']) AND isset($_POST['link']) 
             if (in_array($extension_upload, $extensions_autorisees))
             {
                     // On peut valider le fichier et le stocker définitivement
-            		$avatarPath = ('../assets/pictures/' . $_POST['pseudo'] . '.' . $extension_upload);
+            		$avatarPath = ('../assets/pictures/uploaded_avatars/' . $_POST['pseudo'] . '.' . $extension_upload);
                     $req = $bdd->prepare('INSERT INTO curator(genre, pseudo, avatar_url, link) VALUES(:genre, :pseudo, :avatar_url, :link)');
 					$req->execute(array(
 						'genre' => $_POST['genre'],

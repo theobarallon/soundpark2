@@ -65,9 +65,6 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 					?> <div class="trackIds"><?php echo($trackIds[0]); ?></div> <?php
 				};
 			?>
-
-
-				
 			</div>
 			
 		</div>
