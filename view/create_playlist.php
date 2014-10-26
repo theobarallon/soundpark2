@@ -33,10 +33,16 @@
 			 <span>URL : </span><input autofocus="autofocus" id="song_url" name="song_url" type="url" />
 		      <label for="playlist">Dans quelle playlist ?</label>
 		       <select name="playlist" id="playlist">
-		           <option value="11">Playlist du 15 au 21 septembre</option>
-		           <option value="12">Playlist du 22 au 28 septembre</option>
-		           <option value="13">Playlist du 29 septembre au 5 octobre</option>
-		           <option value="14">Playlist du 6 au 12 octobre</option>
+		           <option value="15">Playlist du 26 octobre au 02 novembre</option>
+		           <option value="16">Playlist du 03 au 09 novembre</option>
+		           <option value="17">Playlist du 10 au 16 novembre</option>
+		           <option value="18">Playlist du 17 au 23 novembre</option>
+		           <option value="19">Playlist du 24 au 30 novembre</option>
+		           <option value="20">Playlist du 01 au 07 decembre</option>
+		           <option value="21">Playlist du 08 au 14 decembre</option>
+		           <option value="22">Playlist du 15 au 21 decembre</option>
+		           <option value="23">Playlist du 22 au 28 decembre</option>
+		           <option value="24">Playlist du 29 decembre au 04 janvier</option>
 		       </select>
 		       <?php 
 		      	include_once('../model/get_curators.php');
