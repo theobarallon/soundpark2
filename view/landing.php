@@ -105,7 +105,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 	for (var i = 0; i < elements.length; i++) {
 	    elements[i].addEventListener('click', function() 
 	    { 
-	    	//mixpanel.track("Play/Pause Clicked on landing"); 
+	    	mixpanel.track("Play/Pause Clicked on landing"); 
 
 		}, false);
 	}​

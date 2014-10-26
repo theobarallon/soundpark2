@@ -1,6 +1,6 @@
 <?php
 
-include_once('connect_sql.php');
+include_once('../model/connect_sql.php');
 
 
 if(isset($_GET['title']) AND isset($_GET['artist']) AND isset($_GET['trackArtWork']) AND isset($_GET['genre']) AND isset($_GET['trackId']) AND isset($_GET['idCurator']) )
