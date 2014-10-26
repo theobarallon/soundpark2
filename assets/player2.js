@@ -35,11 +35,11 @@ var slider = function(id){
 			self.slider.animate({
 				left:-self.courant*self.saut
 			},400);
-			if(self.courant==(self.steps-1))
+			/*if(self.courant==(self.steps-1))
 			{
 				self.suiv.fadeOut();
 				self.suivParent.fadeOut();
-			}
+			}*/
 			self.prec.fadeIn();
 			self.precParent.fadeIn();
 		}
@@ -51,11 +51,11 @@ var slider = function(id){
 			self.slider.animate({
 				left:-self.courant*self.saut
 			},400);
-			if(self.courant==(self.steps-2))
+			/*if(self.courant==(self.steps-2))
 			{
 				self.suiv.fadeIn();
 				self.suivParent.fadeIn();
-			}
+			}*/
 			if(self.courant==0)
 			{
 				self.prec.fadeOut();
@@ -85,6 +85,7 @@ var position = 0;
 
 var trackIds = document.getElementsByClassName('trackIds');
 var songTable = [];
+
 
 for(var i = 0 ; i<trackIds.length ; i++)
 {
@@ -117,7 +118,9 @@ $('#play').click(function() //Gestion du bouton de lecture/pause en toggle
 
 function updateCurrentTrack(trackId) 
 {
+	
 	SC.stream("/tracks/"+trackId,{onfinish: function(){ nextTrack();}}, function(sound){
+		
 		currentTrack = sound;
 		if ($('#play').val() == "pause") 
 		{	

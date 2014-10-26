@@ -15,6 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <link rel="stylesheet" media="screen and (max-width: 1285px)" href="../assets/landing2smallRes.css" />
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/landing2smallRes.css" />
+    <link rel="stylesheet" media="screen and (max-height: 700px)" href="../assets/landing2smallRes.css" />
     <link rel="stylesheet" media="screen and (min-width: 1700px)" href="../assets/landing2HighRes.css" />
     <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/landing2Mobile.css" />
 
@@ -100,17 +101,14 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 			"fullUrl": window.location.href,
 			});
 
-	var elements = document.getElementsByClassName('play');
+	//var elements = document.getElementsByClassName('play');
+	
 
-	for (var i = 0; i < elements.length; i++) {
-	    elements[i].addEventListener('click', function() 
+	for (var i = 0 ; i < document.getElementsByClassName('play').length; i++){document.getElementsByClassName('play')[i].addEventListener('click', function() 
 	    { 
 	    	mixpanel.track("Play/Pause Clicked on landing"); 
 
-		}, false);
-	}​
-
-
+		}, false);}
 
 	document.getElementById('user_email').addEventListener('click', function () 
 	{
