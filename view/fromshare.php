@@ -20,10 +20,9 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 
   <head>
     <title>Soundpark</title>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/fromshare.css" media="all" rel="stylesheet" />
-    <script src="../assets/player_fromshare.js"></script>
-       <script src="http://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
@@ -36,7 +35,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 		</header>
 		
 		<div class="container"> 
-			<input type="button" class="play" id="play" value="play"/>
+			
 			<?php include_once('../control/display_share_song_box.php'); ?>
 
 		
@@ -55,7 +54,6 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 			</div>
 		</footer>		
 </body>
-<script src="../assets/player_fromshare.js"></script>
 
 <script>
 
@@ -88,5 +86,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 
 
 </script>
+
+<script src="../assets/player_fromshare.js"></script>
 
 </html>

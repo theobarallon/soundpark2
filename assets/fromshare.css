@@ -264,6 +264,7 @@ h3 {
     display: inline-block;
     margin: 0 0 0 0;
     height: 280px;
+    position: relative;
 
   }
 
@@ -275,6 +276,93 @@ h3 {
     display: inline-block;
     vertical-align: middle;
   }
+
+  .ribbon
+{
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  font-family: 'open Sans';
+  font-weight: 300;
+  z-index: 10;
+}
+
+ .cover_wrapper
+  {
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+
+ 
+
+
+ input[value="play"],
+input[value="pause"]
+{
+  border-style: none;
+  color: transparent;
+  display: inline-block;
+  position: absolute;
+
+    width:52px;
+    height:60px;
+    font-size: 0.0000001em;
+}
+
+input[value="play"]:focus,
+input[value="pause"]:focus
+{
+  border-style: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[value="play"]:hover,
+input[value="pause"]:hover
+{
+  cursor: pointer;
+}
+
+
+input[value="play"]
+{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url(pictures/play_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+input[value="pause"]
+{
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url(pictures/pause_white.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+  vertical-align: middle;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
 
   .sound_informations
   {
@@ -299,60 +387,7 @@ h3 {
 
 /* Bouton Play/pause */
 
-  input[value="play"],
-input[value="pause"]
-{
-  border-style: none;
-  color: transparent;
-  display: inline-block;
-    width:52px;
-    height:60px;
-    font-size: 0.0000001em;
-}
-
-input[value="play"]:focus,
-input[value="pause"]:focus
-{
-  border-style: none;
-  outline: none;
-  box-shadow: none;
-}
-
-input[value="play"]
-{
-  display: inline-block;
-  width:60px;
-  height:60px;
-  background: url(pictures/play.png);
-  -webkit-background-size: cover; /* pour Chrome et Safari */
-  -moz-background-size: cover; /* pour Firefox */
-  -o-background-size: cover; /* pour Opera */
-  background-size: cover; /* version standardisée */
-  vertical-align: middle;
-  margin-right: 3%;
-  margin-left: 2%;
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-
-}
-input[value="pause"]
-{
-  display: inline-block;
-  width:60px;
-  height:60px;
-  background: url(pictures/pause.png);
-  -webkit-background-size: cover; /* pour Chrome et Safari */
-  -moz-background-size: cover; /* pour Firefox */
-  -o-background-size: cover; /* pour Opera */
-  background-size: cover; /* version standardisée */
-  vertical-align: middle;
-  margin-right: 3%;
-  margin-left: 2%;
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: middle;
-  }
+  
 
 .trackId
 {
