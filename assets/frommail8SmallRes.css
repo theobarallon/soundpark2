@@ -478,6 +478,7 @@ input[value="+1"]:hover
     animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    cursor: pointer;
 }
 
 @-webkit-keyframes bounce

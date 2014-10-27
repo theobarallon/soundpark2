@@ -467,8 +467,8 @@ input[value="+1"]
 }
 
 
-#minus_one:hover,
-#plus_one:hover
+input[value="-1"]:hover,
+input[value="+1"]:hover
  {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: 0.4s;
@@ -478,6 +478,7 @@ input[value="+1"]
     animation-duration: 0.4s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
+    cursor: pointer;
 }
 
 @-webkit-keyframes bounce
