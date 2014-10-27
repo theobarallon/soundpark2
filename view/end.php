@@ -46,6 +46,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 
 		   		mixpanel.track_links("#bannerBackLink", "Clicked on the banner backlink", {fullUrl: window.location.href});
 		   		mixpanel.track_links("#facebookShare", "Clicked on the Facebook share Link", {fullUrl: window.location.href});
+		   		mixpanel.track_links("#twitterShare", "Clicked on the Facebook share Link", {fullUrl: window.location.href});
 		   		document.getElementById('replay').addEventListener('click', function () {
 					mixpanel.track("Replay Clicked");
 					}, false);

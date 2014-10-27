@@ -101,33 +101,26 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
     <script>
 
 
-	mixpanel.track("Page view", {
-			"fullUrl": window.location.href,
-			});
-
-	//var elements = document.getElementsByClassName('play');
-	
-
 	for (var i = 0 ; i < document.getElementsByClassName('play').length; i++){document.getElementsByClassName('play')[i].addEventListener('click', function() 
 	    { 
-	    	mixpanel.track("Play/Pause Clicked on landing"); 
+	    	mixpanel.track("Play/Pause Clicked on landing", {fullUrl: window.location.href}); 
 
 		}, false);}
 
 	document.getElementById('user_email').addEventListener('click', function () 
 	{
-		mixpanel.track("email input field clicked");
+		mixpanel.track("email input field clicked", {fullUrl: window.location.href});
 	}, false);
 
 	mixpanel.track_forms("#new_user", "Created Account", {"emailAdress": document.getElementById('user_email').value});
 
 
 	document.getElementById('right_arrow_icon').addEventListener('click', function () {
-		mixpanel.track("Next Clicked");
+		mixpanel.track("Next Clicked", {fullUrl: window.location.href});
 	}, false);
 
 	document.getElementById('left_arrow_icon').addEventListener('click', function () {
-		mixpanel.track("Previous Clicked");
+		mixpanel.track("Previous Clicked", {fullUrl: window.location.href});
 	}, false);
 
 
