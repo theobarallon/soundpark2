@@ -25,6 +25,10 @@
 content="http://soundpark.fm/assets/pictures/avatar_disco.png" />
 
 
+
+	<link rel="shortcut icon" href="http://soundpark.fm/assets/pictures/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="http://soundpark.fm/assets/pictures/favicon.ico" type="image/x-icon">
+
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <script type="text/javascript" src="../assets/cookies.js"></script>
