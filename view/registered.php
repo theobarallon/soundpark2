@@ -15,7 +15,7 @@
 <body>
 	<div class="container">
 		<h1>Soundpark.<span style="color: #660066">fm</span></h1>
-		<h2>Incription effectuée, check ta boite mail !</h2>
+		<h2>Inscription effectuée ! Lundi à 10h, check ta boite mail !</h2>
 
 	</div>
 		
