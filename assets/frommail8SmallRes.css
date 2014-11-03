@@ -291,14 +291,12 @@ input[value="pause"]
  	background: url(pictures/left_arrow_smallRes.png);
  	background-repeat: no-repeat;
  	background-position:center center;
+  cursor: pointer;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
- #left_arrow_icon:hover
- {
- 	background-image: url(pictures/left_arrow_hover_smallRes.png);
- }
+
 
 #left_arrow_icon:focus,
 #right_arrow_icon:focus
@@ -320,14 +318,12 @@ input[value="pause"]
  	background: url(pictures/right_arrow_smallRes.png);
  	background-repeat: no-repeat;
  	background-position:center center;
+  cursor: pointer;
   -webkit-transition: background-image 0.5s;
   transition: background-image 0.5s;
  }
 
- #right_arrow_icon:hover
- {
- 	background-image: url(pictures/right_arrow_hover_smallRes.png);
- }
+
 
 .trackIds
 {
