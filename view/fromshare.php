@@ -43,14 +43,17 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 		<div class="trackId" id="trackId"><?php if(isset($_GET['trackId'])){echo($_GET['trackId']);} ?></div>		
 		<footer>
 			<div id="subscription_area">
-				<h2>Get subscribed!</br></h2>
+				<?php
+					include_once('../control/display_email_text.php');
+				?>
 				<div id="saisie">
-					<form accept-charset="UTF-8" action="http://soundpark.fm/control/suscribe.php" class="new_user" id="new_user" method="post">
-							<input autofocus="autofocus" id="user_email" name="user_email" placeholder="Email" type="text" />
+					<form accept-charset="UTF-8" action="http://soundpark.fm/control/register_fromshare.php" class="new_user" id="new_user" method="post">
+							<input autofocus="autofocus" id="user_email" name="user_email" placeholder="Email" type="text" autocorrect="off" autocapitalize="off"/>
 							<input name="commit" type="submit" value="Go" />
-							<div class="clearfix"></div>
-					</form>
-				</div>
+							<input type="hidden" name="trackId" value="<?php echo($_GET['trackId']); ?>" /><br />
+							<div class="clearfix"></div
+					></form
+				></div>
 			</div>
 		</footer>		
 </body>

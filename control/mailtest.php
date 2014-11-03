@@ -47,8 +47,14 @@ $message.= $passage_ligne."--".$boundary."--".$passage_ligne;
 //==========
  
 //=====Envoi de l'e-mail.
-mail($mail,$sujet,$message,$header);
-//==========
+if(mail($mail,$sujet,$message,$header))
+{
+	
+	echo('donse');
+}
+else
+{
+	echo(phpinfo());
+}
 
-echo('done');
 ?>

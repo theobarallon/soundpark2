@@ -135,9 +135,10 @@ input[value="pause"]
   border-style: none;
   color: transparent;
   display: inline-block;
-    width:52px;
-    height:60px;
-    font-size: 0.0000001em;
+  width:52px;
+  height:60px;
+  font-size: 0.0000001em;
+  cursor: pointer;
 }
 
 input[value="play"]:focus,

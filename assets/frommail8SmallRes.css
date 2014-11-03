@@ -121,7 +121,7 @@ h3 {
   #buttons_area
   {
     width: 100%;
-    margin-top: 3%;
+    margin-top: 39px;
     height: 30%;
     -webkit-transition: margin-top 0.3s;
     transition: margin-top 0.3s;
@@ -194,6 +194,7 @@ input[value="pause"]
     width:52px;
     height:60px;
     font-size: 0.0000001em;
+    cursor: pointer;
 }
 
 input[value="play"]:focus,
@@ -379,7 +380,7 @@ input[value="pause"]
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 140px 0 140px;
+    margin: 0 144px 0 143px;
     position: relative;
     height: 380px;
     width: auto;
@@ -471,11 +472,11 @@ input[value="-1"]:hover,
 input[value="+1"]:hover
  {
     -webkit-animation-name: bounce;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.45s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: 1;
     animation-name: bounce;
-    animation-duration: 0.4s;
+    animation-duration: 0.45s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
     cursor: pointer;
@@ -484,18 +485,18 @@ input[value="+1"]:hover
 @-webkit-keyframes bounce
  {
     45% {
-        width: 25px;
-        height: 25px;
+        width: 15px;
+        height: 15px;
         
     }
     55% {
-        width:  25px;
-        height: 25px;
+        width:  15px;
+        height: 15px;
         
     }
     75% {
-        width:  50px;
-        height: 50px;
+        width:  45px;
+        height: 45px;
         
     }
 }
@@ -503,18 +504,18 @@ input[value="+1"]:hover
 keyframes bounce
  {
     45% {
-        width:  25px;
-        height: 25px;
+        width:  15px;
+        height: 15px;
         
     }
     55% {
-        width:  25px;
-        height: 25px;
+        width:  15px;
+        height: 15px;
         
     }
     75% {
-        width:  50px;
-        height: 50px;
+        width:  45px;
+        height: 45px;
         
     }
 }
@@ -527,4 +528,143 @@ keyframes bounce
   font-weight: 300;
   color: white;
   display: none;
+}
+
+
+/* Version réduite verticalement */
+
+
+
+@media screen and (max-height: 650px) {
+
+    .container
+  {
+    margin-top: 2.6%;
+  }
+
+    header h1
+  {
+    margin-top: 4.5%;
+    font-size: 4.8em;
+  }
+
+input[value="-1"],
+input[value="+1"]
+{
+
+  width:25px;
+  height:25px;
+}
+
+
+@-webkit-keyframes bounce
+ {
+    45% {
+        width: 10px;
+        height: 10px;
+        
+    }
+    55% {
+        width:  10px;
+        height: 10px;
+        
+    }
+    75% {
+        width:  35px;
+        height: 35px;
+        
+    }
+}
+
+keyframes bounce
+ {
+    45% {
+        width:  10px;
+        height: 10px;
+        
+    }
+    55% {
+        width:  10px;
+        height: 10px;
+        
+    }
+    75% {
+        width:  35px;
+        height: 35px;
+        
+    }
+  }
+
+  input[value="play"],
+  input[value="pause"]
+  {
+      width:45px;
+      height:45px;
+
+  }
+}
+
+
+/* Version réduite horizontalement*/
+
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+  .container
+  {
+    width: 750px;
+    height: 280px;
+  }
+
+  .sound_box
+  {
+    margin: 0 129px 0 128px;
+    height: 280px;
+  }
+  .sound_cover
+  {
+    height: 220px;
+    width: 220px;
+    margin-right: 10px;
+    margin-top: 30px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .sound_informations h3
+  {
+    text-align: left;
+    line-height: 2.5em;
+    font-size: 1.1em;
+
+    font-family: 'open Sans';
+    font-weight: 300;
+    width: 263px;
+    color: black;
+    overflow: hidden;
+  }
+  #left_arrow_icon, #right_arrow_icon
+   {
+    height: 220px;
+   }
+   #left_arrow, #right_arrow
+   {
+    height: 280px;
+   } 
+
+}
+
+@media screen and (max-height: 650px) and (max-width: 1024px) {
+
+ .container
+  {
+    margin-top: 5%;
+  }
+
+    header h1
+  {
+    margin-top: 4.5%;
+    font-size: 4.5em;
+  }
+
+
 }

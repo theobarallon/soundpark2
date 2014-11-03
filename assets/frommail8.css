@@ -114,14 +114,14 @@ h3 {
     left: 0;
     background-image: url(pictures/footer.jpg);
     width: 100%;
-    height: 23%;
+    height: 180px;
     z-index: 1000;
   }
 
   #buttons_area
   {
     width: 100%;
-    margin-top: 4.3%;
+    margin-top: 61px;
     height: 60%;
     vertical-align: middle;
     display: inline-block;
@@ -218,9 +218,10 @@ input[value="pause"]
   color: transparent;
   display: inline-block;
   vertical-align: middle;
-    width:52px;
-    height:60px;
-    font-size: 0.0000001em;
+  width:52px;
+  height:60px;
+  font-size: 0.0000001em;
+  cursor: pointer;
 }
 
 input[value="play"]:focus,

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: 'Code';
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
+   }
+@font-face {
+  font-family: 'CodeBold';
+  src: url("fonts/code_bold.otf");
+   }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 30px;
+  color: inherit;
+  text-rendering: optimizelegibility; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-weight: normal;
+    line-height: 1;
+    color: #999999; }
+
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 80%;
+  text-align: center; }
+
+
+
+
+.container {
+margin-right: auto;
+margin-left: auto;
+*zoom: 1; }
+.container:before, .container:after {
+display: table;
+content: "";
+line-height: 0; }
+.container:after {
+clear: both; }
+
+.container-fluid {
+padding-right: 20px;
+padding-left: 20px;
+*zoom: 1; }
+.container-fluid:before, .container-fluid:after {
+display: table;
+content: "";
+line-height: 0; }
+.container-fluid:after {
+clear: both; }
+
+
+h1, h2, h3 {
+  font-family: 'Code';
+  text-align: center;
+  font-weight: normal; }
+
+h1 {
+  font-family: 'Code';
+  
+   }
+
+h1 {
+  color: #666;
+  margin-top: 13%;
+  font-size: 6em;
+  margin: 13% 0 20px 0; 
+}
+
+h1 a
+{
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  color: #777;
+  margin-top: 8%;
+  font-family: 'open Sans';
+  font-weight: 300;
+  font-size: 1.7em; 
+  margin-bottom: 3%; }
+
+h3 {
+  color: #777;
+  margin-top: 2%;
+  font-family: 'open Sans';
+  font-size: 1.5em;  }
+
+
+
+@media screen and (max-width: 640px) {
+
+h1 {
+  color: #666;
+  margin-top: 13%;
+  font-size: 3em;
+  margin: 13% 0 20px 0; 
+}
+
+h1 a
+{
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  color: #777;
+  margin-top: 8%;
+  font-family: 'open Sans';
+  font-weight: 300;
+  font-size: 1.3em; 
+  margin-bottom: 3%; }
+
+h3 {
+  color: #777;
+  margin-top: 2%;
+  font-family: 'open Sans';
+  font-size: 1.5em;  }
+
+}

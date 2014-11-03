@@ -8,14 +8,17 @@
   <head>
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link href="../assets/landing.css" media="all" rel="stylesheet" />
+    <link href="../assets/registered.css" media="all" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
  
  
 <body>
 	<div class="container">
-		<h1>Soundpark.<span style="color: #660066">fm</span></h1>
-		<h2>Inscription effectuée ! Lundi à 10h, check ta boite mail !</h2>
+		<h1><a href="http://soundpark.fm">Soundpark.<span style="color: #660066">fm</span></a> </h1>
+		<h2>Bienvenue à la maison ! </br></br>On a bien pris en compte ton inscription. Tu recevras dès lundi prochain un email contanant ta première playlist de morceaux choisis par la crème de la crème. </br></br>
+			En attendant tu peux écouter <a href="http://soundpark.fm">ici</a> les 3 morceaux les plus appréciés de la semaine par la communauté !</br></br>
+			A lundi !
+		</h2>
 
 	</div>
 		
