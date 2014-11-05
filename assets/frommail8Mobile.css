@@ -414,7 +414,7 @@ input[value="pause"]
   .sound_informations
   {
     position: absolute;
-    top: -10px;
+    top: 10px;
     left: 10px;
     vertical-align: middle;
     padding: 0;
