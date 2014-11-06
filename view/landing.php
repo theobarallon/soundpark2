@@ -17,7 +17,7 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/landing2smallRes.css" />
     <link rel="stylesheet" media="screen and (max-height: 700px)" href="../assets/landing2smallRes.css" />
     <link rel="stylesheet" media="screen and (min-width: 1700px)" href="../assets/landing2HighRes.css" />
-    <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/landing2Mobile.css" />
+    <link rel="stylesheet" media="all and (max-width: 800px)" href="../assets/landing2Mobile.css" />
 
     <meta property="og:site_name" content="Soundpark.fm"/>
     <meta property="og:description" content="Toutes les semaines, le lundi à 10h, le meilleur de la musique sélectionné par la crème de la crème, au chaud dans ta boîte mail" />

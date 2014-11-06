@@ -213,7 +213,7 @@ footer
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #660066;
+    background-color: #531931;
     width: 100%;
     height: 140px;
     z-index: 1000;
@@ -238,8 +238,8 @@ footer
     font-weight: 300;
     color: white;
     font-size: 2.2em;
-    margin-top : 1.8%;
-    margin-bottom: 1.5%;
+    margin-top : 30px;
+    margin-bottom: 20px;
   }
 
  
@@ -264,6 +264,12 @@ footer
   background-color: white;
   z-index: 1000;
 
+ }
+
+#left_arrow_icon,
+#right_arrow_icon
+ {
+  cursor: pointer;
  }
 
  #left_arrow
@@ -297,10 +303,6 @@ footer
   transition: background-image 0.5s;
  }
 
- #left_arrow_icon:hover
- {
-  background-image: url(pictures/left_arrow_hover.png);
- }
 
 #left_arrow_icon:focus,
 #right_arrow_icon:focus
@@ -326,10 +328,6 @@ footer
   transition: background-image 0.5s;
  }
 
- #right_arrow_icon:hover
- {
-  background-image: url(pictures/right_arrow_hover.png);
- }
 
 .trackIds
 {
@@ -397,6 +395,7 @@ input[value="pause"]
   color: transparent;
   display: inline-block;
   position: absolute;
+  cursor: pointer;
 
     width:52px;
     height:60px;
@@ -512,7 +511,7 @@ input[value="pause"]
 
 
 
-  input[type="text"], input[type="password"]
+  input[type="text"]
   {
     font-family: 'open Sans';
     font-weight: 300;
@@ -521,16 +520,9 @@ input[value="pause"]
     height : 20px;
     border-radius: 0px;
     width: 50%;
-    background-color: #660066; }
+    background-color: #531931; }
     
-  input[name="user_password2"]
-  {
-    font-family: 'open Sans';
-    font-weight: 300;
-    font-size: 1em;
-    height : 25px;
-    border-radius: 0px;
-    width: 67%; }
+  
     
   form input[type="submit"] {
     border-radius: 3px;
@@ -542,7 +534,140 @@ input[value="pause"]
     width: 30px;
     font-family: Code; 
     border: 1px solid #a0a0a0;
+    cursor: pointer;
     }
 
     form input[type="submit"]:hover {
       background-color: #999; }
+
+/* Version réduite verticalement */
+
+  @media screen and (max-height: 620px) {
+
+   header h1
+   {
+      margin-top: 4.5%;
+      font-size: 4.5em;
+   }
+    header h2
+   {
+      margin-top: 3%;
+      font-size: 1.3em; 
+   }
+
+
+   footer
+  {
+    height: 120px;
+  }
+
+  #subscription_area
+  {
+    width: 100%;
+    margin: auto;
+  }
+
+  footer form
+  {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  footer h2
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    color: white;
+    font-size: 1.8em;
+    margin-top : 19px;
+    margin-bottom: 1.5%;
+  }
+
+ 
+
+}
+
+/* Version réduite horizontalement */
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+
+  .container
+  {
+    width: 750px;
+    height: 180px;
+  }
+
+
+  .sound_informations h3
+  {
+
+    font-size: 1.1em;
+    width: 243px;
+  }
+
+
+ 
+ #left_arrow, #right_arrow
+ {
+
+  height: 180px;
+
+ }
+
+
+
+#left_arrow_icon
+ {
+  height: 180px;
+  width: 90px;
+ }
+
+
+
+ #right_arrow_icon
+ {
+  height: 180px;
+ }
+
+
+ .sound_box
+  {
+    margin: 0 160px 0 160px;
+    height: 180px;
+  }
+  
+
+  .sound_cover
+  {
+    height: 180px;
+    width: 180px;
+  }
+
+  .cover_wrapper
+  {
+    height: 180px;
+    width: 180px;
+
+  }
+
+ 
+
+ 
+  input[value="play"]
+  {
+    width: 50px;
+    height: 50px;
+    margin-left: 70px;
+    margin-top: 70px;
+  }
+  input[value="pause"]
+  {
+    width: 50px;
+    height: 50px;
+    margin-left: 70px;
+    margin-top: 70px;
+  }
+
+
+}

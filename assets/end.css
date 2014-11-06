@@ -237,6 +237,7 @@ h3 {
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
   vertical-align: middle;
 }
 
@@ -260,11 +261,20 @@ h3 {
 {
   cursor: pointer;
   background-image: url(pictures/fb_share_icon_hover.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
 }
 #twitterShare:hover
 {
+
   cursor: pointer;
   background-image: url(pictures/twitter_share_icon_hover.png);
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
 }
 
 #twitterShare
@@ -276,6 +286,7 @@ h3 {
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
   background-size: cover; /* version standardisée */
+  background-repeat: no-repeat;
   vertical-align: middle;
 }
 
@@ -309,5 +320,81 @@ h3 {
   color: black;
  }
 
+@media screen and (max-width: 1282px)  {
+  
+  h1
+  {
+    margin-bottom: 15px;
+  }
+
+  header h1
+  {
+    font-size: 4.5em;
+  }
+
+  .container
+  {
+    margin-top: 4%;
+  }
+
+  .container h2
+  {
+    font-size: 25px; 
+    line-height: 1.3em;
+  }
+   .container h3
+  {
+    font-size: 25px; 
+    line-height: 1.3em;
+  }
+
+  footer
+  {
+    height: 140px;
+  }
 
 
+  #replay 
+  {
+    display: inline-block;
+    width:80px;
+    height:80px;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  #facebookShare
+  {
+    width: 85px;
+    height: 85px;
+  }
+
+
+
+
+  #twitterShare
+  {
+    width: 85px;
+    height: 85px;
+  }
+
+}
+
+@media screen and (max-width: 1014px)  {
+
+  #facebookShare
+{
+  width: 60px;
+  height: 60px;
+}
+
+
+
+
+#twitterShare
+{
+  width: 60px;
+  height: 60px;
+}
+
+}

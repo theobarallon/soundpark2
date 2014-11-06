@@ -425,19 +425,6 @@ input[value="pause"]
 
 
 
-
-
-#share_url:hover
-{
-  border-color: white;
-  outline: 0;
-  outline: thin dotted \9;
-  /* IE6-9 */
-  -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
-  -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
-  box-shadow: inset 0 1px 1px white, 0 0 8px white; 
-}
-
 #share_link
 {
   display: none;
@@ -507,11 +494,11 @@ keyframes bounce
 }
 
 
-/* Version réduite verticalement */
+/* Versions réduites verticalement */
 
 
 
-@media screen and (max-height: 650px) {
+@media screen and (max-height: 630px) {
 
     .container
   {
@@ -578,8 +565,31 @@ keyframes bounce
       height:45px;
 
   }
+
+
+  footer
+  {
+    height: 120px;
+  }
+
+
+  #buttons_area
+  {
+    margin-top: 28px;   
+  }
+
+
+  
 }
 
+@media screen and (max-height: 540px) {
+
+  .container
+  {
+    margin-top: 0.2%;
+  }  
+
+}
 
 /* Version réduite horizontalement*/
 
@@ -627,9 +637,10 @@ keyframes bounce
     height: 280px;
    } 
 
+
 }
 
-@media screen and (max-height: 650px) and (max-width: 1024px) {
+@media screen and (max-height: 630px) and (max-width: 1024px) {
 
  .container
   {
@@ -642,5 +653,13 @@ keyframes bounce
     font-size: 4.5em;
   }
 
+}
+
+@media screen and (max-height: 540px) and (max-width: 1024px) {
+
+  .container
+  {
+    margin-top: 0.2%;
+  }  
 
 }
