@@ -19,7 +19,7 @@
     <link rel="stylesheet" media="screen and (min-width: 1700px)" href="../assets/frommail8HighRes.css" />
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/frommail8SmallRes.css" />
     <link rel="stylesheet" media="screen and (max-height: 700px)" href="../assets/frommail8SmallRes.css" />
-    <link rel="stylesheet" media="all and (max-width: 480px)" href="../assets/frommail8Mobile.css" />
+    <link rel="stylesheet" media="all and (max-width: 550px)" href="../assets/frommail8Mobile.css" />
 
     <link rel="shortcut icon" href="http://soundpark.fm/assets/pictures/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="http://soundpark.fm/assets/pictures/favicon.ico" type="image/x-icon">
