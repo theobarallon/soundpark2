@@ -356,11 +356,8 @@ h3 {
 
   #replay 
   {
-    display: inline-block;
     width:80px;
     height:80px;
-    margin-right: 15%;
-    margin-left: 15%;
   }
 
   #facebookShare

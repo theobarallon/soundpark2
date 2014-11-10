@@ -119,7 +119,13 @@ $('#play').click(function() //Gestion du bouton de lecture/pause en toggle
 function updateCurrentTrack(trackId) 
 {
 	
-	SC.stream("/tracks/"+trackId,{onfinish: function(){ nextTrack();}}, function(sound){
+	SC.stream("/tracks/"+trackId,{onfinish: function(){ 
+			nextTrack();
+			mixpanel.track("Automatic Next", {
+				"fullUrl": window.location.href,
+				"TrackId": trackId
+			});
+		}}, function(sound){
 		
 		currentTrack = sound;
 		if ($('#play').val() == "pause") 

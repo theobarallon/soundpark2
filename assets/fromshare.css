@@ -393,3 +393,11 @@ input[value="pause"]
 {
   display: none;
 }
+
+
+/* version - 1285px de large*/
+
+@media screen and (max-width: 1285px)  {
+
+
+}

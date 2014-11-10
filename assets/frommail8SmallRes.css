@@ -654,12 +654,3 @@ keyframes bounce
   }
 
 }
-
-@media screen and (max-height: 540px) and (max-width: 1024px) {
-
-  .container
-  {
-    margin-top: 0.2%;
-  }  
-
-}

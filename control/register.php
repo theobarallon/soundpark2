@@ -20,7 +20,7 @@
 	        {
 	        	$req = $bdd->prepare('INSERT INTO user(email, subscription_date) VALUES(?, NOW())');
 				$req->execute(array($_POST['user_email']));
-				header('Location: ../view/registered.php'); 
+				header('Location: ../view/registered.php?userEmail='.$_POST['user_email']); 
 	        }			
 	    }
 	    else
