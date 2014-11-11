@@ -25,7 +25,7 @@
 		<aside>
 			<ul>
 				<li><a
-				<?php if($_GET['idPlaylist'] == $currentPlaylistId)
+				<?php if(($_GET['idPlaylist'] == $currentPlaylistId) OR !isset($_GET['idPlaylist']))
 				{
 					echo(' style="color: #531931; border-bottom: 1px solid #531931;" ');
 				}?>
@@ -54,19 +54,16 @@
 			<?php
 
 			}
-			else if(isset($_GET['addCurator']))
-			{
-				?> <h1> Curator well added ! </h1></br>
-
-			<?php
-
-			}
 			else if(isset($_GET['modifyPlaylist']))
 			{
 				?> <h1> Playlist updated :) ! </h1></br>
 
 			<?php
 
+			}
+			else if(!isset($_GET['idPlaylist']))
+			{
+				header("Location: http://soundpark.fm/view/create_playlist.php&idPlaylist=".$currentPlaylistId);
 			}
 			?>
 
