@@ -34,7 +34,7 @@
 		echo '</ol>';
 		echo('<input autofocus="autofocus" class="numberOfTracks" id="numberOfTracks" name="numberOfTracks" value="'.$index.'" type="hidden"/>');
 		echo('<input autofocus="autofocus" class="idPlaylist" id="idPlaylist" name="idPlaylist" value="'.$_GET['idPlaylist'].'" type="hidden"/>');
-		echo('<input name="commit" type="submit" value="Go" />');
+		echo('<input name="commit" type="submit" value=" Update! " />');
 
 	}
 	else
