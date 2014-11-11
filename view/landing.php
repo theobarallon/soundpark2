@@ -20,7 +20,7 @@
     <link rel="stylesheet" media="all and (max-width: 700px)" href="../assets/landing2Mobile.css" />
 
     <meta property="og:site_name" content="Soundpark.fm"/>
-    <meta property="og:description" content="Toutes les semaines, le lundi à 10h, le meilleur de la musique sélectionné par la crème de la crème, au chaud dans ta boîte mail" />
+    <meta property="og:description" content="Toutes les semaines, le lundi matin, le meilleur de la musique sélectionné par la crème de la crème, au chaud dans ta boîte mail" />
     <meta property="og:image"
 content="http://soundpark.fm/assets/pictures/avatar_disco.png" />
 
@@ -53,7 +53,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 				<h1>Soundpark.<span style="color: #660066">fm</span></h1>
 			</div>
 			<h2 id="player_position"><?php include("../control/display_player_position.php"); ?></h2>
-			<h2>Toutes les semaines, le lundi à 10h, <span class="tagline">le meilleur de la musique</span> sélectionné par <span class="tagline">la crème de la crème</span>, au chaud <span class="tagline">dans ta boîte mail</span>.</h2>
+			<h2>Toutes les semaines, le lundi matin, <span class="tagline">le meilleur de la musique</span> sélectionné par <span class="tagline">la crème de la crème</span>, au chaud <span class="tagline">dans ta boîte mail</span>.</h2>
 			<!--<h3> <?php //echo($_COOKIE['playlist_url']); ?> </h3>-->
 			<!--<h3> <?php //echo($_COOKIE['current_user']); ?> </h3>-->
 		</header>

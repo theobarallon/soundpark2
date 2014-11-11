@@ -31,7 +31,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 	<body>
 		<header>
 			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
-			<h2>Toutes les semaines, le lundi, à 9h, <span style="color: #660066">le meilleur de la musique</span> sélectionné par <span style="color: #660066">la crème de la crème</span> au chaud <span style="color: #660066">dans votre boite mail</span>.</h2>
+			<h2>Toutes les semaines, le lundi matin, <span style="color: #660066">le meilleur de la musique</span> sélectionné par <span style="color: #660066">la crème de la crème</span> au chaud <span style="color: #660066">dans votre boite mail</span>.</h2>
 		</header>
 		
 		<div class="container"> 
