@@ -7,11 +7,17 @@ document.getElementById('plus_one').addEventListener('click', function () {
 }, false);
 
 document.getElementById('right_arrow_icon').addEventListener('click', function () {
-	mixpanel.track("Next Clicked", {fullUrl: window.location.href});
+	mixpanel.track("Next Clicked", {
+		"fullUrl": window.location.href,
+		"trackId": songTable[position-1]
+		});
 }, false);
 
 document.getElementById('left_arrow_icon').addEventListener('click', function () {
-	mixpanel.track("Previous Clicked", {fullUrl: window.location.href});
+	mixpanel.track("Previous Clicked", {
+		"fullUrl": window.location.href,
+		"trackId": songTable[position+1]
+		});
 }, false);
 
 document.getElementById('play').addEventListener('click', function () {

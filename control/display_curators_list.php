@@ -8,6 +8,7 @@
 			echo('<li><strong style="color: #C5CFD0;">Pseudo :</strong> '.$curatorsList[1].'  </li>');
 			echo('<li><strong style="color: #C5CFD0;">Genre :</strong> '.$curatorsList[2].'  </li>');
 			echo('<li><strong style="color: #C5CFD0;">Link :</strong> <a href="'.$curatorsList[4].'">'.$curatorsList[4].'</a></li>');
+			echo('<li><strong style="color: #C5CFD0;">Total likes :</strong> '.$curatorsList[5].'  </li>');
 		echo('</ul>');
 	}	
 					
