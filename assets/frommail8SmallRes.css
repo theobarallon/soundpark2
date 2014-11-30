@@ -482,7 +482,7 @@ input[value="pause"]
     animation-timing-function: linear;
     animation-iteration-count: 1;
     
-}*/
+}
 
 @-webkit-keyframes bounce
  {
@@ -520,7 +520,7 @@ keyframes bounce
         height: 45px;
         
     }
-}
+}*/
 
 .share_url_title
 {
@@ -570,7 +570,7 @@ keyframes bounce
 }
 
 
-@-webkit-keyframes bounce
+/*@-webkit-keyframes bounce
  {
     45% {
         width: 10px;
@@ -606,7 +606,7 @@ keyframes bounce
         height: 35px;
         
     }
-  }
+  }*/
 
   input[value="play"],
   input[value="pause"]

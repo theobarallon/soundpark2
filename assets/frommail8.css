@@ -589,7 +589,7 @@ input[value="pause"]
     animation-timing-function: linear;
     animation-iteration-count: 1;
     cursor: pointer;
-}*/
+}
 
 @-webkit-keyframes bounce
  {
@@ -627,7 +627,9 @@ keyframes bounce
         height: 50px;
         
     }
-}
+}*/
+
+
 
 .share_url_title
 {

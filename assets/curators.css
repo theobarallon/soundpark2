@@ -233,7 +233,7 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: #660066;
+    background-image: url(pictures/footer2.jpg);
     width: 100%;
     height: 23%;
   }
