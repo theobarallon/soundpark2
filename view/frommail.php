@@ -31,6 +31,8 @@
     <script type="text/javascript" src="../assets/AJAX/update_player_position.js"></script>
     <script type="text/javascript" src="../assets/AJAX/add_like_dislike.js"></script>
     <script type="text/javascript" src="../assets/AJAX/display_user_past_likes.js"></script>
+    <!--<script type="text/javascript" src="../zeroclipboard-2.1.6/dist/ZeroClipboard.min.js"></script>-->
+    
 
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -60,14 +62,18 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 				<input type="button" id="right_arrow_icon" class="next" onclick="nextTrack()"/>
 			</div>
 			<div class="slider">
-			<?php include_once('../control/display_song_boxes.php'); ?>
 			<?php 
-				$req = $bdd->query('SELECT trackId FROM song, playlist WHERE song.ID_playlist=playlist.ID AND playlist.date_end >= NOW() AND playlist.date_start <= NOW()');
-				$i = 0;
-				while($trackIds = $req->fetch())
+				include_once('../model/get_current_playlist_id.php'); // renvoi $currentPlaylistId
+				if(isset($_GET['playlistId']))
 				{
-					?> <div class="trackIds"><?php echo($trackIds[0]); ?></div> <?php
-				};
+					$playlistId = $_GET['playlistId'];
+				}
+				else
+				{
+					$playlistId = $currentPlaylistId;
+				}
+				include_once('../control/display_song_boxes.php'); 
+				include_once('../control/display_playlist_trackIds.php');
 			?>
 			</div>
 			
@@ -96,7 +102,16 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 		</footer>		
 </body>
     <script type="text/javascript" src="../assets/player2.js"></script>
-    <script type="text/javascript" src="../assets/glide_up_share_link.js"></script>
+    <!--<script type="text/javascript" src="../assets/glide_up_share_link.js"></script>-->
     <script type="text/javascript" src="../assets/on_load.js"></script>
     <script type="text/javascript" src="../assets/mixpanel_logs.js"></script>
+    <script type="text/javascript">
+
+    	/*var copyToClipboard = function(index)
+    	{
+    		ZeroClipboard.config( { swfPath: "http://localhost:8888/zeroclipboard-2.1.6/dist/ZeroClipboard.swf" } );
+			var client = new ZeroClipboard( document.getElementById("socialIconClipboard1") );	
+			client.clip( document.getElementById("socialIconClipboard1") );
+		}*/
+    </script>
 </html>

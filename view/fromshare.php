@@ -47,7 +47,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 					include_once('../control/display_email_text.php');
 				?>
 				<div id="saisie">
-					<form accept-charset="UTF-8" action="http://soundpark.fm/control/register_fromshare.php" class="new_user" id="new_user" method="post">
+					<form accept-charset="UTF-8" action="../control/register_fromshare.php" class="new_user" id="new_user" method="post">
 							<input autofocus="autofocus" id="user_email" name="user_email" placeholder="Email" type="text" autocorrect="off" autocapitalize="off"/>
 							<input name="commit" type="submit" value="Go" />
 							<input type="hidden" name="trackId" value="<?php echo($_GET['trackId']); ?>" /><br />

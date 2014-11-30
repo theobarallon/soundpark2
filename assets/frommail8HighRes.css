@@ -318,12 +318,14 @@ input[value="pause"]
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 254px 0 254px;
+    margin: 0 219px 0 219px;
     position: relative;
     height: 480px;
     width: auto;
   }
   
+
+
 
   .sound_cover
   {
@@ -335,6 +337,18 @@ input[value="pause"]
     vertical-align: middle;
   }
 
+  .socialIcons
+  {
+    height: 320px;
+    width: 70px;
+  }
+
+  .socialIcon
+  {
+    height: 56px;
+    width: 56px;
+    margin-bottom: 23px;
+  }
  
 
   .sound_informations
@@ -368,8 +382,8 @@ input[value="pause"]
   }
  
 
-#input[value="-1"],
-input[value="+1"]
+##minus_one,
+#plus_one
 {
   border-style: none;
   color: transparent;
@@ -380,20 +394,20 @@ input[value="+1"]
     font-size: 0.0000001em;
 }
 
-input[value="-1"]:focus,
-input[value="+1"]:focus
+#minus_one:focus,
+#plus_one:focus
 {
   border-style: none;
   outline: none;
   box-shadow: none;
 }
 
-input[value="-1"]
+#minus_one
 {
   display: inline-block;
   width:35px;
   height:35px;
-  background: url(pictures/cross_dislike.png);
+  background: url(pictures/broken_heart2.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
@@ -406,7 +420,7 @@ input[value="-1"]
   vertical-align: middle;
 
 }
-input[value="+1"]
+#plus_one
 {
   display: inline-block;
   width:35px;
@@ -434,8 +448,8 @@ input[value="+1"]
 }
 
 
-input[value="-1"]:hover,
-input[value="+1"]:hover
+/*#minus_one:hover,
+#plus_one:hover
  {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: 0.4s;
@@ -446,7 +460,7 @@ input[value="+1"]:hover
     animation-timing-function: linear;
     animation-iteration-count: 1;
     cursor: pointer;
-}
+}*/
 
 @-webkit-keyframes bounce
  {

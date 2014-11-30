@@ -34,6 +34,7 @@
 							streamable = track.streamable;
 							trackId = track.id;
 							duration = track.duration;
+							permalinkUrl = track.permalink_url
 							var str = track.artwork_url;
 							trackArtWork = str.replace("large.jpg", "crop.jpg");
 							str = track.title;
@@ -46,14 +47,14 @@
 								var songInfo = document.getElementById('songInfo');
 								songInfo.innerHTML = "<p id=\"artist\"> Artist = " + trackArtist +"</p><p id=\"title\"> Title = " + trackTitle +"</p><p id=\"genre\"> Genre = " + trackGenre +"</p><img src=\""+trackArtWork+"\"id=\"artWork\">" ;
 								var addLink = document.getElementById('addLink');
-								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&artist="+trackArtist+"&genre="+trackGenre+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"&idCurator="+idCurator+"&duration="+duration+"\"> Add Track Bitch </a>";
+								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&artist="+trackArtist+"&genre="+trackGenre+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"&idCurator="+idCurator+"&duration="+duration+"&permalinkUrl="+permalinkUrl+"\"> Add Track Bitch </a>";
 							}
 							else if(streamable)
 							{
 								var songInfo = document.getElementById('songInfo');
 								songInfo.innerHTML = "<p id=\"artist\"> Artist = " + trackArtist +"</p><p id=\"title\"> Title = " + trackTitle +"</p><p id=\"trackId\"> Trackid = " + trackId +"</p><p id=\"genre\"> Genre = Undefined</p><img src=\""+trackArtWork+"\"id=\"artWork\">" ;
 								var addLink = document.getElementById('addLink');
-								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"&idCurator="+idCurator+"&duration="+duration+"&artist="+trackArtist+"\"> Add Track Bitch </a>";
+								addLink.innerHTML = "<a href=\"add_track.php?title="+trackTitle+"&trackId="+trackId+"&trackArtWork="+trackArtWork+"&playlist="+playlist+"&idCurator="+idCurator+"&duration="+duration+"&artist="+trackArtist+"&permalinkUrl="+permalinkUrl+"\"> Add Track Bitch </a>";
 							}
 							else
 							{

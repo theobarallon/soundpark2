@@ -34,7 +34,8 @@
 		echo '</ol>';
 		echo('<input autofocus="autofocus" class="numberOfTracks" id="numberOfTracks" name="numberOfTracks" value="'.$index.'" type="hidden"/>');
 		echo('<input autofocus="autofocus" class="idPlaylist" id="idPlaylist" name="idPlaylist" value="'.$_GET['idPlaylist'].'" type="hidden"/>');
-		echo('<input name="commit" type="submit" value=" Update! " />');
+		echo('<input name="commit" type="submit" value=" Update! " /></br></br>');
+		echo('<a href="../view/frommail.php?pwd=thomas.bouttefort@gmail.com&playlistId='.$playlistId.'"> Ecoute cette playlist </a>');
 
 	}
 	else

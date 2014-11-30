@@ -27,26 +27,192 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'test';
 $mail->Body    = "<head>
     <title>Soundpark</title>
-    <link href='http://soundpark.fm/assets/email.css' media='all' rel='stylesheet' />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+
+    <style>
+
+		*{ margin:0; }
+
+		@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+		h1, h2, h3, h4, h5, h6 {
+		  margin: 10px 0;
+		  font-family: inherit;
+		  font-weight: bold;
+		  line-height: 30px;
+		  color: inherit;
+		  text-rendering: optimizelegibility; }
+		  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+		    font-weight: normal;
+		    line-height: 1;
+		    color: #999999; }
+
+
+		select,
+		textarea,
+		input[type='text'],
+		input[type='password'],
+		input[type='datetime'],
+		input[type='datetime-local'],
+		input[type='date'],
+		input[type='month'],
+		input[type='time'],
+		input[type='week'],
+		input[type='number'],
+		input[type='email'],
+		input[type='url'],
+		input[type='search'],
+		input[type='tel'],
+		input[type='color'],
+		.uneditable-input {
+		  display: inline-block;
+		  height: 20px;
+		  padding: 4px 6px;
+		  font-size: 14px;
+		  line-height: 20px;
+		  color: #555555;
+		  -webkit-border-radius: 4px;
+		  -moz-border-radius: 4px;
+		  border-radius: 4px;
+		  vertical-align: middle; }
+
+		textarea,
+		input[type='text'],
+		input[type='password'],
+		input[type='datetime'],
+		input[type='datetime-local'],
+		input[type='date'],
+		input[type='month'],
+		input[type='time'],
+		input[type='week'],
+		input[type='number'],
+		input[type='email'],
+		input[type='url'],
+		input[type='search'],
+		input[type='tel'],
+		input[type='color'],
+		.uneditable-input {
+		  background-color: white;
+		  border: 1px solid white;
+		  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+		  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+		  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+		  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+		  transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+		  textarea:focus,
+		  input[type='text']:focus,
+		  input[type='password']:focus,
+		  input[type='datetime']:focus,
+		  input[type='datetime-local']:focus,
+		  input[type='date']:focus,
+		  input[type='month']:focus,
+		  input[type='time']:focus,
+		  input[type='week']:focus,
+		  input[type='number']:focus,
+		  input[type='email']:focus,
+		  input[type='url']:focus,
+		  input[type='search']:focus,
+		  input[type='tel']:focus,
+		  input[type='color']:focus,
+		  .uneditable-input:focus {
+		    border-color: white;
+		    outline: 0;
+		    outline: thin dotted \9;
+		    /* IE6-9 */
+		    -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+		    -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+		    box-shadow: inset 0 1px 1px white, 0 0 8px white; }
+		  
+		input[type='file'],
+		input[type='image'],
+		input[type='submit'],
+		input[type='reset'],
+		input[type='button'],
+		input[type='radio'],
+		input[type='checkbox'] {
+		  width: auto; }
+
+
+
+		.container {
+		margin-right: auto;
+		margin-left: auto;
+		*zoom: 1; }
+		.container:before, .container:after {
+		display: table;
+		content: '';
+		line-height: 0; }
+		.container:after {
+		clear: both; }
+
+		.container-fluid {
+		padding-right: 20px;
+		padding-left: 20px;
+		*zoom: 1; }
+		.container-fluid:before, .container-fluid:after {
+		display: table;
+		content: '';
+		line-height: 0; }
+		.container-fluid:after {
+		clear: both; }
+
+
+		#logo
+		{
+			width: 400px;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		h1, h2, h3 {
+		  font-family: 'Code';
+		  text-align: center;
+		  font-weight: normal; }
+
+		#container
+		{
+		  margin: 15px 40px 15px 40px;
+		  text-align: center;
+		}
+
+		p, ul, li
+		{
+			font-family: 'Open Sans';
+			color: #797979;
+		}
+
+    </style>
+
  </head>
 
-<div id='containter' style='text-align: center;'><h1 style='font-size: 5em; margin-top: 20px;'>Soundpark.fm</h1></br>
 
-<p style='font-size 1.6em; font-family: 'open sans';'>Bienvenue à la maison,</br></br>Merci beaucoup pour ton inscription, on est ravi de te savoir parmi nous et on espère sincèrement que tu ne regretteras pas ton clic quand tu recevras 50 mails de nos partenaires commerciaux… </br></br>Ton temps d’attention est limité donc on va la faire courte : </br></br></p>
 
-<ul style='font-size 1.6em; font-family: 'open sans';'>
-	<li>Tu reçois <b>la playlist</b> dans un joli mail le lundi matin à 10h. <b>SEUL</b> le lien présent dans ce mail te permet d’y accéder.</li> 
+<div id='container'>
 
-<li>Sur <a href='http://soundpark.fm'>la maison</a> il n’y a que les 3 morceaux que la communauté dont vous faites maintenant partie ont le plus likés.</li></ul></br>
+	<img id='logo' src='http://soundpark.fm/assets/pictures/logo.png'/></br>
 
-<p style='font-size 1.6em; font-family: 'open sans';'>Dernière chose, si tu veux devenir contributeur, <a href='mailto:contact@soundpark.fm'>écris-nous</a>. On n'a rien d’autre à t’offrir que du sang, du labeur, des larmes et de la sueur… Et une bonne bière à l’occasion !</br></br>
+	<p>Bienvenue à la maison,</br></br>Merci beaucoup pour ton inscription, on est ravi de te savoir parmi nous et on espère sincèrement que tu ne regretteras pas ton clic quand tu recevras 50 mails de nos partenaires commerciaux… </br></br>Ton temps d’attention est limité donc on va la faire courte : </br></br></p>
 
-A lundi pour ta première fois, </br></br>
+	<ul>
+		<li>Tu reçois <b>la playlist</b> dans un joli mail le lundi matin à 10h. <b>SEUL</b> le lien présent dans ce mail te permet d’y accéder.</li> 
 
-Thomas & Arthur </br></br>
+	<li>Sur <a href='http://soundpark.fm'>la maison</a> il n’y a que les 3 morceaux que la communauté dont vous faites maintenant partie ont le plus likés.</li></ul></br>
 
-PS : Evidemment, tu ne recevras pas de mails de nos partenaires commerciaux puisque personne ne veut bosser avec nous ! ☺ On a juste un humour hyper lourd mais tu t’y feras. D’ailleurs, si tu as des blagues à nous soumettre fais-nous rire ! On partagera les meilleurs, c’est promis ! </p></div>";
+	<p>Dernière chose, si tu veux devenir contributeur, <a href='mailto:contact@soundpark.fm'>écris-nous</a>. On n'a rien d’autre à t’offrir que du sang, du labeur, des larmes et de la sueur… Et une bonne bière à l’occasion !</br></br>
+
+	A lundi pour ta première fois, </br></br>
+
+	Thomas & Arthur </br></br></p>
+
+	<p style='font-size: 0.8em;'>PS : Evidemment, tu ne recevras pas de mails de nos partenaires commerciaux puisque personne ne veut bosser avec nous ! ☺ On a juste un humour hyper lourd mais tu t’y feras. D’ailleurs, si tu as des blagues à nous soumettre fais-nous rire ! On partagera les meilleures, c’est promis ! </p>
+
+</div>
+
+";
 
 
 $mail->AltBody = "Soundpark.fm,

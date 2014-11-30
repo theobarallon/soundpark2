@@ -95,6 +95,7 @@ for(var i = 0 ; i<trackIds.length ; i++)
 
 var currentTrack;
 updateCurrentTrack(songTable[0]);
+getLikeState();
 
 
 
@@ -165,7 +166,8 @@ function nextTrack()
 		updateCurrentTrack(songTable[position]);
 		updatePlayerPosition(songTable[position]);
 		s.slideRight();
-		g.disappear();
+		getLikeState();
+		//g.disappear();
 	}
 	else
 	{
@@ -182,8 +184,8 @@ function previousTrack()
 	updateCurrentTrack(songTable[position]);
 	updatePlayerPosition(songTable[position]);
 	s.slideLeft();
-	g.disappear();
-	
+	//g.disappear();
+	getLikeState();
 }
 
 function getCurrentTrackId()
@@ -192,7 +194,61 @@ function getCurrentTrackId()
 }
 
 
+function getLikeState()
+{
+	xhr = new XMLHttpRequest();
+	xhr2 = new XMLHttpRequest();
+	var trackId = getCurrentTrackId(); // Renvoit le TrackID en lecture, fonction dans player2.js
+    var currentUser = getCookie('current_user') //user.email
+    xhr.open('GET', '../model/get_like_state.php?trackId='+trackId+'&currentUser='+currentUser); // On test si le son a déjà été liké par currentUser
+    xhr.onreadystatechange = function() 
+	{ // On gère ici une requête asynchrone
 
+        if(xhr.readyState == 4 && xhr.status == 200) 
+        { // Si le fichier est chargé sans erreur
+            console.log(xhr.responseText);
+            var likeStamp = document.getElementById("plus_one");
+            if(xhr.responseText == 'TRUE') // Si le son est déjà liké par currentUser
+            {
+                console.log('coucou3');
+            	likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like_pressed.png)";
+            	likeStamp.style.backgroundSize="cover";
+            	xhr2.open('GET', '../model/get_dislike_state.php?trackId='+trackId+'&currentUser='+currentUser); // On test si le son a déjà été disliké par currentUser
+                xhr2.send(null)
+        	}
+            else // Si le son n'est pas déjà liké par currentUser
+            {
+                likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like.png)";
+                likeStamp.style.backgroundSize="cover";
+                console.log('youou');
+                xhr2.open('GET', '../model/get_dislike_state.php?trackId='+trackId+'&currentUser='+currentUser); // On test si le son a déjà été disliké par currentUser
+                xhr2.send(null)
+            }
+        }
+    };
+
+    xhr2.onreadystatechange = function() 
+	{ // On gère ici une requête asynchrone
+
+        
+        if(xhr2.readyState == 4 && xhr2.status == 200) 
+        { // Si le fichier est chargé sans erreur
+        	var dislikeStamp = document.getElementById("minus_one");
+        	if(xhr2.responseText == 'TRUE')
+        	{
+	        	dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2_pressed.png)";
+	        	dislikeStamp.style.backgroundSize="cover";
+        	}
+        	else
+        	{		
+	        	dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2.png)";
+	        	dislikeStamp.style.backgroundSize="cover";
+        	}	
+        }
+    };
+
+    xhr.send(null); // La requête est prête, on envoie tout !
+}
 
 
 

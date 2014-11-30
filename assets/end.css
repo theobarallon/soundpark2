@@ -320,6 +320,7 @@ h3 {
   color: black;
  }
 
+/* Petits écran de desktop */
 @media screen and (max-width: 1282px)  {
   
   h1
@@ -376,7 +377,7 @@ h3 {
   }
 
 }
-
+/* Très petits écran de desktop */
 @media screen and (max-width: 1014px)  {
 
   #facebookShare
@@ -386,8 +387,6 @@ h3 {
 }
 
 
-
-
 #twitterShare
 {
   width: 60px;
@@ -395,3 +394,25 @@ h3 {
 }
 
 }
+
+/* Format mobile */
+@media screen and (max-width: 550px)  { 
+
+  header h1
+  {
+    font-size: 3em;
+    margin-bottom: 30px;
+  }
+
+  .container h2
+  {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+  }
+  .container h3
+  {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+  }
+}
+

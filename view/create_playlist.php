@@ -15,7 +15,7 @@
 			<h1>Soundpark.<span style="color: white;">fm</span></h1>
 			<ul>
 				<?php 
-					include_once('../model/get_current_playlist_id.php'); 
+					include_once('../model/get_current_playlist_id.php'); // renvoi $currentPlaylistId
 				?>
 				<li><a id="playlist_tab" style="color: white; border-bottom: 1px solid white;" href="create_playlist.php?idPlaylist=<?php echo($currentPlaylistId); ?>">Playlists</a></li>
 				<li><a id="curator_tab" href="create_curator.php">Curators</a></li>
@@ -47,19 +47,26 @@
 
 		<div id="container">
 			<?php 
+			$playlistId = $currentPlaylistId;
 			if(isset($_GET['addTrack']) AND isset($_GET['idPlaylist']))
 			{
+				$playlistId = $_GET['idPlaylist'];
 				?> <h1> Son bien ajouté ! </h1></br>
 
 			<?php
 
 			}
-			else if(isset($_GET['modifyPlaylist']))
+			else if(isset($_GET['modifyPlaylist']) AND isset($_GET['idPlaylist']))
 			{
+				$playlistId = $_GET['idPlaylist'];
 				?> <h1> Playlist updated :) ! </h1></br>
 
 			<?php
 
+			}
+			else if(isset($_GET['idPlaylist']))
+			{
+				$playlistId = $_GET['idPlaylist'];
 			}
 			else if(!isset($_GET['idPlaylist']))
 			{
@@ -68,7 +75,7 @@
 			?>
 
 			<h2> Add a new song to the playlist : </h2>
-			<form accept-charset="UTF-8" action="http://soundpark.fm/control/get_track_info.php" class="new_song" id="new_song" method="post">
+			<form accept-charset="UTF-8" action="../control/get_track_info.php" class="new_song" id="new_song" method="post">
 				 <span>URL : </span><input autofocus="autofocus" id="song_url" name="song_url" type="url" />
 				 <input autofocus="autofocus" class="playlist" id="playlist" name="playlist" value="<?php echo($_GET['idPlaylist']);?>" type="hidden"/>
 			       <?php 
@@ -98,6 +105,7 @@
 				<h2> Playlist de la semaine courante : </h2>
 				
 				<?php include_once('../control/display_complete_track_list_form.php'); ?>
+
 
 			</div>
 		</div>

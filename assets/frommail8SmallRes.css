@@ -112,7 +112,7 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-image: url(pictures/footer.jpg);
+    background-image: url(pictures/footer2.jpg);
     width: 100%;
     height: 150px;
     z-index: 1000;
@@ -149,12 +149,12 @@ h3 {
   margin-right: 2.3%;
 }
 
-input[value="-1"]
+#minus_one
 {
   display: inline-block;
   width:30px;
   height:30px;
-  background: url(pictures/cross_dislike.png);
+  background: url(pictures/broken_heart2.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
@@ -167,7 +167,7 @@ input[value="-1"]
   vertical-align: middle;
 
 }
-input[value="+1"]
+#plus_one
 {
   display: inline-block;
   width:30px;
@@ -376,10 +376,23 @@ input[value="pause"]
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 144px 0 143px;
+    margin: 0 117px 0 117px;
     position: relative;
     height: 380px;
     width: auto;
+  }
+
+ .socialIcons
+  {
+    height: 240px;
+    width: 53px;
+  }
+
+  .socialIcon
+  {
+    height: 43px;
+    width: 43px;
+    margin-bottom: 17px;
   }
 
   .sound_cover
@@ -387,10 +400,12 @@ input[value="pause"]
     height: 240px;
     width: 240px;
     margin-right: 10px;
-    margin-top: 30px;
     display: inline-block;
     vertical-align: middle;
   }
+
+
+
 
   .sound_informations
   {
@@ -431,8 +446,32 @@ input[value="pause"]
 }
 
 
-input[value="-1"]:hover,
-input[value="+1"]:hover
+#minus_one:hover
+{
+  cursor: pointer;
+  background: url(pictures/broken_heart2_pressed.png);
+  width:30px;
+  height:30px;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
+#plus_one:hover
+{
+  cursor: pointer;
+  background: url(pictures/heart_like_pressed.png);
+  width:30px;
+  height:30px;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
+
+
+/*#minus_one:hover,
+#plus_one:hover
  {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: 0.45s;
@@ -442,8 +481,8 @@ input[value="+1"]:hover
     animation-duration: 0.45s;
     animation-timing-function: linear;
     animation-iteration-count: 1;
-    cursor: pointer;
-}
+    
+}*/
 
 @-webkit-keyframes bounce
  {
@@ -511,10 +550,21 @@ keyframes bounce
     font-size: 4.8em;
   }
 
-input[value="-1"],
-input[value="+1"]
+#minus_one,
+#plus_one
 {
 
+  width:25px;
+  height:25px;
+}
+
+#minus_one:hover
+{
+  width:25px;
+  height:25px;
+}
+#plus_one:hover
+{
   width:25px;
   height:25px;
 }
@@ -604,7 +654,7 @@ keyframes bounce
 
   .sound_box
   {
-    margin: 0 129px 0 128px;
+    margin: 0 104px 0 104px;
     height: 280px;
   }
   .sound_cover
@@ -612,9 +662,20 @@ keyframes bounce
     height: 220px;
     width: 220px;
     margin-right: 10px;
-    margin-top: 30px;
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .socialIcons
+  {
+    height: 220px;
+    width: 49px;
+  }
+  .socialIcon
+  {
+    height: 39px;
+    width: 39px;
+    margin-bottom: 15px;
   }
   .sound_informations h3
   {

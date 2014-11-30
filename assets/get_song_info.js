@@ -11,6 +11,7 @@ SC.get('/resolve', { url: songUrl }, function(track)
 			{
 				streamable = track.streamable;
 				trackId = track.id;
+				permalinkUrl = track.permalink_url
 				var str = track.artwork_url;
 				trackArtWork = str.replace("large.jpg", "crop.jpg");
 				str = track.title;

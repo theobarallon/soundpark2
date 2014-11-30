@@ -20,6 +20,7 @@
 	        {
 	        	$req = $bdd->prepare('INSERT INTO user(email, subscription_date) VALUES(?, NOW())');
 				$req->execute(array($_POST['user_email']));
+				include_once('mailchimpUserNewSubscribe.php');
 				header('Location: ../view/registered.php'); 
 	        }			
 	    }

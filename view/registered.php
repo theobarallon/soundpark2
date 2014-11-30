@@ -21,8 +21,11 @@
 		</h2>
 
 	</div>
-		
-		
+	
+	<script type="text/javascript">
+		mixpanel.track("Page view", {fullUrl: window.location.href});
+	</script>	
+			
 </body>
 </html>
 </html>

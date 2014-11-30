@@ -112,7 +112,7 @@ h3 {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-image: url(pictures/footer.jpg);
+    background-image: url(pictures/footer2.jpg);
     width: 100%;
     height: 180px;
     z-index: 1000;
@@ -151,8 +151,8 @@ h3 {
   margin-right: 2.3%;
 }
 
-input[value="-1"],
-input[value="+1"]
+#minus_one,
+#plus_one
 {
   border-style: none;
   color: transparent;
@@ -161,22 +161,24 @@ input[value="+1"]
     width:35px;
     height:35px;
     font-size: 0.0000001em;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
 }
 
-input[value="-1"]:focus,
-input[value="+1"]:focus
+#minus_one:focus,
+#plus_one:focus
 {
   border-style: none;
   outline: none;
   box-shadow: none;
 }
 
-input[value="-1"]
+#minus_one
 {
   display: inline-block;
   width:35px;
   height:35px;
-  background: url(pictures/cross_dislike.png);
+  background: url(pictures/broken_heart2.png);
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
@@ -189,7 +191,7 @@ input[value="-1"]
   vertical-align: middle;
 
 }
-input[value="+1"]
+#plus_one
 {
   display: inline-block;
   width:35px;
@@ -208,7 +210,28 @@ input[value="+1"]
   }
 
 
-
+#minus_one:hover
+{
+  cursor: pointer;
+  background: url(pictures/broken_heart2_pressed.png);
+  width:35px;
+  height:35px;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
+#plus_one:hover
+{
+  cursor: pointer;
+  background: url(pictures/heart_like_hover.png);
+  width:35px;
+  height:35px;
+  -webkit-background-size: cover; /* pour Chrome et Safari */
+  -moz-background-size: cover; /* pour Firefox */
+  -o-background-size: cover; /* pour Opera */
+  background-size: cover; /* version standardisée */
+}
 
 
   input[value="play"],
@@ -396,11 +419,86 @@ input[value="pause"]
     display: none;
   }
 
+
+  
+
+  .socialIcons
+  {
+    height: 212px;
+    width: 60px;
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .socialIcon, 
+  .socialIconClipboard
+  {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0px;
+    display: inline-block;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+
+
+
+ 
+
+  #socialIconFb
+  {
+    background-image: url(pictures/facebook_frommail_share_icon.png);
+  }
+   #socialIconTwitter
+  {
+    background-image: url(pictures/twitter_frommail_share_icon.png);
+  }
+   #socialIconEmail
+  {
+    background-image: url(pictures/email_frommail_share_icon.png);
+  }
+   .socialIconClipboard
+  {
+    background-image: url(pictures/clipboard_frommail_share_icon.png);
+  }
+  #socialIconSoundcloud
+  {
+    background-image: url(pictures/soundcloudLogoWhite.png);
+  }
+
+  #socialIconFb:hover
+  {
+    background-image: url(pictures/facebook_frommail_share_icon_hover.png);
+  }
+   #socialIconTwitter:hover
+  {
+    background-image: url(pictures/twitter_frommail_share_icon_hover.png);
+  }
+   #socialIconEmail:hover
+  {
+    background-image: url(pictures/email_frommail_share_icon_hover.png);
+  }
+   .socialIconClipboard:hover
+  {
+    background-image: url(pictures/clipboard_frommail_share_icon_hover.png);
+  }
+  #socialIconSoundcloud:hover
+  {
+    background-image: url(pictures/soundcloudLogoWhite_hover.png);
+  }
+
+
  .sound_box
   {
     vertical-align: middle;
     display: inline-block;
-    margin: 0 210px 0 210px;
+    margin: 0 208px 0 208px;
     position: relative;
     height: 480px;
     width: auto;
@@ -412,11 +510,15 @@ input[value="pause"]
     height: 280px;
     width: 280px;
     margin-right: 10px;
-    margin-top: 30px;
+    margin-top: 0px;
     display: inline-block;
     vertical-align: middle;
   }
 
+  .soundcloudLogo
+  {
+    
+  }
  
 
   .sound_informations
@@ -432,11 +534,11 @@ input[value="pause"]
   {
     text-align: left;
     line-height: 2.5em;
-    font-size: 1.4em;
+    font-size: 1.2em;
 
     font-family: 'open Sans';
     font-weight: 300;
-    width: 363px;
+    width: 313px;
     color: black;
     overflow: hidden;
   }
@@ -475,8 +577,8 @@ input[value="pause"]
 }
 
 
-input[value="-1"]:hover,
-input[value="+1"]:hover
+/*#minus_one:hover,
+#plus_one:hover
  {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: 0.4s;
@@ -487,7 +589,7 @@ input[value="+1"]:hover
     animation-timing-function: linear;
     animation-iteration-count: 1;
     cursor: pointer;
-}
+}*/
 
 @-webkit-keyframes bounce
  {
