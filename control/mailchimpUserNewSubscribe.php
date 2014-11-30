@@ -2,7 +2,7 @@
 
 if(isset($_POST['user_email']))
 {
-	include('../vendor/drewm/mailchimp-api/src/Drewm/MailChimp.php');
+	include('../vendor/drewm/mailchimp-api/MailChimp.php');
 	$MailChimp = new \Drewm\MailChimp('b325e66745372713e98fc83055649de9-us8');
 	$result = $MailChimp->call('lists/subscribe', array(
 	                'id'                => '6b7043da5e',
