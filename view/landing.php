@@ -21,8 +21,7 @@
 
     <meta property="og:site_name" content="Soundpark.fm"/>
     <meta property="og:description" content="Toutes les semaines, le lundi matin, le meilleur de la musique sélectionné par la crème de la crème, au chaud dans ta boîte mail" />
-    <meta property="og:image"
-content="http://soundpark.fm/assets/pictures/thumbnail_fb.jpg" />
+    <meta property="og:image" content="http://soundpark.fm/assets/pictures/thumbnail_fb.jpg" />
 
 
 
