@@ -1,3 +1,9 @@
+/* Tracking playlist main controlers */
+
+document.getElementById('play').addEventListener('click', function () {
+	mixpanel.track("Play/Pause Clicked", {fullUrl: window.location.href});
+}, false);
+
 document.getElementById('minus_one').addEventListener('click', function () {
 	mixpanel.track("Dislike Clicked", {fullUrl: window.location.href});
 }, false);
@@ -28,38 +34,61 @@ document.getElementById('left_arrow_icon').addEventListener('click', function ()
 }, false);
 
 
-document.getElementById('socialIconFb').addEventListener('click', function () {
-	mixpanel.track("Share song with facebook Clicked", {
-		"fullUrl": window.location.href,
-		"trackId": songTable[position]
-		});
-}, false);
-
-document.getElementById('socialIconTwitter').addEventListener('click', function () {
-	mixpanel.track("Share song with twitter Clicked", {
-		"fullUrl": window.location.href,
-		"trackId": songTable[position]
-		});
-}, false);
-
-document.getElementById('socialIconEmail').addEventListener('click', function () {
-	mixpanel.track("Share song with email Clicked", {
-		"fullUrl": window.location.href,
-		"trackId": songTable[position]
-		});
-}, false);
-
-document.getElementById('socialIconSoundcloud').addEventListener('click', function () {
-	mixpanel.track("Listen song on Soundcloud Clicked", {
-		"fullUrl": window.location.href,
-		"trackId": songTable[position]
-		});
-}, false);
+/* Tracking sharing icons */
 
 
-document.getElementById('play').addEventListener('click', function () {
-	mixpanel.track("Play/Pause Clicked", {fullUrl: window.location.href});
-}, false);
+for (var i = 0 ; i < document.getElementsByClassName('socialIconFb').length; i++)
+	{
+		document.getElementsByClassName('socialIconFb')[i].addEventListener('click', function() 
+	    { 
+	    	mixpanel.track("Share song with facebook Clicked", {
+			"fullUrl": window.location.href,
+			"trackId": songTable[position]
+			});
+
+		}, false);
+	}
+
+for (var i = 0 ; i < document.getElementsByClassName('socialIconTwitter').length; i++)
+	{
+		document.getElementsByClassName('socialIconTwitter')[i].addEventListener('click', function() 
+	    { 
+	    	mixpanel.track("Share song with Twitter Clicked", {
+			"fullUrl": window.location.href,
+			"trackId": songTable[position]
+			});
+
+		}, false);
+	}
+
+for (var i = 0 ; i < document.getElementsByClassName('socialIconEmail').length; i++)
+	{
+		document.getElementsByClassName('socialIconEmail')[i].addEventListener('click', function() 
+	    { 
+	    	mixpanel.track("Share song with Email Clicked", {
+			"fullUrl": window.location.href,
+			"trackId": songTable[position]
+			});
+
+		}, false);
+	}
+
+for (var i = 0 ; i < document.getElementsByClassName('socialIconSoundcloud').length; i++)
+	{
+		document.getElementsByClassName('socialIconSoundcloud')[i].addEventListener('click', function() 
+	    { 
+	    	mixpanel.track("Listen song on Soundcloud Clicked", {
+			"fullUrl": window.location.href,
+			"trackId": songTable[position]
+			});
+
+		}, false);
+	}
+
+
+
+
+
 
 
 

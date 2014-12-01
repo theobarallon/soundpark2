@@ -343,7 +343,10 @@ input[value="pause"]
     width: 70px;
   }
 
-  .socialIcon
+  .socialIconFb,
+  .socialIconTwitter,
+  .socialIconEmail,
+  .socialIconSoundcloud 
   {
     height: 56px;
     width: 56px;

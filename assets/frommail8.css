@@ -432,8 +432,10 @@ input[value="pause"]
     vertical-align: middle;
   }
 
-  .socialIcon, 
-  .socialIconClipboard
+  .socialIconFb,
+  .socialIconTwitter,
+  .socialIconEmail,
+  .socialIconSoundcloud 
   {
     height: 50px;
     width: 50px;
@@ -451,15 +453,15 @@ input[value="pause"]
 
  
 
-  #socialIconFb
+  .socialIconFb
   {
     background-image: url(pictures/facebook_frommail_share_icon.png);
   }
-   #socialIconTwitter
+   .socialIconTwitter
   {
     background-image: url(pictures/twitter_frommail_share_icon.png);
   }
-   #socialIconEmail
+   .socialIconEmail
   {
     background-image: url(pictures/email_frommail_share_icon.png);
   }
@@ -467,20 +469,20 @@ input[value="pause"]
   {
     background-image: url(pictures/clipboard_frommail_share_icon.png);
   }
-  #socialIconSoundcloud
+  .socialIconSoundcloud
   {
     background-image: url(pictures/soundcloudLogoWhite.png);
   }
 
-  #socialIconFb:hover
+  .socialIconFb:hover
   {
     background-image: url(pictures/facebook_frommail_share_icon_hover.png);
   }
-   #socialIconTwitter:hover
+   .socialIconTwitter:hover
   {
     background-image: url(pictures/twitter_frommail_share_icon_hover.png);
   }
-   #socialIconEmail:hover
+   .socialIconEmail:hover
   {
     background-image: url(pictures/email_frommail_share_icon_hover.png);
   }
@@ -488,7 +490,7 @@ input[value="pause"]
   {
     background-image: url(pictures/clipboard_frommail_share_icon_hover.png);
   }
-  #socialIconSoundcloud:hover
+  .socialIconSoundcloud:hover
   {
     background-image: url(pictures/soundcloudLogoWhite_hover.png);
   }
@@ -513,11 +515,6 @@ input[value="pause"]
     margin-top: 0px;
     display: inline-block;
     vertical-align: middle;
-  }
-
-  .soundcloudLogo
-  {
-    
   }
  
 

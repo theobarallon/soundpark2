@@ -407,7 +407,11 @@ input[value="pause"]
   {
     display: none;
   }
-  .socialIcon
+  
+  .socialIconFb,
+  .socialIconTwitter,
+  .socialIconEmail,
+  .socialIconSoundcloud 
   {
     display: none;
   }

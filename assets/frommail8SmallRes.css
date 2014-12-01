@@ -388,7 +388,10 @@ input[value="pause"]
     width: 53px;
   }
 
-  .socialIcon
+  .socialIconFb,
+  .socialIconTwitter,
+  .socialIconEmail,
+  .socialIconSoundcloud 
   {
     height: 43px;
     width: 43px;
@@ -671,7 +674,11 @@ keyframes bounce
     height: 220px;
     width: 49px;
   }
-  .socialIcon
+  
+  .socialIconFb,
+  .socialIconTwitter,
+  .socialIconEmail,
+  .socialIconSoundcloud 
   {
     height: 39px;
     width: 39px;
