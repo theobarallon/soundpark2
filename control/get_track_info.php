@@ -36,7 +36,7 @@
 							duration = track.duration;
 							permalinkUrl = track.permalink_url
 							var str = track.artwork_url;
-							trackArtWork = str.replace("large.jpg", "crop.jpg");
+							trackArtWork = str.replace("large.jpg", "t500x500.jpg");
 							str = track.title;
 							var res = str.split("-");
 							trackArtist = res[0];

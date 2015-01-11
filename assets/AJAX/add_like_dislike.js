@@ -26,7 +26,7 @@ function addLike()
                 xhr2.send(null);
             	likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like_pressed.png)";
                 likeStamp.style.backgroundSize="cover";
-                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2.png)";
+                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/cross_dislike.png)";
                 dislikeStamp.style.backgroundSize="cover";
         	}
             else
@@ -38,7 +38,7 @@ function addLike()
                 xhr2.send(null);
                 likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like.png)";
                 likeStamp.style.backgroundSize="cover";
-                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2.png)";
+                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/cross_dislike.png)";
                 dislikeStamp.style.backgroundSize="cover";
             }
         }
@@ -79,7 +79,7 @@ function addDislike()
             {
             	xhr2.open('GET', '../control/add_dislike.php?trackId='+trackId+'&currentUser='+currentUser); // fichier à modifier: tester si le son est disliké est si oui, effacer en meme temps le dislike
             	xhr2.send(null);
-            	dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2_pressed.png)";
+            	dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/cross_dislike.png)";
                 dislikeStamp.style.backgroundSize="cover";
                 likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like.png)";
                 likeStamp.style.backgroundSize="cover";
@@ -91,7 +91,7 @@ function addDislike()
 				console.log('disnull');
                 xhr2.open('GET', '../control/remove_dislike.php?trackId='+trackId+'&currentUser='+currentUser); // fichier à modifier: tester si le son est disliké est si oui, effacer en meme temps le dislike
                 xhr2.send(null);
-                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/broken_heart2.png)";
+                dislikeStamp.style.background="url(http://soundpark.fm/assets/pictures/cross_dislike.png)";
                 dislikeStamp.style.backgroundSize="cover";
                 likeStamp.style.background="url(http://soundpark.fm/assets/pictures/heart_like.png)";
                 likeStamp.style.backgroundSize="cover";

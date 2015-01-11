@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	header('Access-Control-Allow-Origin: *');
 	include_once('../model/connect_sql.php');
 	include_once('../model/find_user_email.php');
 	include_once('../control/control_user.php');
@@ -15,10 +16,10 @@
     <link href="../assets/frommail8.css" media="all" rel="stylesheet" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <link rel="stylesheet" media="screen and (max-width: 1285px)" href="../assets/frommail8SmallRes.css" />
+    <!--<link rel="stylesheet" media="screen and (max-width: 1285px)" href="../assets/frommail8SmallRes.css" />
     <link rel="stylesheet" media="screen and (min-width: 1700px)" href="../assets/frommail8HighRes.css" />
     <link rel="stylesheet" media="screen and (max-width: 768px)" href="../assets/frommail8SmallRes.css" />
-    <link rel="stylesheet" media="screen and (max-height: 700px)" href="../assets/frommail8SmallRes.css" />
+    <link rel="stylesheet" media="screen and (max-height: 700px)" href="../assets/frommail8SmallRes.css" />-->
     <link rel="stylesheet" media="all and (max-width: 550px)" href="../assets/frommail8Mobile.css" />
 
     <link rel="shortcut icon" href="http://soundpark.fm/assets/pictures/favicon.ico" type="image/x-icon">
@@ -47,7 +48,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
  
 	<body>
 		<header>
-			<h1>Soundpark.<span style="color: #660066">fm</span></h1>
+			<h1>SOUNDPARK.FM</h1>
 			<h2 id="player_position"><?php include("../control/display_player_position.php"); ?></h2>
 			<!--<h3> <?php //echo($_COOKIE['playlist_url']); ?> </h3>-->
 			<!--<h3> <?php //echo($_COOKIE['current_user']); ?> </h3>-->
@@ -83,10 +84,12 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 			<div id="buttons_area">
 				<div id="dislike">
 					<input type="button" id="minus_one" value="-1" onclick="addDislike()" align="center"/>
+					<span class="likeText">Forget it</span>
 				</div>
 				<input type="button" class="play" id="play" value="pause"/>
 				<div id="like">
 					<input type="button" id="plus_one" value="+1" onclick="addLike()" align="center"/>
+					<span class="likeText">Like it</span>
 				</div>
 				<form id="share_link">
 					<span class="share_url_title"> Share that tune --> </span>
