@@ -362,7 +362,7 @@ input[value="pause"]
 #left_arrow_icon
  {
     height: 65.1vh;
-    width: 23vh;
+    width: 21.41vh;
     float: left;
     border-style: none;
     display: inline-block;
@@ -386,7 +386,7 @@ input[value="pause"]
  #right_arrow_icon
  {
   height: 65.1vh;
-  width: 23vh;
+  width: 21.41vh;
   display: inline-block;
   float: right;
   border-style: none;

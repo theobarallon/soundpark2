@@ -26,7 +26,7 @@ var slider = function(id){
 	this.precParent = this.div.find('#left_arrow');
 	this.suivParent = this.div.find('#right_arrow');
 	//alert(this.suiv.html());
-	this.saut=(this.lengthCach)+6;
+	this.saut=(this.lengthCach)+5;
 	this.steps = Math.ceil(this.largeur/this.saut);
 	//alert(this.steps);
 	this.courant = 0;
@@ -50,7 +50,7 @@ var slider = function(id){
 			self.largeur+=parseInt($(this).css("margin-right"));
 		});
 		console.log('InNewlargeur : '+self.largeur);
-		this.saut=(this.lengthCach)+6;
+		this.saut=(this.lengthCach)+5;
 		this.steps = Math.ceil(this.largeur/this.saut);
 		//s.slider.style.left = "0px";
 		var newSliderPosition = -s.courant * s.saut;
