@@ -26,12 +26,37 @@ var slider = function(id){
 	this.precParent = this.div.find('#left_arrow');
 	this.suivParent = this.div.find('#right_arrow');
 	//alert(this.suiv.html());
-	this.saut=(this.lengthCach)+4;
+	this.saut=(this.lengthCach)+6;
 	this.steps = Math.ceil(this.largeur/this.saut);
 	//alert(this.steps);
 	this.courant = 0;
 	this.prec.hide();
 	this.precParent.hide();
+	
+
+	/* Réajustement des marges onresize */
+
+	window.addEventListener("resize", function() 
+	{
+		s.reconstruct();
+	}, false);
+
+	this.reconstruct =  function(){
+		this.largeur = 0;
+		this.lengthCach = s.div.width();
+		this.div.find(".sound_box").each(function(){
+			self.largeur+= parseInt($(this).css("width"));
+			self.largeur+=parseInt($(this).css("margin-left"));
+			self.largeur+=parseInt($(this).css("margin-right"));
+		});
+		console.log('InNewlargeur : '+self.largeur);
+		this.saut=(this.lengthCach)+6;
+		this.steps = Math.ceil(this.largeur/this.saut);
+		//s.slider.style.left = "0px";
+		var newSliderPosition = -s.courant * s.saut;
+		document.getElementsByClassName("slider")[0].style.left=newSliderPosition+"px";
+	}
+
 
 	this.slideRight = function(){
 			if(self.courant<(self.steps-1)){
@@ -73,6 +98,8 @@ var slider = function(id){
 	}
 
 }
+
+
 
 
 /* Audio part of player */
@@ -204,21 +231,27 @@ function updateCurrentTrack(trackId)
 			TranparentOverlayDiv.addEventListener('click', function (e) 
 			{
 					clearDropdownMenu();
+					durationBeforeJump = currentTrack.position;
 					var mousePos = {'x': e.layerX, 'y': e.layerY};
 					//console.log(mousePos['x']);
 					var aimedPositionMs = (mousePos['x']*(currentTrack.durationEstimate/coverWidth));
 					currentTrack.setPosition(aimedPositionMs);
 					document.getElementById('blurred_sound_cover_container'+ playerPosition).style.width=(mousePos['x']+"px");
 					document.getElementById('cover_overlay'+ playerPosition).style.width=(mousePos['x']+"px");
+					mixpanel.track("Progression bar hit", {
+						"fullUrl": window.location.href,
+						"trackId": getCurrentTrackId(),
+						"durationBeforeJump": durationBeforeJump,
+						"jumpedTo": currentTrack.position
+					});
 	
-					
 			}, false);
 			
 
 			/* END position navigation with click */
 
 
-		},1000);
+		},4000);
 
 		
 		

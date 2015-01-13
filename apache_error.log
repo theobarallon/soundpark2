@@ -178,3 +178,17 @@
 [Sat Nov 29 18:08:52 2014] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
 [Sat Nov 29 18:09:05 2014] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
 [Sat Nov 29 18:09:25 2014] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Tue Jan 13 21:17:37 2015] [notice] FastCGI: process manager initialized (pid 83516)
+[Tue Jan 13 21:17:37 2015] [notice] Digest: generating secret for digest authentication ...
+[Tue Jan 13 21:17:37 2015] [notice] Digest: done
+[Tue Jan 13 21:17:37 2015] [notice] Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8za DAV/2 mod_perl/2.0.8 Perl/v5.20.0 configured -- resuming normal operations
+[Tue Jan 13 21:18:39 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Tue Jan 13 21:19:13 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Tue Jan 13 21:19:34 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Tue Jan 13 21:20:30 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Tue Jan 13 21:21:46 2015] [notice] caught SIGTERM, shutting down
+[Tue Jan 13 21:21:52 2015] [notice] FastCGI: process manager initialized (pid 83793)
+[Tue Jan 13 21:21:52 2015] [notice] Digest: generating secret for digest authentication ...
+[Tue Jan 13 21:21:52 2015] [notice] Digest: done
+[Tue Jan 13 21:21:52 2015] [notice] Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8za DAV/2 mod_perl/2.0.8 Perl/v5.20.0 configured -- resuming normal operations
+[Tue Jan 13 22:10:04 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/favicon.ico
