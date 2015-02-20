@@ -41,5 +41,3 @@ while($songBoxes = $req->fetch())
 };
 
 ?>
-
-j’ai découvert ce son sur Soundpark.fm, la newsletter musicale qui te régale tous les lundis. Inscris toi aussi!

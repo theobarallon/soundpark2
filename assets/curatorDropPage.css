@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'Code';
+  src: url('fonts/code_light.otf');
+  src: url('fonts/code_light.eot#iefix') format('embedded-opentype'),
+       url('fonts/code_light.ttf') format('truetype'),
+       url('fonts/code_light.woff') format('woff');
+   }
+@font-face {
+  font-family: 'CodeBold';
+  src: url('fonts/code_bold.otf');
+   }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+
+body 
+{ 
+  background: url(pictures/curatorSoundDropPage.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+h1
+{
+	font-size: 10vh;
+	font-family: 'Code';
+	font-weight: 100;
+	margin: auto;
+	color: white;
+	margin-top: 26vh;
+}
+h2
+{
+	font-size: 3vh;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	margin: auto;
+	color: white;	
+	margin-bottom: 7vh;
+	margin-top: 1vh;
+}
+
+#container h3
+{
+	position: absolute;
+	left: 20vh;
+	top: 37vh;
+	-ms-transform: rotate(-30deg); /* IE 9 */
+    -webkit-transform: rotate(-30deg); /* Chrome, Safari, Opera */
+    transform: rotate(-30deg);
+    width: 25vh;
+    font-size: 2vh;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	margin: auto;
+	color: white;	
+}
+
+#explainArrow
+{
+	position: absolute;
+	top: 40vh;
+	left: 42vh;
+	width: 4vh;
+	-ms-transform: rotate(150deg); /* IE 9 */
+    -webkit-transform: rotate(150deg); /* Chrome, Safari, Opera */
+    transform: rotate(150deg);
+}
+
+
+#message
+{
+  margin-top: 10vh;
+  color: #dfdfdf;
+  opacity: 0.6;
+}
+
+
+/* INPUT PARAMETERS */
+
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  vertical-align: middle; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  background-color: white;
+  border: 1px solid white;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s; }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: white;
+    outline: 0;
+    outline: thin dotted \9;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    -moz-box-shadow: inset 0 1px 1px white, 0 0 8px white;
+    box-shadow: inset 0 1px 1px white, 0 0 8px white; }
+  
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto; }
+
+
+input[type="url"]
+  {
+    font-family: 'open Sans';
+    font-weight: 300;
+    font-size: 1em;
+    color: white;
+    height : 25px;
+    border-radius: 0px;
+    width: 50%;
+   background-color: transparent; 
+ }
+
+    
+form input[type="submit"] 
+  {
+    border-radius: 2px;
+    background-color: transparent;
+    color: #fff;
+    padding: 2px 6px 2px;
+    border: none;
+    height : 35px;
+    width: 35px;
+    font-family: Code; 
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+  }
+
+  form input[type="submit"]:hover 
+  {
+  	background-color: rgba(230,230,230,0.5);
+  }
+
+  form input[type="url"]:hover 
+  {
+  	cursor: text;
+  }
+
+

@@ -4,6 +4,7 @@
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <script type="text/javascript" src="../assets/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="../Sortable/Sortable.min.js"></script>
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <link href="../assets/BO.css" media="all" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,6 +19,7 @@
 					include_once('../model/get_current_playlist_id.php'); // renvoi $currentPlaylistId
 				?>
 				<li><a id="playlist_tab" style="color: white; border-bottom: 1px solid white;" href="create_playlist.php?idPlaylist=<?php echo($currentPlaylistId); ?>">Playlists</a></li>
+				<li><a id="songs_tab" href="curators_songs_new.php">Songs</a></li>
 				<li><a id="curator_tab" href="create_curator.php">Curators</a></li>
 			</ul>
 		</header>
@@ -105,6 +107,65 @@
 				<h2> Playlist de la semaine courante : </h2>
 				
 				<?php include_once('../control/display_complete_track_list_form.php'); ?>
+				<script type="text/javascript">
+					var el = document.getElementById('sortable');
+					var sortable = Sortable.create(el, 
+					{
+						handle: '.icon-move',
+						animation: 150,
+						group: "localStorage-example",
+						scroll: true, // or HTMLElement
+			
+
+					     setData: function (dataTransfer, dragEl) {
+					        dataTransfer.setData('Text', dragEl.textContent);
+					    },
+
+					    onStart: function (/**Event*/evt) {
+					        evt.oldIndex;  // element index within parent
+					    },
+
+					    // dragging ended
+					    onEnd: function (/**Event*/evt) {
+					        evt.oldIndex;  // element's old index within parent
+					        evt.newIndex;  // element's new index within parent
+					        for(var index = 0; index < document.getElementsByClassName('songOrder').length; index++)
+					        {
+					        	var elem = document.getElementById("songOrder"+sortable.toArray()[index]);
+								elem.value = (index+1);
+					        }
+					        
+					    },
+
+					    // Element is dropped into the list from another list
+					    onAdd: function (/**Event*/evt) {
+					        var itemEl = evt.item;  // dragged HTMLElement
+					        evt.from;  // previous list
+					        // + indexes from onEnd
+					    },
+
+					    // Changed sorting within list
+					    onUpdate: function (/**Event*/evt) {
+					        var itemEl = evt.item;  // dragged HTMLElement
+					        // + indexes from onEnd
+					    },
+
+					    // Called by any change to the list (add / update / remove)
+					    onSort: function (/**Event*/evt) {
+					        // same properties as onUpdate
+					    },
+
+					    // Element is removed from the list into another list
+					    onRemove: function (/**Event*/evt) {
+					        // same properties as onUpdate
+					    },
+
+					    // Attempt to drag a filtered element
+					    onFilter: function (/**Event*/evt) {
+					        var itemEl = evt.item;  // HTMLElement receiving the `mousedown|tapstart` event.
+					    }
+					});
+				</script>
 
 
 			</div>
@@ -114,4 +175,5 @@
 			
 		</footer>		
 </body>
+<script type="text/javascript" src="../assets/player_bo.js"></script>
 </html>

@@ -4,12 +4,12 @@
 	if($trackList = $req->fetch())
 	{
 		echo('<form accept-charset="UTF-8" action="../control/modify_songs.php" class="modifyPlaylist" id="modifyPlaylist" method="post">');
-		echo '<ol>';
+		echo '<ol id="sortable">';
 		$index = 0;
 		do
 		{
 				//echo('<li>'.$trackList[5].' - '.$trackList[6].' - '.$trackList[4].'<a href="../control/delete_track.php?idSong='.$trackList[0].'"> Supprimer </a></li>');
-				echo('<li><span>Title : </span><input autofocus="autofocus" class="song_title" id="song_title'.$index.'" name="song_title'.$index.'" value="'.$trackList[5].'" type="text" /> <span>  Artist : </span><input autofocus="autofocus" id="song_artist'.$index.'" name="song_artist'.$index.'" value="'.$trackList[6].'" type="text" /> <span>  Genre : </span><input autofocus="autofocus" class="song_genre" id="song_genre'.$index.'" name="song_genre'.$index.'" value="'.$trackList[4].'" type="text" />');
+				echo('<li data-id="'.($index+1).'"><div id="playPauseIcon'.$index.'" class="playPauseIcon play"></div><img src="../assets/pictures/handle_icon.svg" class="icon-move"><span id="trackOrder">'.$trackList[8].'. </span><span>Title : </span><input autofocus="autofocus" class="song_title" id="song_title'.$index.'" name="song_title'.$index.'" value="'.$trackList[5].'" type="text" /> <span>  Artist : </span><input autofocus="autofocus" class="song_artist" id="song_artist'.$index.'" name="song_artist'.$index.'" value="'.$trackList[6].'" type="text" /> <span>  Genre : </span><input autofocus="autofocus" class="song_genre" id="song_genre'.$index.'" name="song_genre'.$index.'" value="'.$trackList[4].'" type="text" />');
 				include_once('../model/get_curators.php');
 				$j = 0;
 				$htmlSelectForm ="<label for='idCurator".$index."'>  Curator : </label><select name='idCurator".$index."' id='idCurator".$index."'>";
@@ -28,7 +28,7 @@
 				}
 				$htmlSelectForm = $htmlSelectForm . "</select>";
 				echo $htmlSelectForm;
-				echo('   <a href="../control/delete_track.php?idSong='.$trackList[0].'">Supprimer</a><input autofocus="autofocus" class="songId" id="songId'.$index.'" name="songId'.$index.'" value="'.$trackList[0].'" type="hidden"/></br></li>');
+				echo('   <a href="../control/delete_track.php?idSong='.$trackList[0].'">Supprimer</a><input autofocus="autofocus" class="songId" id="songId'.$index.'" name="songId'.$index.'" value="'.$trackList[0].'" type="hidden"/><input autofocus="autofocus" class="songOrder" id="songOrder'.($index+1).'" name="songOrder'.($index+1).'" value="'.$trackList[8].'" type="hidden"/><input autofocus="autofocus" class="trackId" id="trackId'.$index.'" name="trackId'.$index.'" value="'.$trackList[7].'" type="hidden"/></br></li>');
 				$index++;
 		} while($trackList = $req->fetch());	
 		echo '</ol>';

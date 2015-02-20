@@ -12,7 +12,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
   <head>
     <title>Soundpark</title>
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/frommail8.css" media="all" rel="stylesheet" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -29,13 +28,44 @@
     <script src="http://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript" src="../assets/jquery.js"></script>
     <script type="text/javascript" src="../assets/cookies.js"></script>
+    <script type="text/javascript" src="../assets/date.js"></script>
     <script type="text/javascript" src="../assets/AJAX/update_player_position.js"></script>
     <script type="text/javascript" src="../assets/AJAX/add_like_dislike.js"></script>
     <script type="text/javascript" src="../assets/AJAX/display_user_past_likes.js"></script>
     <!--<script type="text/javascript" src="../zeroclipboard-2.1.6/dist/ZeroClipboard.min.js"></script>-->
     
 
-    
+	<!--Intercom integration-->
+	
+	<?php
+		include_once('../model/get_user_subscription_date.php');
+	?>
+    <script>
+    	var unixtime = Date.parse("<?php echo($subsciptionDate); ?>").getTime()/1000
+	 	var parts = window.location.search.substr(1).split("&");
+		var $_GET = {};
+		for (var i = 0; i < parts.length; i++) 
+		{
+		    var temp = parts[i].split("=");
+		    $_GET[decodeURIComponent(temp[0])] = decodeURIComponent(temp[1]);
+		}
+		console.log($_GET['pwd']);
+
+	 	 window.intercomSettings = {
+		    // TODO: The current logged in user's full name
+		    name: $_GET['pwd'],
+		    // TODO: The current logged in user's email address.
+		    email: $_GET['pwd'],
+		    // TODO: The current logged in user's sign-up date as a Unix timestamp.
+		    created_at: unixtime,
+		    app_id: "qbgtpz2g"
+		};
+	</script>
+	<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/qbgtpz2g';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+   
+
+
+	<!--Google fonts integration-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 
@@ -110,11 +140,6 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
     <script type="text/javascript" src="../assets/mixpanel_logs.js"></script>
     <script type="text/javascript">
 
-    	/*var copyToClipboard = function(index)
-    	{
-    		ZeroClipboard.config( { swfPath: "http://localhost:8888/zeroclipboard-2.1.6/dist/ZeroClipboard.swf" } );
-			var client = new ZeroClipboard( document.getElementById("socialIconClipboard1") );	
-			client.clip( document.getElementById("socialIconClipboard1") );
-		}*/
+    
     </script>
 </html>

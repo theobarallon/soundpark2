@@ -18,6 +18,7 @@
 					include_once('../model/get_current_playlist_id.php'); 
 				?>
 				<li><a id="playlist_tab" href="create_playlist.php?idPlaylist=<?php echo($currentPlaylistId); ?>">Playlists</a></li>
+				<li><a id="songs_tab" href="curators_songs_new.php">Songs</a></li>
 				<li><a id="curator_tab" style="color: white; border-bottom: 1px solid white;" href="create_curator.php">Curators</a></li>
 			</ul>
 		</header>

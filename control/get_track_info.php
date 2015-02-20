@@ -36,12 +36,28 @@
 							duration = track.duration;
 							permalinkUrl = track.permalink_url
 							var str = track.artwork_url;
-							trackArtWork = str.replace("large.jpg", "t500x500.jpg");
+							if(str)
+							{
+								trackArtWork = str.replace("large.jpg", "t500x500.jpg");
+							}
+							else
+							{
+								trackArtWork = "http://soundpark.fm/assets/pictures/default_cover.png";
+							}
+
 							str = track.title;
 							var res = str.split("-");
 							trackArtist = res[0];
 							trackTitle =  res[1];
-							trackGenre = track.genre;	
+							if(track.genre)
+							{
+								trackGenre = track.genre;	
+							}
+							else
+							{
+								trackGenre = "";
+							}
+							
 							if(streamable && trackGenre)
 							{
 								var songInfo = document.getElementById('songInfo');

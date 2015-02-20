@@ -9,7 +9,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
   <head>
     <title>Soundpark</title>
-    <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <link href="../assets/landing2.css" media="all" rel="stylesheet" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
