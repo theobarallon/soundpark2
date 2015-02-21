@@ -26,7 +26,7 @@
 					{
 						?>
 						<form accept-charset="UTF-8" action="../control/register_curator_track.php" class="new_user" id="new_user" method="post">
-						<input autofocus="autofocus" placeholder="URL of your tune. Soundcloud prefered!" id="curator_track" name="curator_track"  type="url" autocorrect="off" autocapitalize="off"/>
+						<input autofocus="autofocus" placeholder="URL of your tune. Soundcloud prefered! But youtube compatible." id="curator_track" name="curator_track"  type="url" autocorrect="off" autocapitalize="off"/>
 						<input name="commit" type="submit" value="Go" />
 						<input type="hidden" value="<?php echo($_GET['curatorId']) ?>" name="ID_curator">
 						<input type="hidden" value="dropPage" name="source">
