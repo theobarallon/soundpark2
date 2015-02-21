@@ -54,4 +54,5 @@
 			
 		</footer>		
 </body>
+<script type="text/javascript" src="../assets/player_bo.js"></script>
 </html>

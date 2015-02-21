@@ -142,7 +142,11 @@ function playCurrentTrack(trackId)
 							{
 								var mousePos = {'x': (e.layerX-335), 'y': e.layerY};
 							}
-							else
+							else if(window.location.href.indexOf("histo") > 0)
+							{
+								var mousePos = {'x': (e.layerX-335), 'y': e.layerY};
+							}
+							else 
 							{
 								var mousePos = {'x': (e.layerX-250), 'y': e.layerY};
 							}
