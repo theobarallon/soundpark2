@@ -12,15 +12,15 @@ var slider = function(id){
 	this.div = $(id);
 	this.slider = this.div.find(".slider");
 	this.lengthCach = this.div.width();
-	console.log('LengthCachà : '+this.lengthCach);
+	//console.log('LengthCachà : '+this.lengthCach);
 	this.largeur=0;
 	this.div.find(".sound_box").each(function(){
 		self.largeur+= parseInt($(this).css("width"));
 		self.largeur+=parseInt($(this).css("margin-left"));
 		self.largeur+=parseInt($(this).css("margin-right"));
-		console.log('Inlargeur : '+self.largeur);
+		//console.log('Inlargeur : '+self.largeur);
 	});
-	console.log('largeur : '+this.largeur);
+	//console.log('largeur : '+this.largeur);
 	this.prec = this.div.find('.previous');
 	this.suiv = this.div.find('.next');
 	this.precParent = this.div.find('#left_arrow');
@@ -49,7 +49,7 @@ var slider = function(id){
 			self.largeur+=parseInt($(this).css("margin-left"));
 			self.largeur+=parseInt($(this).css("margin-right"));
 		});
-		console.log('InNewlargeur : '+self.largeur);
+		//console.log('InNewlargeur : '+self.largeur);
 		this.saut=(this.lengthCach)+6;
 		this.steps = Math.ceil(this.largeur/this.saut);
 		//s.slider.style.left = "0px";
@@ -156,17 +156,82 @@ function updateCurrentTrack(trackId)
 {
 	
 	SC.stream("/tracks/"+trackId,
-		{onfinish: function()
+		{
+			onfinish: function()
 			{ 
 				nextTrack();
-				mixpanel.track("Automatic Next", {
+				mixpanel.track("Automatic Next", 
+				{
 					"fullUrl": window.location.href,
 					"TrackId": trackId
 				});
-			}}, 
+			}, 
+			onload: function()
+			{
+				var playerPosition = document.getElementById('player_position').innerHTML;
+				for(var index = 1 ; index < (currentTrack.durationEstimate/1000) ; index++)
+				{
+					currentTrack.onPosition(index*1000, function(eventPosition)
+					{
+						//console.log(this.id+' reached '+eventPosition);
+
+						/* On change le formatage du compteur temps ici pour afficher mn:sec */
+
+						var minutes = (eventPosition / 60000) | (0);
+						var seconds = eventPosition/1000 - minutes * 60;
+						if(seconds < 10)
+						{
+							seconds = '0'+seconds;
+						}
+						if(!minutes)
+						{
+							document.getElementById('track_position'+ playerPosition).innerHTML = seconds;
+						}
+						else
+						{
+							document.getElementById('track_position'+ playerPosition).innerHTML = minutes + ':' + seconds;
+						}
+
+						/* END On change le formatage du compteur temps ici pour afficher mn:sec */
+
+						/*On fait avancer l'overlay*/
+						var coverWidth = document.getElementById('sound_cover'+ playerPosition).offsetWidth;
+						var step = (eventPosition/1000*coverWidth/(currentTrack.durationEstimate/1000));
+						document.getElementById('blurred_sound_cover_container'+ playerPosition).style.width=(step+"px");
+						document.getElementById('cover_overlay'+ playerPosition).style.width=((step)+"px");
+						/*END On fait avancer l'overlay*/
+					});
+				}
+
+				/* Position navigation with click */
+
+				var playerPosition = document.getElementById('player_position').innerHTML;
+				var TranparentOverlayDiv = document.getElementById('transparent_overlay'+ playerPosition);
+				TranparentOverlayDiv.addEventListener('click', function (e) 
+				{
+						clearDropdownMenu();
+						durationBeforeJump = currentTrack.position;
+						var mousePos = {'x': e.layerX, 'y': e.layerY};
+						//console.log(mousePos['x']);
+						var aimedPositionMs = (mousePos['x']*(currentTrack.durationEstimate/coverWidth));
+						currentTrack.setPosition(aimedPositionMs);
+						document.getElementById('blurred_sound_cover_container'+ playerPosition).style.width=(mousePos['x']+"px");
+						document.getElementById('cover_overlay'+ playerPosition).style.width=(mousePos['x']+"px");
+						mixpanel.track("Progression bar hit", {
+							"fullUrl": window.location.href,
+							"trackId": getCurrentTrackId(),
+							"durationBeforeJump": durationBeforeJump,
+							"jumpedTo": currentTrack.position
+						});
+		
+				}, false);
+					
+
+					/* END position navigation with click */
+			}
+		}, 
 			function(sound)
 			{
-				
 				currentTrack = sound;
 				if ($('#play').val() == "pause") 
 				{	
@@ -183,77 +248,6 @@ function updateCurrentTrack(trackId)
 					}
 						
 				}
-				
-
-				setTimeout(function() { // on lui dit ici d'attendre un peu que le son se lance avant de lancer la detection d'évènements de position, sinon duration marche pas
-					
-					var playerPosition = document.getElementById('player_position').innerHTML;
-					for(var index = 1 ; index < (currentTrack.durationEstimate/1000) ; index++)
-					{
-						currentTrack.onPosition(index*1000, function(eventPosition)
-						{
-							//console.log(this.id+' reached '+eventPosition);
-
-							/* On change le formatage du compteur temps ici pour afficher mn:sec */
-
-							var minutes = (eventPosition / 60000) | (0);
-							var seconds = eventPosition/1000 - minutes * 60;
-							if(seconds < 10)
-							{
-								seconds = '0'+seconds;
-							}
-							if(!minutes)
-							{
-								document.getElementById('track_position'+ playerPosition).innerHTML = seconds;
-							}
-							else
-							{
-								document.getElementById('track_position'+ playerPosition).innerHTML = minutes + ':' + seconds;
-							}
-
-							/* END On change le formatage du compteur temps ici pour afficher mn:sec */
-
-							/*On fait avancer l'overlay*/
-
-							var coverWidth = document.getElementById('sound_cover'+ playerPosition).offsetWidth;
-							var step = (eventPosition/1000*coverWidth/(currentTrack.durationEstimate/1000));
-							document.getElementById('blurred_sound_cover_container'+ playerPosition).style.width=(step+"px");
-							document.getElementById('cover_overlay'+ playerPosition).style.width=((step)+"px");
-							/*END On fait avancer l'overlay*/
-						});
-					}
-
-					/* Position navigation with click */
-
-					var playerPosition = document.getElementById('player_position').innerHTML;
-					var TranparentOverlayDiv = document.getElementById('transparent_overlay'+ playerPosition);
-					TranparentOverlayDiv.addEventListener('click', function (e) 
-					{
-							clearDropdownMenu();
-							durationBeforeJump = currentTrack.position;
-							var mousePos = {'x': e.layerX, 'y': e.layerY};
-							//console.log(mousePos['x']);
-							var aimedPositionMs = (mousePos['x']*(currentTrack.durationEstimate/coverWidth));
-							currentTrack.setPosition(aimedPositionMs);
-							document.getElementById('blurred_sound_cover_container'+ playerPosition).style.width=(mousePos['x']+"px");
-							document.getElementById('cover_overlay'+ playerPosition).style.width=(mousePos['x']+"px");
-							mixpanel.track("Progression bar hit", {
-								"fullUrl": window.location.href,
-								"trackId": getCurrentTrackId(),
-								"durationBeforeJump": durationBeforeJump,
-								"jumpedTo": currentTrack.position
-							});
-			
-					}, false);
-					
-
-					/* END position navigation with click */
-
-
-				},4000);
-
-		
-		
 			});
 }
 
@@ -422,12 +416,12 @@ var fill = function(){
 	            dm.style.height= "30vh";
 	            var indexDropdownMenuIcons = 0;
  				var fillSocialIcons = function(){
- 					console.log('1 : '+ indexDropdownMenuIcons);
+ 					//console.log('1 : '+ indexDropdownMenuIcons);
  					setTimeout(function () { 
 				        if(indexDropdownMenuIcons === 0)
 				        {
 				        	socialIconFb.style.display = "inline-block";
-				        	console.log('2 : '+ indexDropdownMenuIcons);
+				        	//console.log('2 : '+ indexDropdownMenuIcons);
 				        	indexDropdownMenuIcons++;
 				        	fillSocialIcons();
 				        } 
@@ -477,12 +471,12 @@ var fill = function(){
 				var socialIconSoundcloud = document.getElementById('socialIconSoundcloud'+ playerPosition);
 				var indexDropdownMenuIcons = 0;
 	        	var unfillSocialIcons = function(){
-	 					console.log('3 : '+ indexDropdownMenuIcons);
+	 					//console.log('3 : '+ indexDropdownMenuIcons);
 	 					setTimeout(function () { 
 					        if(indexDropdownMenuIcons === 3)
 					        {
 					        	socialIconFb.style.display = "none";
-					        	console.log('4 : '+ indexDropdownMenuIcons);
+					        	//console.log('4 : '+ indexDropdownMenuIcons);
 					        	indexDropdownMenuIcons++;	
 					        	unfillSocialIcons();		        	
 					        } 
@@ -554,12 +548,12 @@ function clearDropdownMenu()
 				var socialIconSoundcloud = document.getElementById('socialIconSoundcloud'+ playerPosition);
 				var indexDropdownMenuIcons = 0;
 	        	var unfillSocialIcons = function(){
-	 					console.log('3 : '+ indexDropdownMenuIcons);
+	 					//console.log('3 : '+ indexDropdownMenuIcons);
 	 					setTimeout(function () { 
 					        if(indexDropdownMenuIcons === 3)
 					        {
 					        	socialIconFb.style.display = "none";
-					        	console.log('4 : '+ indexDropdownMenuIcons);
+					        	//console.log('4 : '+ indexDropdownMenuIcons);
 					        	indexDropdownMenuIcons++;	
 					        	unfillSocialIcons();		        	
 					        } 

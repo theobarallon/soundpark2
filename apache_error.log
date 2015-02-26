@@ -267,3 +267,8 @@
 [Tue Feb 17 14:17:21 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/favicon.ico
 [Wed Feb 18 13:43:53 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/model/get_curator_name
 [Thu Feb 19 21:40:46 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/view/curatorDropPage.php&curatorId=1
+[Sun Feb 22 19:58:51 2015] [error] [client ::1] script '/Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/control/move_track_to_next_playlist.php' not found or unable to stat, referer: http://localhost:8888/view/create_playlist.php?idPlaylist=30
+[Sun Feb 22 19:59:07 2015] [error] [client ::1] script '/Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/control/move_track_to_next_playlist.php' not found or unable to stat, referer: http://localhost:8888/view/create_playlist.php?idPlaylist=30
+[Tue Feb 24 18:43:41 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon-precomposed.png
+[Tue Feb 24 18:43:41 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon.png
+[Thu Feb 26 14:52:15 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/favicon.ico

@@ -2,8 +2,13 @@ function updatePlayerPosition(trackId){
     document.getElementById('share_url').innerHTML = ("http://soundpark.fm/view/fromshare.php?trackId=" + trackId); // On met à jour le lien share aussi au passage
 	xhrUPP = new XMLHttpRequest();
     //console.log(trackId);
+    
     var urlPlayerPosition = '../control/display_player_position.php?trackId='+trackId;
-    //console.log(urlPlayerPosition);
+    if(getParameterByName('playlistId') > 0)
+    {
+        urlPlayerPosition = urlPlayerPosition + '&playlistId=' + getParameterByName('playlistId');
+    }
+    console.log(urlPlayerPosition);
 	xhrUPP.open('GET', urlPlayerPosition);
 
 
