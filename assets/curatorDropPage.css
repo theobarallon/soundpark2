@@ -73,9 +73,16 @@ h2
 
 #message
 {
-  margin-top: 10vh;
+  margin-top: 7vh;
   color: #dfdfdf;
-  opacity: 0.6;
+  opacity: 0.8;
+}
+
+#checkMark
+{
+  margin-bottom: 1.5vh;
+  height: 8vh;
+  width: 8h;
 }
 
 
@@ -202,5 +209,7 @@ form input[type="submit"]
   {
   	cursor: text;
   }
+
+
 
 

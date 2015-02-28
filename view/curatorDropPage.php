@@ -18,7 +18,7 @@
 			<h2>Curator’s trackdropper</h2>
 		</header>
 		<div id="container">
-			<h3>Hi bro! Past your tune in there to propose it for the next playlist</h3>
+			<h3>Hi bro! To propose a tune for the next playlist, paste the URL there!</h3>
 			<img id="explainArrow" src="../assets/pictures/explain_arrow.png">
 			<div id="drop_space">
 				<?php
@@ -43,7 +43,9 @@
 				{
 					if($_GET['message'] == "successAdd")
 					{
-						echo('<h2 id="message"> Track well added! Other great catches to propose :)?</h2></br>');
+	
+						echo('<h2 id="message"> <img id="checkMark" src="../assets/pictures/check_icon.svg" /></br>Track well added! Other great catches to propose :)?</h2></br>');
+						
 					}
 					else if($_GET['message'] == "notWorking")
 					{
@@ -62,8 +64,8 @@
 				{
 					echo('<h2 id="message"> Page problem man! Are you sure you are using the link we gave you?</h2></br>');
 				}
-
 			?>
+
 		</footer>		
 </body>
 </html>

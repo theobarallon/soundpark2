@@ -185,7 +185,18 @@
 	{
 		optionLinks[indexMenus].addEventListener('click', function() 
 	    { 
-	    	var indexMenusNew = this.id.slice(-1); 
+	    	if(Number(this.id.slice(-2))==this.id.slice(-2))
+	    	{
+				var indexMenusNew = this.id.slice(-2); 
+	    	}
+	    	else
+	    	{
+	    		var indexMenusNew = this.id.slice(-1); 
+	    	}
+	    	for (var indexMenusAll = 0 ; indexMenusAll < optionLinks.length ; indexMenusAll++)
+				{
+					menus[indexMenusAll].style.display="none";
+				}
 	    	console.log(indexMenusNew);
 	    	menus[indexMenusNew].style.display="inline-block";
 		}, false);
