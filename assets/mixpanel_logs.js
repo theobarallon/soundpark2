@@ -1,35 +1,47 @@
 /* Tracking playlist main controlers */
 
 document.getElementById('play').addEventListener('click', function () {
-	mixpanel.track("Play/Pause Clicked", {fullUrl: window.location.href});
+	mixpanel.track("Play/Pause Clicked", {
+		fullUrl: window.location.href,
+		"userId": userId
+		});
 }, false);
 
 document.getElementById('minus_one').addEventListener('click', function () {
-	mixpanel.track("Dislike Clicked", {fullUrl: window.location.href});
+	mixpanel.track("Dislike Clicked", {
+		fullUrl: window.location.href,
+		"userId": userId
+		});
 }, false);
 
 document.getElementById('plus_one').addEventListener('click', function () {
-	mixpanel.track("Like Clicked", {fullUrl: window.location.href});
+	mixpanel.track("Like Clicked", {
+		fullUrl: window.location.href,
+		"userId": userId
+		});
 }, false);
 
 document.getElementById('right_arrow_icon').addEventListener('click', function () {
 	mixpanel.track("Next Clicked", {
 		"fullUrl": window.location.href,
-		"trackId": songTable[position-1]
+		"trackId": songTable[position-1],
+		"userId": userId
 		});
 }, false);
 
 document.getElementById('left_arrow_icon').addEventListener('click', function () {
 	mixpanel.track("Previous Clicked", {
 		"fullUrl": window.location.href,
-		"trackId": songTable[position+1]
+		"trackId": songTable[position+1],
+		"userId": userId
 		});
 }, false);
 
 document.getElementById('left_arrow_icon').addEventListener('click', function () {
 	mixpanel.track("Previous Clicked", {
 		"fullUrl": window.location.href,
-		"trackId": songTable[position+1]
+		"trackId": songTable[position+1],
+		"userId": userId
 		});
 }, false);
 
@@ -43,7 +55,8 @@ for (var i = 0 ; i < document.getElementsByClassName('socialIconFb').length; i++
 	    { 
 	    	mixpanel.track("Share song with facebook Clicked", {
 			"fullUrl": window.location.href,
-			"trackId": songTable[position]
+			"trackId": songTable[position],
+			"userId": userId
 			});
 
 		}, false);
@@ -55,7 +68,8 @@ for (var i = 0 ; i < document.getElementsByClassName('socialIconTwitter').length
 	    { 
 	    	mixpanel.track("Share song with Twitter Clicked", {
 			"fullUrl": window.location.href,
-			"trackId": songTable[position]
+			"trackId": songTable[position],
+			"userId": userId
 			});
 
 		}, false);
@@ -67,7 +81,8 @@ for (var i = 0 ; i < document.getElementsByClassName('socialIconEmail').length; 
 	    { 
 	    	mixpanel.track("Share song with Email Clicked", {
 			"fullUrl": window.location.href,
-			"trackId": songTable[position]
+			"trackId": songTable[position],
+			"userId": userId
 			});
 
 		}, false);
@@ -79,7 +94,8 @@ for (var i = 0 ; i < document.getElementsByClassName('socialIconSoundcloud').len
 	    { 
 	    	mixpanel.track("Listen song on Soundcloud Clicked", {
 			"fullUrl": window.location.href,
-			"trackId": songTable[position]
+			"trackId": songTable[position],
+			"userId": userId
 			});
 
 		}, false);

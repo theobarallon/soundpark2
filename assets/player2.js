@@ -598,5 +598,47 @@ function clearDropdownMenu()
 	 			unfillSocialIcons();   
 }
 
+/*Keyboard shortcuts management */
+
+document.addEventListener('keydown', function(e) 
+{
+   	
+    if(e.keyCode == 32)
+    {
+    	mixpanel.track("Shortcut Play/Pause", 
+		{
+			"fullUrl": window.location.href
+		});
+    	var playButton = document.getElementById('play')
+    	if(playButton.value == 'pause')
+	   	{
+	   		pauseCurrentTrack();
+	   		playButton.value = 'play';
+	   	}
+	   	else
+	   	{
+	   		playCurrentTrack();
+	   		playButton.value = 'pause';
+	   	}
+    }
+    else if (e.keyCode == 39) 
+	{
+		nextTrack();
+		mixpanel.track("Shortcut Next", 
+		{
+			"fullUrl": window.location.href
+		});
+	}
+	else if (e.keyCode == 37) 
+	{
+		mixpanel.track("Shortcut Previous", 
+		{
+			"fullUrl": window.location.href
+		});
+		previousTrack();
+	}
+
+}, false);
+
 
 

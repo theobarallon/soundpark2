@@ -1,5 +1,6 @@
 <?php 
 	session_start();
+	require('../control/decide_lang.php');
 	include_once('../model/connect_sql.php');
 	setcookie('playlist_url', $_SERVER['SERVER_NAME'].$_SERVER['PHP_SELF'], time() + 7*24*3600, null, null, false, true);
 	setcookie('current_user', $_GET['pwd'], time() + 7*24*3600, null, null, false, false);
@@ -51,7 +52,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 				<h1>Soundpark.<span style="color: #660066">fm</span></h1>
 			</div>
 			<h2 id="player_position"><?php include("../control/display_player_position.php"); ?></h2>
-			<h2>Toutes les semaines, le lundi matin, <span class="tagline">le meilleur de la musique</span> sélectionné par <span class="tagline">la crème de la crème</span>, au chaud <span class="tagline">dans ta boîte mail</span>.</h2>
+			<h2><?php echo TXT_LANDING_TAGLINE; ?></h2>
 			<!--<h3> <?php //echo($_COOKIE['playlist_url']); ?> </h3>-->
 			<!--<h3> <?php //echo($_COOKIE['current_user']); ?> </h3>-->
 		</header>

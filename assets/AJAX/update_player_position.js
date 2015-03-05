@@ -8,7 +8,7 @@ function updatePlayerPosition(trackId){
     {
         urlPlayerPosition = urlPlayerPosition + '&playlistId=' + getParameterByName('playlistId');
     }
-    console.log(urlPlayerPosition);
+    //console.log(urlPlayerPosition);
 	xhrUPP.open('GET', urlPlayerPosition);
 
 
