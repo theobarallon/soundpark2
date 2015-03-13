@@ -28,7 +28,17 @@ $('.playPauseIcon').click(function() //Gestion du bouton de lecture/pause en tog
 	{
 		var oldIndex = index;
 	}
-	index = this.id.slice(-1); // On récupère la position du son dans la liste
+	if(Number(this.id.slice(-2))==this.id.slice(-2))
+	{
+		index = this.id.slice(-2); 
+		console.log('double - index = '+index);
+	}
+	else
+	{
+		index = this.id.slice(-1); 
+		console.log('simple - index = '+index);
+	}
+	//index = this.id.slice(-1); // On récupère la position du son dans la liste
 	trackId = document.getElementById('trackId'+index).value;
 	if (this.className === "playPauseIcon play") 
 	{
@@ -140,15 +150,15 @@ function playCurrentTrack(trackId)
 							durationBeforeJump = currentTrack.position;
 							if(window.location.href.indexOf("new") > 0)
 							{
-								var mousePos = {'x': (e.layerX-335), 'y': e.layerY};
+								var mousePos = {'x': (e.layerX-50), 'y': e.layerY};
 							}
 							else if(window.location.href.indexOf("histo") > 0)
 							{
-								var mousePos = {'x': (e.layerX-335), 'y': e.layerY};
+								var mousePos = {'x': (e.layerX-50), 'y': e.layerY};
 							}
 							else 
 							{
-								var mousePos = {'x': (e.layerX-250), 'y': e.layerY};
+								var mousePos = {'x': (e.layerX-50), 'y': e.layerY};
 							}
 							
 							//console.log(mousePos['x']);

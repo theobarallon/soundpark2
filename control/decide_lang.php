@@ -1,18 +1,18 @@
 <?php
 
-if ($_GET['lang']=='fr')  // si la langue est 'fr' (français) on inclut le fichier fr-lang.php
-{          
-	include('../control/fr_lang.php');
-} 
-
-else if ($_GET['lang']=='en') // si la langue est 'en' (anglais) on inclut le fichier en-lang.php
-{      
-	include('../control/en_lang.php');
-}
- 
- else   // si aucune langue n'est déclarée on inclut le fichier fr-lang.php par défaut
- {                     
- 	include('../control/fr_lang.php');
- }
- 
- ?>
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+	switch ($lang)
+	{
+		case "fr":
+		    //echo "PAGE FR";
+		    include('../control/fr_lang.php');//include check session FR
+		    break;
+		case "en":
+		    //echo "PAGE EN";
+		    include('../control/en_lang.php');
+		    break;        
+		default:
+		    //echo "PAGE EN - Setting Default";
+		   include('../control/en_lang.php');//include EN in all other cases of different lang detection
+		    break;
+	}

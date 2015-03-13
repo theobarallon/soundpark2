@@ -1,6 +1,11 @@
-<?php session_start(); ?>
+<?php
+ session_start();
+ require('../control/decide_lang.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
+  
+
   <head>
     <title>Soundpark</title>
     <link href="/images/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
@@ -23,7 +28,7 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 	<body>
 		<header>
 			<h1><a href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>" id="bannerBackLink">Soundpark.<span style="color: #660066">fm</span></a></h1>
-			<h2>Merci à eux : </h2>
+			<h2><?php echo TXT_CURATORS_HEADLINE; ?></h2>
 		</header>
 		
 		<div class="container" id="galerie"

@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+	require('../control/decide_lang.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
   <head>
@@ -28,10 +30,10 @@ mixpanel.init("96e08627ec77b0c4f5e065ece45960fb");</script><!-- end Mixpanel -->
 			<h1><a id="bannerBackLink" href="http://<?php echo($_COOKIE['playlist_url']); ?>?pwd=<?php echo($_COOKIE['current_user']); ?>">Soundpark.<span style="color: #660066">fm</span></a></h1>
 		</header>
 		<div class="container"> 
-				<h2>A la semaine prochaine ! </br> Si ça t'a plu, n'hésite pas à partager :</h2>
+				<h2><?php echo TXT_END_HEADLINE; ?></h2>
 				<a href="http://www.facebook.com/sharer.php?u=http://soundpark.fm/view/landing.php" id="facebookShare" target="_blank"><input type="button" id="facebookShare"/></a>
 				<a href="http://twitter.com/share?url=http://soundpark.fm&text=Toutes%20les%20semaines,%20le%20meilleur%20de%20la%20musique%20sélectionné%20par%20la%20crème%20de%20la%20crème,%20au%20chaud%20dans%20ta%20boîte%20mail" class="twitter-share-button" id="twitterShare" target="_blank"><input type="button" id="twitterShare"/></a>
-				<a href="curators.php" id="curatorPageLink"><h3>Et merci qui ?</h3></a>
+				<a href="curators.php" id="curatorPageLink"><h3><?php echo TXT_END_CURATORSLINK; ?></h3></a>
 		</div>
 		<footer>
 			<div id="buttons_area">

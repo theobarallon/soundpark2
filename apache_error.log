@@ -305,3 +305,14 @@
 [Mon Mar 02 21:49:54 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/assets/pictures/uploaded_avatars/Amaury.jpg, referer: http://localhost:8888/view/create_curator.php
 [Mon Mar 02 21:52:51 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/favicon.ico
 [Thu Mar 05 14:46:15 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/favicon.ico
+[Mon Mar 09 15:36:38 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon-precomposed.png
+[Mon Mar 09 15:36:38 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon.png
+[Mon Mar 09 15:37:03 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon-precomposed.png
+[Mon Mar 09 15:37:03 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/apple-touch-icon.png
+[Mon Mar 09 16:32:02 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
+[Fri Mar 13 15:14:40 2015] [notice] caught SIGTERM, shutting down
+[Fri Mar 13 15:15:24 2015] [notice] FastCGI: process manager initialized (pid 27668)
+[Fri Mar 13 15:15:24 2015] [notice] Digest: generating secret for digest authentication ...
+[Fri Mar 13 15:15:24 2015] [notice] Digest: done
+[Fri Mar 13 15:15:25 2015] [notice] Apache/2.2.29 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.8 PHP/5.6.1 mod_ssl/2.2.29 OpenSSL/0.9.8zc DAV/2 mod_perl/2.0.8 Perl/v5.20.0 configured -- resuming normal operations
+[Fri Mar 13 15:16:12 2015] [error] [client ::1] File does not exist: /Users/ArthurRougier/Dropbox/Soundpark.fm 2.0/1. Produit/01. MVP/IT/codesource/soundpark2/images
