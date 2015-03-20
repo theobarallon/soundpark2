@@ -78,7 +78,8 @@ h2
   opacity: 0.8;
 }
 
-#checkMark
+#checkMark, 
+#crossMark
 {
   margin-bottom: 1.5vh;
   height: 8vh;

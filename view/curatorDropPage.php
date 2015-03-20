@@ -1,3 +1,7 @@
+<?php
+	require('../control/decide_lang.php');
+?>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
@@ -15,10 +19,10 @@
 	<body>
 		<header>
 			<h1>SOUNDPARK.FM</h1>
-			<h2>Curator’s trackdropper</h2>
+			<h2><?php echo TXT_CURATORSDROPPAGE_HEADLINE; ?></h2>
 		</header>
 		<div id="container">
-			<h3>Hi bro! To propose a tune for the next playlist, paste the URL there!</h3>
+			<h3><?php echo TXT_CURATORSDROPPAGE_HELPMESSAGE; ?></h3>
 			<img id="explainArrow" src="../assets/pictures/explain_arrow.png">
 			<div id="drop_space">
 				<?php
@@ -44,25 +48,25 @@
 					if($_GET['message'] == "successAdd")
 					{
 	
-						echo('<h2 id="message"> <img id="checkMark" src="../assets/pictures/check_icon.svg" /></br>Track well added! Other great catches to propose :)?</h2></br>');
+						echo('<h2 id="message"><img id="checkMark" src="../assets/pictures/check_icon.svg" /></br>'. TXT_CURATORSDROPPAGE_SUCCESSADD .'</h2></br>');
 						
 					}
 					else if($_GET['message'] == "notWorking")
 					{
-						echo('<h2 id="message">Sorry mate, but this link is not working :(. Mail us at @contact@soundpark.fm!</h2></br>');
+						echo('<h2 id="message"><img id="crossMark" src="../assets/pictures/cross_dropPage.svg" /></br>'. TXT_CURATORSDROPPAGE_NOTWORKING .'</h2></br>');
 					}
 					else if($_GET['message'] == "notStreamable")
 					{
-						echo('<h2 id="message"> Sorry mate, but this link has some souncloud copyrights that fucks us. Try another!</h2></br>');
+						echo('<h2 id="message"><img id="crossMark" src="../assets/pictures/cross_dropPage.svg" /></br>'. TXT_CURATORSDROPPAGE_NOTSTREAMABLE .'</h2></br>');
 					}
 					else if($_GET['message'] == "badLink")
 					{
-						echo('<h2 id="message"> Sorry mate, but this link is not valid. Sure it\'s Soundcloud or youtube?</h2></br>');
+						echo('<h2 id="message"><img id="crossMark" src="../assets/pictures/cross_dropPage.svg" /></br>'. TXT_CURATORSDROPPAGE_BADLINK .'</h2></br>');
 					}
 				}
 				if(!isset($_GET['curatorId']))
 				{
-					echo('<h2 id="message"> Page problem man! Are you sure you are using the link we gave you?</h2></br>');
+					echo('<h2 id="message"><img id="crossMark" src="../assets/pictures/cross_dropPage.svg" /></br>'. TXT_CURATORSDROPPAGE_NOCURATORID .'</h2></br>');
 				}
 			?>
 

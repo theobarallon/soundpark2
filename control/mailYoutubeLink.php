@@ -1,6 +1,6 @@
 <?php
 
-require '../PHPmailer/PHPMailerAutoload.php';
+require '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 include_once('../model/get_curator_name.php'); // returns $curatorName
 //echo($curatorName);
 
