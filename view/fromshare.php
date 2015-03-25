@@ -1,4 +1,5 @@
 <?php 
+//echo('test avec arthur');
 	session_start();
 	include_once('../model/connect_sql.php');
 ?>
